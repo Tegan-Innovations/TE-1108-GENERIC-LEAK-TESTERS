@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcBootProject CreateTime="2025-12-01T11:53:48">
+<TcBootProject CreateTime="2025-12-02T12:54:22">
 	<System>
 		<LockedMemSize>33554432</LockedMemSize>
 		<AffinityMask>#x80000</AffinityMask>
@@ -127,7 +127,7 @@
 	<ProjectInfo>
 		<ProjectName>TEMPLATE_VER1</ProjectName>
 		<ProjectGuid>{AAED4EA2-0931-43D2-8590-E4ACDEB76CAB}</ProjectGuid>
-		<ConfigurationFile>C:\Users\Sebastian.Ulloa\Source\Repos\TEMPLATE-VER1\TEMPLATE_VER1\TEMPLATE_VER1.tsproj</ConfigurationFile>
+		<ConfigurationFile>C:\Users\Sebastian.Ulloa\Desktop\GIT PROJECTS\TEMPLATES\TEMPLATE_VER1\TEMPLATE_VER1\TEMPLATE_VER1.tsproj</ConfigurationFile>
 		<DataTypes/>
 		<PlcProjects/>
 		<Tasks/>

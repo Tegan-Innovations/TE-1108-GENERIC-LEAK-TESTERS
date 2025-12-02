@@ -20,6 +20,7 @@ VAR_OUTPUT
 	
 	stJavasCriptPDF		: ST_JavasCriptPDF;
 	bDataWrited			: BOOL;
+	bMakePdf			: BOOL;
 
 END_VAR
 VAR
@@ -31,11 +32,15 @@ VAR
 	bWritePDF				: BOOL;
 	sFileName				: STRING(255);
 	tonResetData			: TON;
+	TEST					: BOOL;
 	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[ACT_IO();
+ACT_WriteData();
+
+bMakePdf			:= TEST;]]></ST>
     </Implementation>
     <Action Name="ACT_IO" Id="{8b9915ff-83a8-4047-8cda-512409519079}">
       <Implementation>
@@ -106,6 +111,9 @@ END_IF
     </Action>
     <LineIds Name="FB_PDFMaker">
       <LineId Id="9" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="50" Count="0" />
     </LineIds>
     <LineIds Name="FB_PDFMaker.ACT_IO">
       <LineId Id="1" Count="3" />

@@ -153,17 +153,17 @@ fbPDFMaker(
 							sDate						:= stPDFMaker.sDate,
 							aDataHistoryArrayLength		:= 1000,
 							nDataHistoryIndex			:= stPDFMaker.nDataHistoryIndex,
-							sUser						:= sUserName,
-							sGroup						:= sUserGroupOut,
+							sUser						:= 'sebastian',//sUserName,
+							sGroup						:= 'administrator',//sUserGroupOut,
 							sMachineName				:= 'example',
 							
 							bDataWrited					=> stPDFMaker.bDataWrited,
 							stJavasCriptPDF				=> stPDFMaker.stJavaScriptPDF
 							);
 
-stPDFMaker.sDate			:= 	CONCAT( STR1 := WORD_TO_STRING(stSystemTime.wDay), STR2 := 
+(*stPDFMaker.sDate			:= 	CONCAT( STR1 := WORD_TO_STRING(stSystemTime.wDay), STR2 := 
 								CONCAT(STR1 := '_', STR2 := CONCAT(STR1 := WORD_TO_STRING(stSystemTime.wMonth), STR2 := 
-								CONCAT(STR1 := '_', STR2 := WORD_TO_STRING(stSystemTime.wYear)))));	
+								CONCAT(STR1 := '_', STR2 := WORD_TO_STRING(stSystemTime.wYear)))));	*)
 //CSV
 (*fbWriteDataToCSV_Events( 	bWriteData					:= stEventsCSVProcess.bWriteData,
 							sFileNamePath				:= stEventsCSVProcess.sFileNamePath,
