@@ -57,17 +57,17 @@
       "type": "Stylesheet"
     },
     {
-      "name": "Contents/CSS_JAVA/RowClassesProvider.js",
-      "description": "",
-      "type": "JavaScript"
-    },
-    {
       "name": "Contents/CSS_JAVA/PDF Maker/relatori.js",
       "description": "",
       "type": "JavaScript"
     },
     {
       "name": "Contents/CSS_JAVA/PDF Maker/jspdf.min.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Contents/CSS_JAVA/RowClassesProvider.js",
       "description": "",
       "type": "JavaScript"
     }
@@ -259,6 +259,36 @@
       "nEventsScreen": {
         "value": 0,
         "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "UserToChange": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "User": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "Password": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "AddGroupID": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "RemGroupID": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
         "persist": false,
         "readonly": false
       }
