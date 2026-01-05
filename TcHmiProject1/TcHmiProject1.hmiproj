@@ -117,6 +117,8 @@
     <Folder Include="Contents\Manual" />
     <Folder Include="Contents\CSS_JAVA" />
     <Folder Include="Contents\Events" />
+    <Folder Include="Contents\UserControl" />
+    <Folder Include="Contents\popup" />
     <Folder Include="Contents\pdf" />
     <Folder Include="Contents\Settings" />
     <Folder Include="Fonts\" />
@@ -158,6 +160,9 @@
     <Content Include="Contents\10_Manage_Users.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\CSS_JAVA\Enable buttons.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\CSS_JAVA\CssBehind1.css">
       <SubType>Content</SubType>
     </Content>
@@ -165,13 +170,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\CSS_JAVA\PDF Maker\relatori.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\CSS_JAVA\RowClassesProvider.function.json">
-      <SubType>Content</SubType>
-      <DependentUpon>Contents\CSS_JAVA\RowClassesProvider.js</DependentUpon>
-    </Content>
-    <Content Include="Contents\CSS_JAVA\RowClassesProvider.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\3_IO.content">
@@ -193,6 +191,13 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\1_Main.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\CSS_JAVA\RowClassesProvider.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\CSS_JAVA\RowClassesProvider.js</DependentUpon>
+    </Content>
+    <Content Include="Contents\CSS_JAVA\RowClassesProvider.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Events\Messages_CycleStopReq.content">
@@ -222,6 +227,12 @@
     <Content Include="Contents\pdf\TM429-EMALC-4_StopperInsertion_ScrewStation_Rev_1.0.pdf">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\popup\popup2.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\popup\popup1.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\Settings\3_SettingsStation3.content">
       <SubType>Content</SubType>
     </Content>
@@ -230,6 +241,20 @@
     </Content>
     <Content Include="Contents\Settings\1_SettingsStation1.content">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\YesNo.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\YesNo.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\YesNo.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Contents\UserControl\Acknowledge.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\Acknowledge.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\Acknowledge.usercontrol</DependentUpon>
     </Content>
     <Content Include="Images\Buttons\AlarmButton.png">
       <SubType>Content</SubType>

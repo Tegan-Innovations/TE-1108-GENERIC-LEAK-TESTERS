@@ -1,4 +1,45 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {}
+  "definitions": {
+    "UserControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserContent\\UserControl1.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/UserControl1"
+    },
+    "Part_Rejected": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\Acknowledge.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Part_Rejected"
+    },
+    "Acknowledge_-_Copy": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\YesNo.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Acknowledge_-_Copy"
+    },
+    "Acknowledge": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\Acknowledge.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Acknowledge"
+    },
+    "YesNo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\YesNo.usercontrol.json",
+      "id": "tchmi:project#/definitions/YesNo",
+      "type": "object"
+    }
+  }
 }

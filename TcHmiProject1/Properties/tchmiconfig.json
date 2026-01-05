@@ -70,9 +70,21 @@
       "name": "Contents/CSS_JAVA/RowClassesProvider.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "Contents/CSS_JAVA/Enable buttons.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
-  "userControls": [],
+  "userControls": [
+    {
+      "url": "Contents/UserControl/Acknowledge.usercontrol"
+    },
+    {
+      "url": "Contents/UserControl/YesNo.usercontrol"
+    }
+  ],
   "content": [
     {
       "url": "Contents/12_Operatinal_Manual.content",
@@ -227,6 +239,20 @@
       "keepAlive": false,
       "loadSync": false,
       "preloadBindings": false
+    },
+    {
+      "url": "Contents/popup/popup1.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/popup/popup2.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
     }
   ],
   "views": [
@@ -287,6 +313,28 @@
         "readonly": false
       },
       "RemGroupID": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "CreateUserEnable": {
+        "value": false,
+        "type": "tchmi:general#/definitions/BOOL",
+        "persist": false,
+        "readonly": false
+      },
+      "UserList": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "Groups": {
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
+        "readonly": false
+      },
+      "PopUp": {
         "value": "",
         "type": "tchmi:general#/definitions/String",
         "persist": false,
