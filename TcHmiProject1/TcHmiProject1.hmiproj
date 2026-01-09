@@ -121,6 +121,7 @@
     <Folder Include="Contents\popup" />
     <Folder Include="Contents\pdf" />
     <Folder Include="Contents\Settings" />
+    <Folder Include="Contents\UserControl\PopUp" />
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Icons\events" />
@@ -158,9 +159,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\10_Manage_Users.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\CSS_JAVA\delay.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\CSS_JAVA\Enable buttons.js">
@@ -230,10 +228,13 @@
     <Content Include="Contents\pdf\TM429-EMALC-4_StopperInsertion_ScrewStation_Rev_1.0.pdf">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\popup\popup2.content">
+    <Content Include="Contents\popup\popup2_ChangeSettings.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\popup\popup1_RejectedPart.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\4_Timers.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\3_SettingsStation3.content">
@@ -245,19 +246,32 @@
     <Content Include="Contents\Settings\1_SettingsStation1.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\UserControl\YesNo.usercontrol">
+    <Content Include="Contents\UserControl\led.usercontrol">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\UserControl\YesNo.usercontrol.json">
+    <Content Include="Contents\UserControl\led.usercontrol.json">
       <SubType>Content</SubType>
-      <DependentUpon>Contents\UserControl\YesNo.usercontrol</DependentUpon>
+      <DependentUpon>Contents\UserControl\led.usercontrol</DependentUpon>
     </Content>
-    <Content Include="Contents\UserControl\Acknowledge.usercontrol">
+    <Content Include="Contents\UserControl\PopUp\Acknowledge.usercontrol">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\UserControl\Acknowledge.usercontrol.json">
+    <Content Include="Contents\UserControl\PopUp\Acknowledge.usercontrol.json">
       <SubType>Content</SubType>
-      <DependentUpon>Contents\UserControl\Acknowledge.usercontrol</DependentUpon>
+      <DependentUpon>Contents\UserControl\PopUp\Acknowledge.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Contents\UserControl\PopUp\YesNo.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\PopUp\YesNo.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\PopUp\YesNo.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Images\40-408925_png-file-svg-file-eps-file-psd-file-cdr-file-milk-bottle-Photoroom.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\40-408925_png-file-svg-file-eps-file-psd-file-cdr-file-milk-bottle.png">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Buttons\AlarmButton.png">
       <SubType>Content</SubType>

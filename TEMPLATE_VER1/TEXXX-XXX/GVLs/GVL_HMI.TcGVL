@@ -9,7 +9,6 @@
 	bQuitHMI							: BOOL;
 	bShutDown							: BOOL;
 	stStatusBanner						: ST_StatusBanner;
-	rOpenPopUp							: R_TRIG;
 	nPopUp								: DINT;
 	
 	
@@ -42,6 +41,12 @@
 	nMainRegion							: DINT;
 	bManualModeOffFlag					: BOOL;
 	
+END_VAR
+
+VAR_GLOBAL PERSISTENT
+	
+	stTimers							: ST_Timers;
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

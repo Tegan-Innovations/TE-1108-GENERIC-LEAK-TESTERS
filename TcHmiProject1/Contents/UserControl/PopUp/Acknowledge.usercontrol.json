@@ -33,23 +33,6 @@
       "propertySetterName": "setText",
       "propertyGetterName": "getText",
       "refTo": ""
-    },
-    {
-      "name": "data-tchmi-acknowledge",
-      "displayName": "Acknowledge",
-      "allowSymbolExpressionsInObject": false,
-      "visible": true,
-      "type": "tchmi:general#/definitions/BOOL",
-      "category": "",
-      "description": "",
-      "requiredOnCompile": false,
-      "readOnly": false,
-      "bindable": true,
-      "heritable": true,
-      "propertyName": "Acknowledge",
-      "propertySetterName": "setAcknowledge",
-      "propertyGetterName": "getAcknowledge",
-      "refTo": ""
     }
   ],
   "virtualRights": [],

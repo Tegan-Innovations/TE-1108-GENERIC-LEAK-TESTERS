@@ -45,6 +45,18 @@
     "targetFileHostKeepAlive": false,
     "horizontalAlignment": "Left",
     "verticalAlignment": "Center"
+  },
+  {
+    "name": "Timers",
+    "displayName": "Timers",
+    "targetFile": {
+      "path": "Contents/Settings/4_Timers.content"
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
   }
 ]
 </script>

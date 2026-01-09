@@ -122,7 +122,7 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiButton_47.onPressed",
+    "event": "TcHmiButton_47.onStateReleased",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -131,19 +131,30 @@
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
+          "value": false
         },
         "asyncWait": true
       }
     ]
   },
   {
-    "event": "TcHmiButton_47.onStateReleased",
+    "event": "TcHmiButton_47.onStatePressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
         "active": true,
         "symbolExpression": "%pp%YES%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%OpenPopUp%/i%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:general#/definitions/BOOL",
@@ -161,7 +172,23 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiButton_48.onPressed",
+    "event": "TcHmiButton_48.onStateReleased",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%NO%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiButton_48.onStatePressed",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -173,16 +200,11 @@
           "value": true
         },
         "asyncWait": true
-      }
-    ]
-  },
-  {
-    "event": "TcHmiButton_48.onStateReleased",
-    "actions": [
+      },
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%pp%NO%/pp%",
+        "symbolExpression": "%i%OpenPopUp%/i%",
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:general#/definitions/BOOL",

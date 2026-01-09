@@ -13,7 +13,7 @@
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Contents\\UserControl\\Acknowledge.usercontrol.json",
+      "frameworkUserControlConfig": "Contents\\UserControl\\PopUp\\Acknowledge.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/Part_Rejected"
     },
@@ -21,24 +21,16 @@
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Contents\\UserControl\\YesNo.usercontrol.json",
+      "frameworkUserControlConfig": "Contents\\UserControl\\PopUp\\YesNo.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/Acknowledge_-_Copy"
     },
-    "Acknowledge": {
+    "led": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Contents\\UserControl\\Acknowledge.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/Acknowledge"
-    },
-    "YesNo": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Contents\\UserControl\\YesNo.usercontrol.json",
-      "id": "tchmi:project#/definitions/YesNo",
+      "frameworkUserControlConfig": "Contents\\UserControl\\led.usercontrol.json",
+      "id": "tchmi:project#/definitions/led",
       "type": "object"
     }
   }
