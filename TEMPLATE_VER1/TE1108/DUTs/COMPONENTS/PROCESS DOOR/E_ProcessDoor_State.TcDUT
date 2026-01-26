@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_ProcessDoor_State" Id="{4099e79a-dd09-4eee-a9ea-147d9a547a32}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_ProcessDoor_State :
+(
+		//GENERIC
+	ABORTED				:=10,
+	RESET_ERROR			:=20,
+	HOMING				:=30,
+	READY				:=40,
+	//MANUAL_MODE			:=50, /manual mode not needed.
+	ERROR				:=60,
+	PERSISTENT_ERROR	:=70,
+	STOPPING			:=80,
+	//SPECIFIC FOR EVERY STATION
+	TAKING_PICTURE		:=100,
+	DONE				:=140,
+	RESULTS				:=160,
+	RESET				:=180
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

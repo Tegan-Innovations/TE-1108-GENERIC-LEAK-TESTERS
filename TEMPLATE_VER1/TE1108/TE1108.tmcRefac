@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="5b10c3d3-fd3b-49e5-b6cb-e01f459b546a">E_STATION1_STATE</Type>
+      <From>E_Station1_State</From>
+      <To>E_LeakTester_State</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="39ea7c49-57ae-4672-9d34-1fe246bace50">E_STATION3_STATE</Type>
+      <From>E_Station3_State</From>
+      <To>E_ProcessCylinder_State</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="1f427bb6-b000-49ab-b9fe-b41ba2f3f5a8">E_PROCESSCYLINDER_STATE_1</Type>
+      <From>E_ProcessCylinder_State_1</From>
+      <To>E_Camera_State</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="5b94fbf5-07bd-473e-8e05-f4b5f00f766b">ST_CYCLEDATASTATION2_1</Type>
+      <From>ST_CycleDataStation2_1</From>
+      <To>ST_Camera_CycleData</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="5ddfb4d9-7fc1-463c-94a3-7a2a15a0ec39">E_STATION2_STATE</Type>
+      <From>E_Station2_State</From>
+      <To>E_HeightTest_State</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="9fa01127-d8b3-4cd4-8460-18bade0da36e">ST_CYCLEDATASTATION2</Type>
+      <From>ST_CycleDataStation2</From>
+      <To>ST_HeightTest_CycleData</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="a87f5642-6635-4d10-aef6-f9a75b94d380">ST_CYCLEDATASTATION1</Type>
+      <From>ST_CycleDataStation1</From>
+      <To>ST_LeakTester_CycleData</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="ff78f0ef-9fa8-4e6f-9d5c-03e88c7448b6">ST_STATIONCMD</Type>
+      <From>ST_StationCMD</From>
+      <To>ST_GeneralStationCMD</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="b04f1e4d-e0a9-4657-bf3c-f43eae8c4118">ST_CAMERA_STATION</Type>
+      <From>ST_Station_3_1</From>
+      <To>ST_Camera_CMD</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="be788ca4-1f59-4430-b468-666609eaa6c5">ST_PROCESSCYLINDER_STATION</Type>
+      <From>ST_Station_3</From>
+      <To>ST_ProcessCylinder_CMD</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="4099e79a-dd09-4eee-a9ea-147d9a547a32">E_CAMERA_STATE_1</Type>
+      <From>E_Camera_State_1</From>
+      <To>E_ProcessDoor_State</To>
+    </RenamedType>
+    <RenamedType>
+      <Type guid="4d3e5f95-7477-4aaa-ade9-ea6a5dd1bafd">ST_CAMERA_CMD_1</Type>
+      <From>ST_Camera_CMD_1</From>
+      <To>ST_ProcessDoor_CMD</To>
+    </RenamedType>
+  </Renames>
+</Refactors>
