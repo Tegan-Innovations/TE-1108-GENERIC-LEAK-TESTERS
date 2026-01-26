@@ -171,7 +171,7 @@
     <Compile Include="POUs\A_MASTER\A_4_PRG_MasterSystemTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\B_STATIONS\B_1_STATION_1\B_1_1_PRG_Master_Station_1.TcPOU">
+    <Compile Include="POUs\B_STATIONS\B_1_LEAK_TEST\B_1_1_PRG_Master_Station_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\B_STATIONS\B_2_STATION_2\B_2_1_PRG_Master_Station_2.TcPOU">
@@ -228,7 +228,7 @@
     <Folder Include="GVLs" />
     <Folder Include="POUs\A_MASTER" />
     <Folder Include="POUs\B_STATIONS" />
-    <Folder Include="POUs\B_STATIONS\B_1_STATION_1" />
+    <Folder Include="POUs\B_STATIONS\B_1_LEAK_TEST" />
     <Folder Include="POUs\B_STATIONS\B_2_STATION_2" />
     <Folder Include="POUs\B_STATIONS\B_3_STATION_3" />
     <Folder Include="POUs\C_HMI" />
