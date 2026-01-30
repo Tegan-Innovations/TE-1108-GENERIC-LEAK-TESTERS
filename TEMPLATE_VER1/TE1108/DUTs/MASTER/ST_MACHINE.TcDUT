@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_MACHINE" Id="{07cde51d-2827-4fa0-b86f-854c260785fb}">
+    <Declaration><![CDATA[TYPE ST_MACHINE :
+STRUCT
+	
+	IP8X 						:BOOL;
+		
+	bHeightTest 				:BOOL;
+	bVisionTest					:BOOL;
+	bLeakTest					:BOOL;
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -6,10 +6,23 @@
 	
 
 	//	dw_T01_EK1100                                                	| EtherCAT Coupler 
-	//	dw_T02_EL6070-0033                                           	| EtherCAT Terminal, license key for TwinCAT 3.1
+	//	dw_T02_EL6070-0033                                           	| EtherCAT Terminal, license key for TwinCAT 3.1 	
+	dw_T03_EL6910														: st_EL6910;//TwinSAFE logic
+	dw_T04_EL1918														: st_EL1918_A;//EL1918 8 Channel Safety Digital Input
+	dw_T05_EL1918														: st_EL1918_B;//EL1918 8 Channel Safety Digital Input
+	dw_T06_EL2904														: st_EL2904;//EL2904 4 Channel Safety Digital Output
+	dw_T07_EL9410														: st_EL9410;//E-Bus Power supply
+	dw_T08_EL1809														: st_EL1809;// 16 Channel Digital Input ( 24VDC )
+	dw_T09_EL2809														: st_EL2809_A;// 16 Channel Digital Output ( 24VDC ) 
+	dw_T10_EL2809														: st_EL2809_B;// 16 Channel Digital Output ( 24VDC ) 
+	dw_T11_EL3058                                                		: st_EL3058;// 4 Channel Analog Input
+	dw_T12_EL6633                                                		: ST_EL6633; // Profinet Protocol
 	
-	dw_T03_EL1809                                                		: st_EL1809; //16 Channel Digital Input ( 24VDC ) 
-	dw_T04_EL2809                                                		: st_EL2809; // 16 Channel Digital Output ( 24VDC )
+	stTwinSAFE															: ST_TwinSAFE;
+	
+	LeakTester1_IO														: ST_General_LeakTester;
+	LeakTester2_IO														: ST_General_LeakTester;
+	Probes																: ST_Probes_test;
 
 END_VAR]]></Declaration>
   </GVL>

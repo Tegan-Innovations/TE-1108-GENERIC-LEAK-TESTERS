@@ -10,10 +10,8 @@ STRUCT
 	
 	bCycleStopRequest					:BOOL;
 	
-	bNoImmediateFault					:BOOL;
-	bNoCycleStopFault					:BOOL;
-
-
+	bNoFault							:BOOL;
+	
 	// Feedback Flags
 	bAllStationsReady					:BOOL;
 	bAllStationsStopped					:BOOL;

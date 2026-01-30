@@ -2,23 +2,14 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <GVL Name="GVL_Stations" Id="{51987edd-ecbc-463a-bda0-55117182c9fa}">
     <Declaration><![CDATA[VAR_GLOBAL
-/////////////////////////////////////////////////////////////////////////////////////Station 1/////////////////////////////////////////////////////////////////////////////////////
 	
-	stStation1							: ST_Station_1;
-	CMD_Station1						: ST_GeneralStationCMD;
-	stCycleDataStation1					: ST_LeakTester_CycleData;
 	
-/////////////////////////////////////////////////////////////////////////////////////Station 2/////////////////////////////////////////////////////////////////////////////////////
-
-	stStation2							: ST_Station_2;
-	CMD_Station2						: ST_GeneralStationCMD;
-	stCycleDataStation2					: ST_HeightTest_CycleData;
-
-/////////////////////////////////////////////////////////////////////////////////////Station 3/////////////////////////////////////////////////////////////////////////////////////
-
-	stStation3							: ST_ProcessCylinder_CMD;	
-	CMD_Station3						: ST_GeneralStationCMD;
-	stCycleDataStation3					: ST_CycleDataStation3;
+	stCamera								: ST_Camera;
+	stLeakTesters							: ST_LeakTester;	
+	stHeightTests							: ST_HeightTest;
+	stProcessCylinder						: ST_ProcessCylinder;
+	stProcessDoor							: ST_ProcessDoor;
+	
 
 END_VAR]]></Declaration>
   </GVL>

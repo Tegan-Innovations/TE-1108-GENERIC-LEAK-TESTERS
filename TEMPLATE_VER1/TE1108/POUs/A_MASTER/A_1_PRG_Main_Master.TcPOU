@@ -64,11 +64,18 @@ END_IF
 
 
 A_4_PRG_MasterSystemTime();
+
+stMACHINE.bHeightTest		:= TRUE;
+stMACHINE.bLeakTest			:= TRUE;
+stMACHINE.bVisionTest		:= TRUE;
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////STATIONS/////////////////////////////////////////////////////////////////////////////////////
 
-B_1_1_PRG_Master_Station_1(CMD := CMD_Station1);
-B_2_1_PRG_Master_Station_2(CMD := CMD_Station2);
-B_3_1_PRG_Master_Station_3(CMD := CMD_Station3);
+B_1_1_PRG_Master_Leak_Test();
+//B_2_1_PRG_Master_Station_2();
+//B_3_1_PRG_Master_Station_3();
 
 /////////////////////////////////////////////////////////////////////////////////////PROCESS/////////////////////////////////////////////////////////////////////////////////////
 
@@ -260,11 +267,37 @@ fbUserLog(	nNumberOfData								:= 250,
     </Action>
     <Action Name="f_ACT_TerminalInfo" Id="{8299d142-9ce5-4d1b-9f3f-121127d1dbfb}">
       <Implementation>
-        <ST><![CDATA[dw_T03_EL1809.stTerminalInfo.fbTerminalInfo( 	nTerminalState						:= dw_T03_EL1809.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T03_EL1809.stTerminalInfo.sTerminalInfo);
+        <ST><![CDATA[dw_T03_EL6910.stTerminalInfo.fbTerminalInfo( 	nTerminalState						:= dw_T03_EL6910.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T03_EL6910.stTerminalInfo.sTerminalInfo);
 												
-dw_T04_EL2809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T04_EL2809.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T04_EL2809.stTerminalInfo.sTerminalInfo);]]></ST>
+dw_T04_EL1918.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T04_EL1918.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T04_EL1918.stTerminalInfo.sTerminalInfo);
+												
+dw_T05_EL1918.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T05_EL1918.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T05_EL1918.stTerminalInfo.sTerminalInfo);
+												
+dw_T06_EL2904.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T06_EL2904.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T06_EL2904.stTerminalInfo.sTerminalInfo);
+												
+dw_T07_EL9410.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T07_EL9410.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T07_EL9410.stTerminalInfo.sTerminalInfo);
+											
+dw_T08_EL1809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T08_EL1809.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T08_EL1809.stTerminalInfo.sTerminalInfo);
+												
+dw_T09_EL2809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T09_EL2809.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T09_EL2809.stTerminalInfo.sTerminalInfo);
+												
+dw_T10_EL2809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T10_EL2809.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T10_EL2809.stTerminalInfo.sTerminalInfo);
+												
+dw_T11_EL3058.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T11_EL3058.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T11_EL3058.stTerminalInfo.sTerminalInfo);
+												
+dw_T12_EL6633.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T12_EL6633.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T12_EL6633.stTerminalInfo.sTerminalInfo);
+												
+//add boxes]]></ST>
       </Implementation>
     </Action>
     <Action Name="g_ACT_Manual" Id="{87b8b019-9eb6-46b9-b781-3301c89600c8}">
@@ -276,7 +309,7 @@ IF stMachineStatus.bReadyToStart THEN
 ELSE bEnableManual											:= FALSE;
 END_IF
 
-IF nMainRegion = 5 AND stMasterCtrl.bNoImmediateFault AND stMasterCtrl.bNoCycleStopFault
+IF (nMainRegion = 5) AND stMasterCtrl.bNoFault 
 	AND NOT stMasterCtrl.bCycleStopRequest AND NOT stButtonsLamps.bStopButtonFallingEdge THEN
 	stMasterCtrl.bManualModeRequest							:= TRUE;
 	bManualModeOffFlag										:= FALSE;
@@ -312,7 +345,7 @@ END_IF
       </Implementation>
     </Action>
     <LineIds Name="A_1_PRG_Main_Master">
-      <LineId Id="831" Count="75" />
+      <LineId Id="951" Count="82" />
       <LineId Id="373" Count="0" />
     </LineIds>
     <LineIds Name="A_1_PRG_Main_Master.a_ACT_ButtonsLamps">
@@ -397,7 +430,31 @@ END_IF
       <LineId Id="72" Count="0" />
     </LineIds>
     <LineIds Name="A_1_PRG_Main_Master.f_ACT_TerminalInfo">
-      <LineId Id="1" Count="4" />
+      <LineId Id="1" Count="5" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="32" Count="1" />
     </LineIds>
     <LineIds Name="A_1_PRG_Main_Master.g_ACT_Manual">
       <LineId Id="23" Count="0" />

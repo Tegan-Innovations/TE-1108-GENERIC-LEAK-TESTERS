@@ -8,15 +8,12 @@ STRUCT
 	
 	// Status Flags:
 	bSystemPowerUp 				:BOOL;
-	bImmediateStopped 			:BOOL;
+	bStopped 					:BOOL;
 	bInitialising 				:BOOL;
 	bReadyToStart 				:BOOL;
 	bAutoCycle 					:BOOL;
-	bStandby					:BOOL;
-	bStopping					:BOOL;	
-	bCycleStopped 				:BOOL;
-	bImmediateFault 			:BOOL;
-	bCycleStopFault 			:BOOL;
+	bStopping					:BOOL;
+	bFault 						:BOOL;
 	bManualMode					:BOOL;
 
 END_STRUCT

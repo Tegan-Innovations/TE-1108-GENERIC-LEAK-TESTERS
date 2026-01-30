@@ -6,9 +6,9 @@ STRUCT
 	
 	aEvents								: ARRAY [0..100] OF ST_EVENT;	
 	
-	bImmediateFault						: BOOL;
-	bCycleStopFault						: BOOL;
+	bFault								: BOOL;
 	bCycleStopRequest					: BOOL;
+	
 			
 END_STRUCT
 END_TYPE

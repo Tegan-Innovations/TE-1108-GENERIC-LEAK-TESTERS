@@ -4,8 +4,7 @@
     <Declaration><![CDATA[TYPE ST_EventsAssigmentGeneral :
 STRUCT
 	
-	astImmediateFaultEvents				: ARRAY [1..100] OF ST_EventsAssigment;
-	astCycleStopFaultEvents				: ARRAY [1..100] OF ST_EventsAssigment;
+	astFaultEvents						: ARRAY [1..100] OF ST_EventsAssigment;
 	astCycleStopRequestEvents			: ARRAY [1..100] OF ST_EventsAssigment;
 	astMessage							: ARRAY [1..100] OF ST_EventsAssigment;
 	

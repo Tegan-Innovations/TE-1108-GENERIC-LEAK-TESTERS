@@ -18,7 +18,34 @@
     <LibraryReferences>{7e0ded34-cd0a-44e1-a526-a59b9a6219c4}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\COMPONENTS\CAMERA\ST_Camera.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\GENERIC\ST_GeneralStationCMD.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\GENERIC\ST_StationStatus.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\HEIGHT TEST\ST_HeightTest.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\HEIGHT TEST\ST_HeightTest_CMD.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\LEAK TESTER\ST_LeakTester.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\LEAK TESTER\ST_LeakTester_CMD.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\MAIN CYLINDER\ST_ProcessCylinder.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\COMPONENTS\PROCESS DOOR\E_ProcessDoor_State.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\COMPONENTS\PROCESS DOOR\ST_ProcessDoor.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\COMPONENTS\PROCESS DOOR\ST_ProcessDoor_CMD.TcDUT">
@@ -30,13 +57,40 @@
     <Compile Include="DUTs\HMI\ST_Timers.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL3058.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL1918_A.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL1918_B.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL2809_B.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL2904.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL6910.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL6633.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\CARDS\ST_EL9410.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\IO\CARDS\ST_Terminal_Info.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\CARDS\ST_EL1809.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\IO\CARDS\ST_EL2809.TcDUT">
+    <Compile Include="DUTs\IO\CARDS\ST_EL2809_A.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\IO\LEAK_TESTERS\ST_General_LeakTester.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\IO\LEAK_TESTERS\st_i28General_I_O.TcDUT">
@@ -48,10 +102,10 @@
     <Compile Include="DUTs\IO\LEAK_TESTERS\st_i28LiveMeasurement.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\MASTER\E_MachineState.TcDUT">
+    <Compile Include="DUTs\IO\PROBES\ST_Probes_test.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DUTs\MASTER\E_ProcessCycle.TcDUT">
+    <Compile Include="DUTs\MASTER\E_MachineState.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\MASTER\log_CSV\ST_CSVProcess.TcDUT">
@@ -63,22 +117,22 @@
     <Compile Include="DUTs\MASTER\log_CSV\ST_CycleData.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\MASTER\PROCESS CYCLES\E_General_ProcessCycle.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\MASTER\ST_ButtonsLamps.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\MASTER\ST_HMI_IO.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\MASTER\ST_MACHINE.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\MASTER\ST_MachineStatus.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\MASTER\ST_MasterCTRL.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\MASTER\ST_GeneralStationCMD.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\MASTER\ST_StationStatus.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\MASTER\ST_Puls.TcDUT">
@@ -124,6 +178,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\COMPONENTS\MAIN CYLINDER\ST_ProcessCylinder_CMD.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\ST_TwinSAFE.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DUTs\USER_ALARMS_EVENTS\EVENTS\ST_ActiveEvents.TcDUT">
@@ -186,10 +243,10 @@
     <Compile Include="POUs\A_MASTER\A_4_PRG_MasterSystemTime.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\B_STATIONS\B_1_LEAK_TEST\B_1_1_PRG_Master_Station_1.TcPOU">
+    <Compile Include="POUs\B_STATIONS\B_1_LEAK_TEST\B_1_1_PRG_Master_Leak_Test.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\B_STATIONS\B_2_HEIGHT_TEST\B_2_1_PRG_Master_Station_2.TcPOU">
+    <Compile Include="POUs\B_STATIONS\B_2_HEIGHT_TEST\B_2_1_PRG_Master_Height_Test.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\B_STATIONS\B_3_STATION_3\B_3_1_PRG_Master_Station_3.TcPOU">
@@ -228,13 +285,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
+    <Folder Include="DUTs\COMPONENTS\GENERIC" />
     <Folder Include="DUTs\COMPONENTS\PROCESS DOOR" />
     <Folder Include="DUTs\IO\CARDS" />
     <Folder Include="DUTs\IO\LEAK_TESTERS" />
+    <Folder Include="DUTs\IO\CAMERA" />
+    <Folder Include="DUTs\IO\PROBES" />
     <Folder Include="DUTs\MASTER" />
     <Folder Include="DUTs\IO" />
     <Folder Include="DUTs\MASTER\log_CSV" />
     <Folder Include="DUTs\HMI" />
+    <Folder Include="DUTs\MASTER\PROCESS CYCLES" />
     <Folder Include="DUTs\PDFMaker" />
     <Folder Include="DUTs\COMPONENTS" />
     <Folder Include="DUTs\COMPONENTS\LEAK TESTER" />

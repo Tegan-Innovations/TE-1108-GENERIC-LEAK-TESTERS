@@ -6,6 +6,7 @@ STRUCT
 	
 	sEventText							: STRING(255);
 	sSolution							: STRING(255);
+	
 END_STRUCT
 END_TYPE
 ]]></Declaration>

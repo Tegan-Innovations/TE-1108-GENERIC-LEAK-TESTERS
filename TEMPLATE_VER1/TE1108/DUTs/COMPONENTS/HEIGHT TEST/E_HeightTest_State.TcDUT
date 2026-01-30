@@ -5,21 +5,17 @@
 {attribute 'strict'}
 TYPE E_HeightTest_State :
 (
-		//GENERIC
-	ABORTED				:=10,
-	RESET_ERROR			:=20,
-	HOMING				:=30,
-	READY				:=40,
-	//MANUAL_MODE			:=50, /manual mode not needed.
-	ERROR				:=60,
-	PERSISTENT_ERROR	:=70,
-	STOPPING			:=80,
-	//SPECIFIC FOR EVERY STATION
+	//GENERIC
 
-	MEASURING			:=130,
-	DONE				:=140,
-	RESULTS				:=160,
-	RESET				:=180
+	READY				,
+	//MANUAL_MODE			:=50, /manual mode not needed.
+	ERROR				,
+	//SPECIFIC FOR EVERY STATION
+	MEASURE				,
+	WAIT_MEASUREMENT	,
+	DONE				,
+	RESULTS				,
+	RESET				
 );
 END_TYPE
 ]]></Declaration>

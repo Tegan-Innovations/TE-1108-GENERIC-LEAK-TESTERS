@@ -10,7 +10,7 @@
                 var cssStyles = []; // Collected CSS styles which will be returned at the end
 
                     
-                if (RowData.sType == "Immediate Fault") {
+                if (RowData.sType == "Fault") {
                     cssStyles.push("Alarm");
                 }
                 if (RowData.sType == "Cycle Stop Fault") {

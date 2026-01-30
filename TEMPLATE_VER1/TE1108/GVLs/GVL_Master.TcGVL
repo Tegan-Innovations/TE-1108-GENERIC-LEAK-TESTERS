@@ -15,6 +15,9 @@
 	stPuls							: ST_Puls;		
 
 	stCSVProcess					: ST_CSVProcess;
+	stCycleData						: ST_CycleData;
+	
+	stMACHINE						: ST_MACHINE;//THIS STRUCTURE WILL DEFINDE THE PROCESS IN AUTO CYCLE DEPENDING OF WHAT MACHINE YOU ARE WORKING WITH
 /////////////////////////////////////////////////////////////////////////////////////Event Log/////////////////////////////////////////////////////////////////////////////////////
 	
 	stStationEvents				: ARRAY[0..3] OF  ST_StationEvents;//0: GENERAL
@@ -37,6 +40,8 @@
 	
 	bResetTest								: BOOL;
 	tonResetTest							: TON;
+
+	
 	
 END_VAR]]></Declaration>
   </GVL>

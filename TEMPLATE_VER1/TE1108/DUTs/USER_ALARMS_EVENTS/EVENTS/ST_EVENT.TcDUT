@@ -4,8 +4,7 @@
     <Declaration><![CDATA[TYPE ST_EVENT :
 STRUCT
 	
-	bImmediateFault						: BOOL;
-	bCycleStopFault						: BOOL;
+	bFault								: BOOL;
 	bCycleStopRequest					: BOOL;
 	bMessage							: BOOL;
 	

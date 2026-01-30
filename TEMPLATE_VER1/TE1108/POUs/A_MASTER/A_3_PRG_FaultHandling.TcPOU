@@ -16,11 +16,8 @@ END_VAR
 /////////////////////////////////////////////////////////////////////////////////////MASTER FAULT MONITORS////////////////////////////////////////////////////////////////////////////////////
 
 
-stMasterCtrl.bNoImmediateFault 										:= 	NOT stStationEvents[0].bImmediateFault AND NOT stStationEvents[1].bImmediateFault AND
-                                            							NOT stStationEvents[2].bImmediateFault AND NOT stStationEvents[3].bImmediateFault;
-
-stMasterCtrl.bNoCycleStopFault 										:= NOT stStationEvents[0].bCycleStopFault AND NOT stStationEvents[1].bCycleStopFault AND
-                          												NOT stStationEvents[2].bCycleStopFault AND NOT stStationEvents[3].bCycleStopFault;
+stMasterCtrl.bNoFault 												:= 	NOT stStationEvents[0].bFault AND NOT stStationEvents[1].bFault AND
+                                            							NOT stStationEvents[2].bFault AND NOT stStationEvents[3].bFault;
 
 stMasterCtrl.bCycleStopRequest										:= stStationEvents[0].bCycleStopRequest OR stStationEvents[0].bCycleStopRequest OR
 																		stStationEvents[0].bCycleStopRequest OR stStationEvents[0].bCycleStopRequest;
@@ -32,23 +29,14 @@ stMasterCtrl.bCycleStopRequest										:= stStationEvents[0].bCycleStopRequest 
       <Implementation>
         <ST><![CDATA[//IMMEDIATE FAULTS
 
-stStationEvents[0].aEvents[0].bImmediateFault				:= TRUE;
+stStationEvents[0].aEvents[0].bFault						:= TRUE;
 stStationEvents[0].aEvents[0].bEventFlag					:= bEventsFlag[0];
 stStationEvents[0].aEvents[0].bEventText					:= 'ST1 EVENT 0';
 stStationEvents[0].aEvents[0].sSolution						:= 'Solution 5';
 
-
-//CYCLE STOP FAULT
-
-stStationEvents[0].aEvents[1].bCycleStopFault				:= TRUE;
-stStationEvents[0].aEvents[1].bEventFlag					:= bEventsFlag[1];
-stStationEvents[0].aEvents[1].bEventText					:= 'ST1 EVENT 1';
-stStationEvents[0].aEvents[1].sSolution						:= 'Solution 6';
-
-
 //CYCLE STOP REQUEST
 
-stStationEvents[0].aEvents[2].bCycleStopRequest			:= TRUE;
+stStationEvents[0].aEvents[2].bCycleStopRequest				:= TRUE;
 stStationEvents[0].aEvents[2].bEventFlag					:= bEventsFlag[2];
 stStationEvents[0].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       </Implementation>
@@ -57,15 +45,16 @@ stStationEvents[0].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="317" Count="0" />
       <LineId Id="278" Count="0" />
       <LineId Id="306" Count="0" />
-      <LineId Id="279" Count="2" />
-      <LineId Id="284" Count="3" />
+      <LineId Id="279" Count="1" />
+      <LineId Id="286" Count="1" />
       <LineId Id="296" Count="0" />
       <LineId Id="307" Count="0" />
       <LineId Id="297" Count="1" />
       <LineId Id="21" Count="0" />
     </LineIds>
     <LineIds Name="A_3_PRG_FaultHandling.a_ACT_Set_Events">
-      <LineId Id="50" Count="19" />
+      <LineId Id="50" Count="5" />
+      <LineId Id="65" Count="4" />
       <LineId Id="1" Count="0" />
     </LineIds>
   </POU>

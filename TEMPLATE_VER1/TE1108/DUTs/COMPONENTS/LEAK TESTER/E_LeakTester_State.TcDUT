@@ -6,18 +6,18 @@
 TYPE E_LeakTester_State :
 (
 	//GENERIC
-	ABORTED				:=10,
-	RESET_ERROR			:=20,
-	READY				:=40,
-	//MANUAL_MODE		:=50, /manual mode not needed.
-	ERROR				:=60,
-	PERSISTENT_ERROR	:=70,
-	STOPPING			:=80,
+	ABORTED				,
+	READY				,
+	HOMING				,
+	//MANUAL_MODE		, /manual mode not needed.
+	ERROR				,
+	STOPPING			,
 	//SPECIFIC FOR EVERY STATION
-	TEST_IN_PROCESS		:=90,
-	DONE				:=100,
-	RESULTS				:=120,
-	RESET				:=130
+	RUN_LEAK_TESTERS	,
+	WAIT_LEAK_TESTERS	,
+	DONE				,
+	RESULTS				,
+	RESET			
 );
 END_TYPE
 ]]></Declaration>

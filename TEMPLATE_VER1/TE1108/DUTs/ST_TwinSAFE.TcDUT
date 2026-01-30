@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_TwinSAFE" Id="{53872549-54d4-4379-ac97-82f6a4774545}">
+    <Declaration><![CDATA[TYPE ST_TwinSAFE :
+STRUCT
+	
+	bRightTouchButton							: BOOL;
+	bLeftTouchButton							: BOOL;
+	bTouchButtonsDelayedSignal					: BOOL;
+	bEStopCH1									: BOOL;
+	bEStopCH2									: BOOL;
+	bInterlockFeedback							: BOOL;
+	
+	bSafetyOK									: BOOL;
+	bResetButton								: BOOL;					
+	
+	
+	
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

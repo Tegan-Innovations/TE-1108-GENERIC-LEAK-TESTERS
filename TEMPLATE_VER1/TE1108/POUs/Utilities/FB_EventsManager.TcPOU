@@ -68,11 +68,11 @@ FOR k[0] := 0 TO 3 DO
 	
 	FOR k[1] := 0 TO 100 DO
 		
-		IF stStationEvents[k[0]].aEvents[k[1]].bImmediateFault AND stStationEvents[k[0]].aEvents[k[1]].bEventFlag AND NOT stStationEvents[k[0]].aEvents[k[1]].bActive THEN
+		IF stStationEvents[k[0]].aEvents[k[1]].bFault AND stStationEvents[k[0]].aEvents[k[1]].bEventFlag AND NOT stStationEvents[k[0]].aEvents[k[1]].bActive THEN
 			
 			//ACTIVE EVENTS
 			astActiveEvents[l].sEventTex				:= 	stStationEvents[k[0]].aEvents[k[1]].bEventTextHMI;
-			astActiveEvents[l].sType					:= 'Immediate Fault';						
+			astActiveEvents[l].sType					:= 'Fault';						
 			astActiveEvents[l].abType					:= 1; 
 			astActiveEvents[l].sSolution				:= stStationEvents[k[0]].aEvents[k[1]].sSolution;
 			stStationEvents[k[0]].aEvents[k[1]].bActive := TRUE;
@@ -89,44 +89,13 @@ FOR k[0] := 0 TO 3 DO
 			END_FOR
 
 			astEventsHistory[0].sEventTex				:= stStationEvents[k[0]].aEvents[k[1]].bEventTextHMI;
-			astEventsHistory[0].sType					:= 'Immediate Fault';
+			astEventsHistory[0].sType					:= 'Fault';
 			astEventsHistory[0].abType					:= 1;
 			astEventsHistory[0].sDate					:= 	sSystemDate;										
 			astEventsHistory[0].sTime					:= 	sSystemTime;
 			l											:= l + 1;			
 			nDataHistoryIndex							:= 1 + nDataHistoryIndex;		
 			
-		END_IF
-		
-		IF stStationEvents[k[0]].aEvents[k[1]].bCycleStopFault AND stStationEvents[k[0]].aEvents[k[1]].bEventFlag AND NOT stStationEvents[k[0]].aEvents[k[1]].bActive THEN
-			
-			//ACTIVE EVENTS
-			astActiveEvents[l].sEventTex				:= 	stStationEvents[k[0]].aEvents[k[1]].bEventTextHMI;
-			astActiveEvents[l].sType					:= 'Cycle Stop Fault';						
-			astActiveEvents[l].abType					:= 1; 
-			astActiveEvents[l].sSolution				:= stStationEvents[k[0]].aEvents[k[1]].sSolution;
-			stStationEvents[k[0]].aEvents[k[1]].bActive := TRUE;
-			
-			//EVENTS HISTORY
-			FOR n := 199 TO 0 BY -1 DO
-							
-				astEventsHistory[n+1].sEventTex				:= astEventsHistory[n].sEventTex;
-				astEventsHistory[n+1].sType					:= astEventsHistory[n].sType;
-				astEventsHistory[n+1].abType				:= astEventsHistory[n].abType;
-				astEventsHistory[n+1].sDate					:= astEventsHistory[n].sDate;										
-				astEventsHistory[n+1].sTime					:= astEventsHistory[n].sTime;
-				
-			END_FOR
-			
-			astEventsHistory[0].sEventTex				:= stStationEvents[k[0]].aEvents[k[1]].bEventTextHMI;
-			astEventsHistory[0].sType					:= 'Cycle Stop Fault';
-			astEventsHistory[0].abType					:= 1;
-			astEventsHistory[0].sDate					:= 	sSystemDate;										
-			astEventsHistory[0].sTime					:= 	sSystemTime;
-															
-			l											:= l + 1;		
-			nDataHistoryIndex							:= 1 + nDataHistoryIndex;	
-					
 		END_IF
 		
 		IF stStationEvents[k[0]].aEvents[k[1]].bCycleStopRequest AND stStationEvents[k[0]].aEvents[k[1]].bEventFlag AND NOT stStationEvents[k[0]].aEvents[k[1]].bActive THEN
@@ -256,11 +225,11 @@ FOR j[0] := 0 TO 3 DO
 	
 	FOR j[1] := 0 TO 100 DO 
 		
-		IF stStationEvents[j[0]].aEvents[j[1]].bImmediateFault THEN
+		IF stStationEvents[j[0]].aEvents[j[1]].bFault THEN
 			
 			m[0]											:= m[0]+1;
 			
-			stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI	:= 		CONCAT( STR1 := 'Immediate Fault N ', STR2 := 
+			stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI	:= 		CONCAT( STR1 := 'Fault N ', STR2 := 
 																CONCAT( STR1 := DINT_TO_STRING(m[0]), str2 := 
 																CONCAT( STR1 :=' - Station ' , STR2 := 
 																CONCAT( STR1 := DINT_TO_STRING(j[0]), STR2 := 
@@ -268,23 +237,8 @@ FOR j[0] := 0 TO 3 DO
 			stStationEvents[j[0]].aEvents[j[1]].bAssignedID	:= 	m[0];				
 			
 			//EVENTS ASSIGMENT
-			stEventsAssigment.astImmediateFaultEvents[m[0]].sEventText	:= stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI;
-			stEventsAssigment.astImmediateFaultEvents[m[0]].sSolution	:= stStationEvents[j[0]].aEvents[j[1]].sSolution;
-			
-		ELSIF stStationEvents[j[0]].aEvents[j[1]].bCycleStopFault THEN
-			
-			m[1]											:= m[1]+1;
-			
-			stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI	:= 		CONCAT( STR1 := 'Cycle Stop Fault N ', STR2 := 
-																CONCAT( STR1 := DINT_TO_STRING(m[1]), str2 := 
-																CONCAT( STR1 :=' - Station ' , STR2 := 
-																CONCAT( STR1 := DINT_TO_STRING(j[0]), STR2 := 
-																CONCAT( STR1 :=' - ', str2 := stStationEvents[j[0]].aEvents[j[1]].bEventText )))));
-			stStationEvents[j[0]].aEvents[j[1]].bAssignedID	:= 	m[1];													
-			
-			//EVENTS ASSIGMENT
-			stEventsAssigment.astCycleStopFaultEvents[m[1]].sEventText	:= stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI;
-			stEventsAssigment.astCycleStopFaultEvents[m[1]].sSolution	:= stStationEvents[j[0]].aEvents[j[1]].sSolution;
+			stEventsAssigment.astFaultEvents[m[0]].sEventText	:= stStationEvents[j[0]].aEvents[j[1]].bEventTextHMI;
+			stEventsAssigment.astFaultEvents[m[0]].sSolution	:= stStationEvents[j[0]].aEvents[j[1]].sSolution;
 			
 		ELSIF stStationEvents[j[0]].aEvents[j[1]].bCycleStopRequest THEN
 		
@@ -340,22 +294,14 @@ m[3]														:= 0;]]></ST>
 		FOR i[1] :=0 TO 100 DO
 			
 			//IMMEDIATE FAULT
-			IF stStationEvents[i[0]].aEvents[i[1]].bImmediateFault AND stStationEvents[i[0]].aEvents[i[1]].bEventFlag THEN
+			IF stStationEvents[i[0]].aEvents[i[1]].bFault AND stStationEvents[i[0]].aEvents[i[1]].bEventFlag THEN
 	
-				stStationEvents[i[0]].bImmediateFault						:= TRUE;
+				stStationEvents[i[0]].bFault								:= TRUE;
 		
 			ELSIF bResetFaults THEN
-				stStationEvents[i[0]].bImmediateFault						:= FALSE;
+				stStationEvents[i[0]].bFault						:= FALSE;
 			END_IF
-			//STOP FAULT
-			IF stStationEvents[i[0]].aEvents[i[1]].bCycleStopFault AND stStationEvents[i[0]].aEvents[i[1]].bEventFlag THEN
-	
-				stStationEvents[i[0]].bCycleStopFault						:= TRUE;
-		
-			ELSIF bResetFaults THEN
-				stStationEvents[i[0]].bCycleStopFault						:= FALSE;
-			END_IF
-		
+
 			//STOP REQUEST
 			IF stStationEvents[i[0]].aEvents[i[1]].bCycleStopRequest AND stStationEvents[i[0]].aEvents[i[1]].bEventFlag THEN
 	
@@ -410,21 +356,6 @@ END_IF]]></ST>
       <LineId Id="254" Count="0" />
       <LineId Id="265" Count="1" />
       <LineId Id="9" Count="0" />
-      <LineId Id="51" Count="0" />
-      <LineId Id="71" Count="1" />
-      <LineId Id="179" Count="0" />
-      <LineId Id="73" Count="2" />
-      <LineId Id="142" Count="0" />
-      <LineId Id="123" Count="0" />
-      <LineId Id="180" Count="0" />
-      <LineId Id="182" Count="10" />
-      <LineId Id="194" Count="2" />
-      <LineId Id="290" Count="0" />
-      <LineId Id="203" Count="0" />
-      <LineId Id="255" Count="0" />
-      <LineId Id="78" Count="0" />
-      <LineId Id="268" Count="1" />
-      <LineId Id="62" Count="0" />
       <LineId Id="79" Count="0" />
       <LineId Id="81" Count="1" />
       <LineId Id="228" Count="0" />
@@ -511,13 +442,6 @@ END_IF]]></ST>
       <LineId Id="16" Count="0" />
       <LineId Id="90" Count="0" />
       <LineId Id="94" Count="1" />
-      <LineId Id="92" Count="0" />
-      <LineId Id="43" Count="1" />
-      <LineId Id="82" Count="1" />
-      <LineId Id="46" Count="5" />
-      <LineId Id="45" Count="0" />
-      <LineId Id="112" Count="1" />
-      <LineId Id="98" Count="0" />
       <LineId Id="55" Count="0" />
       <LineId Id="57" Count="0" />
       <LineId Id="85" Count="2" />
@@ -549,9 +473,6 @@ END_IF]]></ST>
       <LineId Id="4" Count="1" />
       <LineId Id="53" Count="1" />
       <LineId Id="6" Count="6" />
-      <LineId Id="44" Count="0" />
-      <LineId Id="46" Count="5" />
-      <LineId Id="45" Count="0" />
       <LineId Id="55" Count="0" />
       <LineId Id="57" Count="0" />
       <LineId Id="59" Count="5" />

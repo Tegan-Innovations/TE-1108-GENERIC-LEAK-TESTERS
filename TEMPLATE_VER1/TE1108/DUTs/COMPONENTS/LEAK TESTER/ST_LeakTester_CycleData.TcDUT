@@ -4,7 +4,11 @@
     <Declaration><![CDATA[TYPE ST_LeakTester_CycleData :
 STRUCT
 
-	aLeakTesterLastResult			: st_i28LasResult;
+	aLeakTesterLastResult1			: st_i28LasResult;
+	aLeakTesterLastResult2			: st_i28LasResult;
+	
+	bPass							: ARRAY [0..2] OF BOOL;
+	bFail							: ARRAY [0..2] OF BOOL;	
 
 END_STRUCT
 END_TYPE

@@ -41,6 +41,14 @@
 	nMainRegion							: DINT;
 	bManualModeOffFlag					: BOOL;
 	
+/////////////////////////////////////////////////////////////////////////////////////SETTINGS/////////////////////////////////////////////////////////////////////////////////////	
+
+	anDistanceCalibrationBlock			: ARRAY [0..2] OF DINT;	
+	anExpectedDistances					: ARRAY [0..2] OF DINT;	
+	anHeightSetByCalibration			: ARRAY [0..3] OF DINT;	
+	anTolerances						: ARRAY [0..2] OF DINT;	
+	
+	
 END_VAR
 
 VAR_GLOBAL PERSISTENT
