@@ -37,18 +37,18 @@ bTtigger								:= stCamera.State	= E_Camera_State.TAKING_PICTURE;
 IF bError THEN
 	
 	stCamera.State						:= E_Camera_State.ERROR;
-
-ELSIF NOT bReaDy THEN
 	
-	stCamera.State						:= E_Camera_State.WAITING_READY;
+ELSIF stCamera.CMD.bAbort OR stCamera.CMD.bEndCycle THEN
+	
+	stCamera.State						:= E_Camera_State.ABORTED;
 
 END_IF
 
 CASE stCamera.State OF
 	
-	E_Camera_State.WAITING_READY:
+	E_Camera_State.ABORTED:
 	
-								IF bReady THEN
+								IF bReady AND stCamera.CMD.bEnable THEN
 									
 									stCamera.State						:= E_Camera_State.READY;
 								
@@ -59,6 +59,7 @@ CASE stCamera.State OF
 								IF stCamera.CMD.bExecute THEN
 									
 									stCamera.State						:= E_Camera_State.TAKING_PICTURE;
+									
 									
 								END_IF
 	
@@ -82,7 +83,7 @@ CASE stCamera.State OF
 								IF stCamera.CMD.bAcknowledge THEN
 									
 									stCamera.CMD.bAcknowledge			:= FALSE;
-									stCamera.State						:= E_Camera_State.WAITING_READY;
+									stCamera.State						:= E_Camera_State.READY;
 								
 								END_IF
 	
@@ -91,7 +92,7 @@ CASE stCamera.State OF
 	
 								IF NOT bError THEN
 									
-									stCamera.State					:= E_Camera_State.WAITING_READY;
+									stCamera.State					:= E_Camera_State.ABORTED;
 								
 								END_IF
 					
@@ -207,10 +208,8 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="119" Count="0" />
       <LineId Id="189" Count="0" />
       <LineId Id="192" Count="0" />
+      <LineId Id="217" Count="3" />
       <LineId Id="194" Count="0" />
-      <LineId Id="193" Count="0" />
-      <LineId Id="195" Count="1" />
-      <LineId Id="191" Count="0" />
       <LineId Id="190" Count="0" />
       <LineId Id="3" Count="1" />
       <LineId Id="166" Count="4" />
@@ -220,7 +219,9 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="158" Count="0" />
       <LineId Id="7" Count="0" />
       <LineId Id="157" Count="0" />
-      <LineId Id="8" Count="1" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="221" Count="0" />
+      <LineId Id="9" Count="0" />
       <LineId Id="11" Count="2" />
       <LineId Id="159" Count="0" />
       <LineId Id="14" Count="0" />

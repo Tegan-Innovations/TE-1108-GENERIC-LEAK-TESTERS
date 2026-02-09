@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<safetyApplicationLanguageDiagram Crc="664681878" dslVersion="1.4.0.0" Id="28579eb1-532a-49ee-9127-34a409c9f352" absoluteBounds="0, 0, 14.625, 8.5" name="TwinSAFE">
+  <safetyApplicationMoniker name="/" />
+  <nestedChildShapes>
+    <networkSwimLane Id="cc7d2e5f-60ae-401a-a1f9-f9b7f656c042" absoluteBounds="0, 0, 14.625, 4.875">
+      <networkMoniker name="//Network1" />
+      <nestedChildShapes>
+        <fBTonShape Id="51303b93-9512-4d30-b8dd-e2492268e466" absoluteBounds="6, 0.75, 3.35, 2.25">
+          <fBTonMoniker name="//Network1/FBTon1" />
+          <relativeChildShapes>
+            <inPortShape Id="f516c97e-3821-448a-8a9e-1da873823ca0" absoluteBounds="5.92, 1.495, 0.15, 0.15">
+              <inPortMoniker name="//Network1/FBTon1/TonIn" />
+              <relativeChildShapes />
+            </inPortShape>
+            <outPortShape Id="f09078b7-daa7-4226-8660-c2e7a0631eb4" absoluteBounds="9.25, 2.035, 0.15, 0.15">
+              <outPortMoniker name="//Network1/FBTon1/TonOut" />
+              <relativeChildShapes />
+            </outPortShape>
+            <paramPortShape Id="ad6bc3a6-466c-432e-b507-dfb12719806f" absoluteBounds="7.57, 2.4250000000000003, 0.7, 0.2">
+              <parameterPortMoniker name="//Network1/FBTon1/Delay Time (s)" />
+              <relativeChildShapes />
+            </paramPortShape>
+          </relativeChildShapes>
+        </fBTonShape>
+      </nestedChildShapes>
+    </networkSwimLane>
+  </nestedChildShapes>
+</safetyApplicationLanguageDiagram>

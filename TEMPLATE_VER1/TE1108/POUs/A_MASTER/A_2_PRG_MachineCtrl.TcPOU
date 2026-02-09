@@ -262,8 +262,8 @@ CASE eCycleState OF
 	
 E_General_ProcessCycle.RESET_ALL_CMD:
 
-				stProcessDoor.CMD.ProcessDoorCMD.Extend		:= FALSE;
-				stProcessDoor.CMD.ProcessDoorCMD.Retract	:= FALSE;
+				stProcessDoor.CMD.ProcessDoorCMD.OpenDoor	:= FALSE;
+				stProcessDoor.CMD.ProcessDoorCMD.CloseDoor	:= FALSE;
 				stProcessDoor.CMD.bExecute					:= FALSE;
 				
 				stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder1		:= FALSE;
@@ -298,7 +298,7 @@ E_General_ProcessCycle.IDLE:
 							
 E_General_ProcessCycle.CLOSE_PROCESS_DOOR:
 
-				stProcessDoor.CMD.ProcessDoorCMD.Extend		:= TRUE;
+				stProcessDoor.CMD.ProcessDoorCMD.CloseDoor	:= TRUE;
 				stProcessDoor.CMD.bExecute					:= TRUE;
 				
 				IF tonExecute.Q THEN
@@ -308,7 +308,7 @@ E_General_ProcessCycle.CLOSE_PROCESS_DOOR:
 E_General_ProcessCycle.WAIT_CLOSE_PROCESS_DOOR:
 				
 				IF stProcessDoor.Status.bDone THEN
-				stProcessDoor.CMD.ProcessDoorCMD.Extend		:= FALSE;
+				stProcessDoor.CMD.ProcessDoorCMD.CloseDoor	:= FALSE;
 				stProcessDoor.CMD.bExecute					:= FALSE;
 				stProcessDoor.CMD.bAcknowledge				:= TRUE;
 				eCycleState									:= E_General_ProcessCycle.PROCESS_FLAGS_DEFINITIONS;
@@ -596,7 +596,7 @@ E_General_ProcessCycle.WAIT_RETRACT_PROCESS_CYLINDER:
 		
 E_General_ProcessCycle.OPEN_PROCESS_DOOR:
 
-				stProcessDoor.CMD.ProcessDoorCMD.Retract							:= TRUE;
+				stProcessDoor.CMD.ProcessDoorCMD.OpenDoor							:= TRUE;
 				stProcessDoor.CMD.bExecute				:= TRUE;
 				
 				IF tonExecute.Q THEN
@@ -607,7 +607,7 @@ E_General_ProcessCycle.WAIT_OPEN_PROCESS_DOOR:
 
 				IF 	stProcessDoor.Status.bDone THEN
 					
-					stProcessDoor.CMD.ProcessDoorCMD.Retract						:= FALSE;
+					stProcessDoor.CMD.ProcessDoorCMD.OpenDoor						:= FALSE;
 					stProcessDoor.CMD.bExecute			:= FALSE;
 					stProcessDoor.CMD.bAcknowledge		:= TRUE;
 					

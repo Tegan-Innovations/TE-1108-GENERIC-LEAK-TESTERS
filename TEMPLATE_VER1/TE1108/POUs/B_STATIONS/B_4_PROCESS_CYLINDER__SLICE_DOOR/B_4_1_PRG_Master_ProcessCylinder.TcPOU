@@ -51,16 +51,16 @@ CASE stProcessCylinder.State OF
 								IF stProcessCylinder.CMD.bExecute AND 	(stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder1 OR 
 																		stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder2)	THEN
 
-									stProcessCylinder.State				:= E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER;
+									stProcessCylinder.State				:= E_ProcessCylinder_State.EXTEND;
 									
 								ELSIF stProcessCylinder.CMD.bExecute AND 	(stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder1 OR 
 																		stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder2)	THEN
 									
-									stProcessCylinder.State				:= E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER;									
+									stProcessCylinder.State				:= E_ProcessCylinder_State.RETRACT;;									
 																		
 								END_IF
 	
-	E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER:
+	E_ProcessCylinder_State.EXTEND:
 	
 								bExtend[0]								:= stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder1;
 								bExtend[1]								:= stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder2;
@@ -91,7 +91,7 @@ CASE stProcessCylinder.State OF
 	
 								END_IF
 								
-	E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER:
+	E_ProcessCylinder_State.RETRACT:
 	
 								bRetract[0]								:= stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder1;
 								bRetract[1]								:= stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder2;
@@ -162,10 +162,6 @@ CASE stProcessCylinder.State OF
 								
 									END_IF
 								
-								ELSIF stProcessCylinder.CMD.bAbort THEN
-									
-									stProcessCylinder.State					:= E_ProcessCylinder_State.RESET;
-								
 								END_IF
 								
 														
@@ -176,8 +172,8 @@ ELSE stProcessCylinder.State	:= E_ProcessCylinder_State.ABORTED;
 END_CASE
 /////////////////////////////////////////////////////////////////////////////////////STATUS/////////////////////////////////////////////////////////////////////////////////////
 
-stProcessCylinder.Status.bBusy		:= 	stProcessCylinder.State	= E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER OR
-										stProcessCylinder.State	= E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER;
+stProcessCylinder.Status.bBusy		:= 	stProcessCylinder.State	= E_ProcessCylinder_State.EXTEND OR
+										stProcessCylinder.State	= E_ProcessCylinder_State.RETRACT;
 								
 stProcessCylinder.Status.bDone		:=	stProcessCylinder.State	= E_ProcessCylinder_State.DONE;
 
@@ -303,7 +299,7 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="359" Count="0" />
       <LineId Id="350" Count="8" />
       <LineId Id="348" Count="0" />
-      <LineId Id="361" Count="4" />
+      <LineId Id="365" Count="0" />
       <LineId Id="349" Count="0" />
       <LineId Id="341" Count="0" />
       <LineId Id="334" Count="0" />

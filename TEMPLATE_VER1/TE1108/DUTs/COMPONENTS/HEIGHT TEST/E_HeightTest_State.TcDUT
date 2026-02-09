@@ -6,7 +6,7 @@
 TYPE E_HeightTest_State :
 (
 	//GENERIC
-
+	ABORTED				,
 	READY				,
 	//MANUAL_MODE			:=50, /manual mode not needed.
 	ERROR				,

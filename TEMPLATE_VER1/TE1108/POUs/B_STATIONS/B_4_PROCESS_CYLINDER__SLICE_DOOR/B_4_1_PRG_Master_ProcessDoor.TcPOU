@@ -7,10 +7,11 @@ VAR
 
 	bEventsFlag							: ARRAY [0..100] OF BOOL;
 /////////////////////////////////////////////////////////////////////////////////////I O/////////////////////////////////////////////////////////////////////////////////////	
-	bExtended							: ARRAY [0..1] OF BOOL;
-	bRetracted							: ARRAY [0..1] OF BOOL;
-	bExtend								: ARRAY [0..1] OF BOOL;
-	bRetract							: ARRAY [0..1] OF BOOL;
+	
+	bOpenDoor							: BOOL;
+	bCloseDoor							: BOOL;
+	bDoorClosed							: BOOL;
+	bDoorOpened							: BOOL;
 
 	
 END_VAR
@@ -26,178 +27,126 @@ b_ACT_IO_B();
         <ST><![CDATA[/////////////////////////////////////////////////////////////////////////////////////UTILITIES/////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////CONDITIONS/////////////////////////////////////////////////////////////////////////////////////
-IF stProcessCylinder.CMD.bAbort THEN
+IF stProcessDoor.CMD.bAbort THEN
 	
-	stProcessCylinder.State				:= E_ProcessCylinder_State.RESET;
+	stProcessDoor.State				:= E_ProcessDoor_State.RESET;
 	
-ELSIF stProcessCylinder.CMD.bEndCycle THEN
+ELSIF stProcessDoor.CMD.bEndCycle THEN
 	
-	stProcessCylinder.State				:= E_ProcessCylinder_State.STOPPING;
+	stProcessDoor.State				:= E_ProcessDoor_State.STOPPING;
 
 END_IF
 
-CASE stProcessCylinder.State OF
+CASE stProcessDoor.State OF
 	
-	E_ProcessCylinder_State.ABORTED:
+	E_ProcessDoor_State.ABORTED:
 	
-								IF stProcessCylinder.CMD.bEnable THEN
+								IF stProcessDoor.CMD.bEnable THEN
 									
-									stProcessCylinder.State				:= E_ProcessCylinder_State.READY;
+									stProcessDoor.State				:= E_ProcessDoor_State.READY;
 								
 								END_IF
 	
-	E_ProcessCylinder_State.READY:
+	E_ProcessDoor_State.READY:
 	
-								IF stProcessCylinder.CMD.bExecute AND 	(stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder1 OR 
-																		stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder2)	THEN
+								IF stProcessDoor.CMD.bExecute AND 	stProcessDoor.CMD.ProcessDoorCMD.OpenDoor	THEN
 
-									stProcessCylinder.State				:= E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER;
+									stProcessDoor.State				:= E_ProcessDoor_State.OPEN;
 									
-								ELSIF stProcessCylinder.CMD.bExecute AND 	(stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder1 OR 
-																		stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder2)	THEN
+								ELSIF stProcessDoor.CMD.bExecute AND 	stProcessDoor.CMD.ProcessDoorCMD.CloseDoor	THEN
 									
-									stProcessCylinder.State				:= E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER;									
+									stProcessDoor.State				:= E_ProcessDoor_State.CLOSE;									
 																		
 								END_IF
 	
-	E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER:
+	E_ProcessDoor_State.OPEN:
 	
-								bExtend[0]								:= stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder1;
-								bExtend[1]								:= stProcessCylinder.CMD.ProcessCylinderCMD.ExtendCylinder2;
+								bOpenDoor							:= TRUE;
 								
-								IF bExtend[0] AND bExtend[1] THEN
+								IF bDoorOpened	THEN
 									
-									IF bExtended[0] AND bExtended[1] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF	
+									stProcessDoor.State				:= E_ProcessDoor_State.DONE;
 								
-								ELSIF bExtend[0] AND NOT bExtend[1] THEN	
-
-									IF 	bExtended[0] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF
-
-								ELSIF NOT bExtend[0] AND bExtend[1] THEN	
-
-									IF 	bExtended[1] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF						
-	
 								END_IF
 								
-	E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER:
+	E_ProcessDoor_State.CLOSE:
 	
-								bRetract[0]								:= stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder1;
-								bRetract[1]								:= stProcessCylinder.CMD.ProcessCylinderCMD.RetractCylinder2;
+								bCloseDoor							:= TRUE;
 								
-								IF bRetract[0] AND bRetract[1] THEN
+								IF bDoorClosed THEN
 									
-									IF bRetracted[0] AND bRetracted[1] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF	
+									stProcessDoor.State				:= E_ProcessDoor_State.DONE;
 								
-								ELSIF bRetract[0] AND NOT bRetract[1] THEN	
-
-									IF 	bRetracted[0] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF
-
-								ELSIF NOT bRetract[0] AND bRetract[1] THEN	
-
-									IF 	bRetracted[1] THEN
-
-										stProcessCylinder.State				:= E_ProcessCylinder_State.DONE;
-									
-									END_IF						
-	
 								END_IF
 								
-	E_ProcessCylinder_State.DONE:
+	E_ProcessDoor_State.DONE:
 	
-								IF stProcessCylinder.CMD.bAcknowledge THEN
+								bOpenDoor							:= FALSE;
+								bCloseDoor							:= FALSE;
+	
+								IF stProcessDoor.CMD.bAcknowledge THEN
 									
-									stProcessCylinder.CMD.bAcknowledge		:= FALSE;
-									stProcessCylinder.State					:= E_ProcessCylinder_State.RESET;
+									stProcessDoor.CMD.bAcknowledge	:= FALSE;
+									stProcessDoor.State				:= E_ProcessDoor_State.RESET;
 								
 								END_IF
 	
 	
-	E_ProcessCylinder_State.RESET:	
+	E_ProcessDoor_State.RESET:	
 	
-								bExtend[0]									:= FALSE;
-								bExtend[1]									:= FALSE;
-								bRetract[0]									:= FALSE;
-								bRetract[1]									:= FALSE;
+								bOpenDoor							:= FALSE;
+								bCloseDoor							:= FALSE;
 								
-								IF NOT stProcessCylinder.CMD.bAbort AND NOT stProcessCylinder.CMD.bEndCycle THEN
+								IF NOT stProcessDoor.CMD.bAbort AND NOT stProcessDoor.CMD.bEndCycle THEN
 									
-									stProcessCylinder.State					:= E_ProcessCylinder_State.READY;
+									stProcessDoor.State				:= E_ProcessDoor_State.OPEN;
 									
-								ELSE stProcessCylinder.State					:= E_ProcessCylinder_State.ABORTED;
+								ELSE stProcessDoor.State			:= E_ProcessDoor_State.ABORTED;
 								END_IF
 	
 					
-	E_ProcessCylinder_State.STOPPING:
-								
-								IF stProcessCylinder.CMD.bEndCycle THEN
+	E_ProcessDoor_State.STOPPING:					
 									
-									bRetract[0]									:= TRUE;
-									bRetract[1]									:= TRUE;
-								
-									IF bRetracted[0] AND bRetracted[0] (*remove if you are working with 1 cylinder*) THEN
+								bOpenDoor							:= TRUE;
 									
-										bRetract[0]								:= FALSE;
-										bRetract[1]								:= FALSE;
-										stProcessCylinder.State					:= E_ProcessCylinder_State.RESET;
-								
-									END_IF
-								
-								ELSIF stProcessCylinder.CMD.bAbort THEN
+								IF bDoorOpened THEN
 									
-									stProcessCylinder.State					:= E_ProcessCylinder_State.RESET;
+									bOpenDoor						:= FALSE;
+									stProcessDoor.State				:= E_ProcessDoor_State.RESET;
 								
 								END_IF
 								
+							
 														
 									
 
-ELSE stProcessCylinder.State	:= E_ProcessCylinder_State.ABORTED;
+ELSE stProcessDoor.State		:= E_ProcessDoor_State.ABORTED;
 	
 END_CASE
 /////////////////////////////////////////////////////////////////////////////////////STATUS/////////////////////////////////////////////////////////////////////////////////////
 
-stProcessCylinder.Status.bBusy		:= 	stProcessCylinder.State	= E_ProcessCylinder_State.EXTEND_PROCESS_CYLINDER OR
-										stProcessCylinder.State	= E_ProcessCylinder_State.RETRACT_PROCESS_CYLINDER;
+stProcessDoor.Status.bBusy			:= 	stProcessDoor.State	= E_ProcessDoor_State.CLOSE OR
+										stProcessDoor.State	= E_ProcessDoor_State.OPEN;
 								
-stProcessCylinder.Status.bDone		:=	stProcessCylinder.State	= E_ProcessCylinder_State.DONE;
+stProcessDoor.Status.bDone			:=	stProcessDoor.State	= E_ProcessDoor_State.DONE;
 
-stProcessCylinder.Status.bReady		:= 	stProcessCylinder.State	= E_ProcessCylinder_State.READY;
+stProcessDoor.Status.bReady			:= 	stProcessDoor.State	= E_ProcessDoor_State.READY;
 
-stProcessCylinder.Status.bStopped	:= 	NOT stProcessCylinder.Status.bBusy;]]></ST>
+stProcessDoor.Status.bStopped		:= 	NOT stProcessDoor.Status.bBusy;]]></ST>
       </Implementation>
     </Action>
     <Action Name="b_ACT_IO_B" Id="{7a24ac88-21cc-4219-af73-2aba76419ebf}">
       <Implementation>
         <ST><![CDATA[
-bExtended[0]							:= dw_T08_EL1809.iProcessCylinder1Extended;
-bExtended[1]							:= dw_T08_EL1809.iProcessCylinder2Extended;
-bRetracted[0]							:= dw_T08_EL1809.iProcessCylinder1Retracted;
-bRetracted[1]							:= dw_T08_EL1809.iProcessCylinder2Retracted;
+//bDoorClosed								:= ; FROM TWINSAFE
+//bDoorOpened								:= ; FROM TWINSAFE
 
-dw_T09_EL2809.qExtendProcessCylinder1	:= bExtend[0];	
-dw_T10_EL2809.qExtendProcessCylinder2	:= bExtend[1];	
-dw_T09_EL2809.qRetractProcessCylinder1	:= bRetract[0];
-dw_T10_EL2809.qRectractProcessCylinder2	:= bRetract[1];
+	
+
+
+dw_T09_EL2809.qOpenProcessDoor	:= bOpenDoor;	
+dw_T09_EL2809.qCloseProcessDoor	:= bCloseDoor;
+
 
 ]]></ST>
       </Implementation>
@@ -250,36 +199,31 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="5" Count="1" />
       <LineId Id="158" Count="0" />
       <LineId Id="7" Count="0" />
-      <LineId Id="253" Count="0" />
       <LineId Id="218" Count="0" />
       <LineId Id="11" Count="0" />
-      <LineId Id="254" Count="2" />
+      <LineId Id="254" Count="1" />
       <LineId Id="221" Count="0" />
       <LineId Id="257" Count="1" />
       <LineId Id="222" Count="0" />
       <LineId Id="12" Count="1" />
       <LineId Id="159" Count="0" />
       <LineId Id="245" Count="0" />
-      <LineId Id="259" Count="0" />
-      <LineId Id="247" Count="2" />
-      <LineId Id="251" Count="0" />
-      <LineId Id="261" Count="2" />
-      <LineId Id="260" Count="0" />
-      <LineId Id="252" Count="0" />
-      <LineId Id="264" Count="0" />
-      <LineId Id="267" Count="0" />
-      <LineId Id="266" Count="0" />
-      <LineId Id="269" Count="2" />
-      <LineId Id="268" Count="0" />
-      <LineId Id="273" Count="6" />
-      <LineId Id="272" Count="0" />
-      <LineId Id="265" Count="0" />
-      <LineId Id="250" Count="0" />
+      <LineId Id="366" Count="2" />
+      <LineId Id="370" Count="1" />
+      <LineId Id="369" Count="0" />
       <LineId Id="207" Count="0" />
-      <LineId Id="286" Count="28" />
+      <LineId Id="286" Count="2" />
+      <LineId Id="290" Count="0" />
       <LineId Id="285" Count="0" />
+      <LineId Id="372" Count="0" />
+      <LineId Id="374" Count="1" />
+      <LineId Id="373" Count="0" />
       <LineId Id="208" Count="0" />
-      <LineId Id="211" Count="2" />
+      <LineId Id="211" Count="1" />
+      <LineId Id="376" Count="0" />
+      <LineId Id="378" Count="0" />
+      <LineId Id="377" Count="0" />
+      <LineId Id="213" Count="0" />
       <LineId Id="280" Count="0" />
       <LineId Id="282" Count="0" />
       <LineId Id="284" Count="0" />
@@ -289,8 +233,9 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="198" Count="0" />
       <LineId Id="165" Count="0" />
       <LineId Id="176" Count="0" />
-      <LineId Id="180" Count="0" />
-      <LineId Id="315" Count="4" />
+      <LineId Id="317" Count="0" />
+      <LineId Id="379" Count="0" />
+      <LineId Id="318" Count="1" />
       <LineId Id="323" Count="0" />
       <LineId Id="321" Count="0" />
       <LineId Id="324" Count="1" />
@@ -298,13 +243,12 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="320" Count="0" />
       <LineId Id="178" Count="0" />
       <LineId Id="113" Count="0" />
-      <LineId Id="335" Count="0" />
-      <LineId Id="347" Count="0" />
       <LineId Id="359" Count="0" />
-      <LineId Id="350" Count="8" />
+      <LineId Id="350" Count="1" />
+      <LineId Id="353" Count="2" />
+      <LineId Id="357" Count="1" />
       <LineId Id="348" Count="0" />
-      <LineId Id="361" Count="4" />
-      <LineId Id="349" Count="0" />
+      <LineId Id="361" Count="0" />
       <LineId Id="341" Count="0" />
       <LineId Id="334" Count="0" />
       <LineId Id="109" Count="0" />
@@ -322,12 +266,12 @@ stStationEvents[3].aEvents[2].bEventText					:= 'ST1 EVENT 7';]]></ST>
       <LineId Id="95" Count="0" />
     </LineIds>
     <LineIds Name="B_4_1_PRG_Master_ProcessDoor.b_ACT_IO_B">
-      <LineId Id="15" Count="1" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="24" Count="1" />
+      <LineId Id="15" Count="2" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="25" Count="0" />
       <LineId Id="22" Count="0" />
-      <LineId Id="26" Count="0" />
       <LineId Id="28" Count="1" />
       <LineId Id="27" Count="0" />
       <LineId Id="5" Count="0" />

@@ -6,7 +6,7 @@
 TYPE E_Camera_State :
 (
 	//GENERIC
-	WAITING_READY		,
+	ABORTED				,
 	RESET_ERROR			,
 	READY				,
 	//MANUAL_MODE			:=50, /manual mode not needed.

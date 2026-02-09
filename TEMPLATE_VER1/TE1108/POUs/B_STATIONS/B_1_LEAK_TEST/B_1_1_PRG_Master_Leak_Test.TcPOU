@@ -28,6 +28,7 @@ VAR
 	bPass								: ARRAY [0..1] OF BOOL;	
 	rFail								: ARRAY [0..1] OF R_TRIG;	
 	bFail								: ARRAY [0..1] OF BOOL;
+	rReset								: ARRAY [0..1] OF R_TRIG;
 
 	
 END_VAR
@@ -47,10 +48,14 @@ tonExecute(IN := stLeakTesters.State = E_LeakTester_State.RUN_LEAK_TESTERS, PT :
 
 /////////////////////////////////////////////////////////////////////////////////////CONDITIONS/////////////////////////////////////////////////////////////////////////////////////
 
-IF stLeakTesters.CMD.bAbort OR bError[0] OR bError[1] OR stLeakTesters.CMD.bEndCycle THEN
+IF stLeakTesters.CMD.bAbort OR bError[0] OR bError[1] THEN
 								
-	stLeakTesters.State											:= E_LeakTester_State.STOPPING;
+	stLeakTesters.State											:= E_LeakTester_State.RESET;
 	
+ELSIF stLeakTesters.CMD.bEndCycle AND NOT ( bError[0] OR bError[1]) THEN
+	
+	stLeakTesters.State											:= E_LeakTester_State.RUN_LEAK_TESTERS;
+
 END_IF
 
 
@@ -193,17 +198,8 @@ CASE stLeakTesters.State OF
 								
 								IF tonStationStopped.Q THEN
 									
-									bStop[0]					:= FALSE;
-									bStop[1]					:= FALSE;
+									stLeakTesters.State			:= E_LeakTester_State.RESET;
 									
-									IF bError[0] OR bError[1] THEN
-										
-										stLeakTesters.State		:= E_LeakTester_State.RESET;
-										
-									ELSE stLeakTesters.State	:= E_LeakTester_State.ABORTED;
-										
-									END_IF
-
 								END_IF
 	
 	E_LeakTester_State.ERROR:
@@ -255,6 +251,8 @@ LeakTester2_IO.sti28General_I_O.bStart	:= bStart[1];
 LeakTester1_IO.sti28General_I_O.bStop	:= bStop[0];
 LeakTester2_IO.sti28General_I_O.bStop	:= bStop[1];
 
+rReset[0](CLK := stLeakTesters.CMD.bReset, Q => bReset[0]);
+rReset[1](CLK := stLeakTesters.CMD.bReset, Q => bReset[1]);
 
 fLeakTestDone[0](CLK := LeakTester1_IO.sti28General_I_O.bTestActiveLiveData);
 fLeakTestDone[1](CLK := LeakTester2_IO.sti28General_I_O.bTestActiveLiveData);
@@ -419,6 +417,9 @@ stStationEvents[1].aEvents[3].sSolution						:= '';]]></ST>
       <LineId Id="145" Count="0" />
       <LineId Id="65" Count="0" />
       <LineId Id="146" Count="0" />
+      <LineId Id="432" Count="1" />
+      <LineId Id="435" Count="0" />
+      <LineId Id="434" Count="0" />
       <LineId Id="66" Count="0" />
       <LineId Id="133" Count="0" />
       <LineId Id="128" Count="0" />
@@ -499,17 +500,9 @@ stStationEvents[1].aEvents[3].sSolution						:= '';]]></ST>
       <LineId Id="383" Count="1" />
       <LineId Id="389" Count="0" />
       <LineId Id="162" Count="0" />
-      <LineId Id="385" Count="0" />
-      <LineId Id="387" Count="1" />
       <LineId Id="386" Count="0" />
-      <LineId Id="101" Count="0" />
-      <LineId Id="390" Count="0" />
-      <LineId Id="103" Count="0" />
-      <LineId Id="391" Count="0" />
-      <LineId Id="105" Count="0" />
-      <LineId Id="392" Count="0" />
-      <LineId Id="104" Count="0" />
       <LineId Id="102" Count="0" />
+      <LineId Id="436" Count="0" />
       <LineId Id="69" Count="0" />
       <LineId Id="50" Count="1" />
       <LineId Id="393" Count="0" />
@@ -551,8 +544,10 @@ stStationEvents[1].aEvents[3].sSolution						:= '';]]></ST>
       <LineId Id="20" Count="0" />
       <LineId Id="71" Count="0" />
       <LineId Id="21" Count="0" />
-      <LineId Id="72" Count="0" />
-      <LineId Id="24" Count="1" />
+      <LineId Id="72" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="25" Count="0" />
       <LineId Id="4" Count="0" />
       <LineId Id="27" Count="0" />
       <LineId Id="41" Count="3" />
