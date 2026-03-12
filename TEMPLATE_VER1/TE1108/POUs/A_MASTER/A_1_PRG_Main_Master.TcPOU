@@ -27,6 +27,9 @@ VAR
 	
 	fbSystemTime							: NT_GetTime;
 	
+	fbScaleAirSupply						: FB_Scale;
+	
+	
 ////////////////////////////////////////////////////////////////////////////////////CSV////////////////////////////////////////////////////////////////////////////	
 
 	//stEventsCSVProcess						:  ST_CSVProcess;
@@ -79,11 +82,13 @@ B_4_2_PRG_Master_ProcessDoor();
 
 A_2_PRG_MachineCtrl();
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////EVENT LOG/////////////////////////////////////////////////////////////////////////////////////
 
 fbEventsManager	(			//INPUTS
 							bPulse 							:= stPuls.bFlash10Hz, 
-							bResetFaults 					:= bResetTest,//stButtonsLamps.bResetButtonRisingEdge, 
+							bResetFaults 					:= dw_T04_EL1918.iResetButton, 
 							stStationEvents 				:= stStationEvents,
 							sSystemTime						:= sSystemTime,
 							sSystemDate						:= sSystemDate,
@@ -115,26 +120,7 @@ sSystemDate					:= 	CONCAT( STR1 := WORD_TO_STRING(stSystemTime.wDay), STR2 :=
 
 
 
-//Only to test cylinder
 
-
-
-IF GVL_CylinderTest.iCylinderUp AND  GVL_CylinderTesT.iCylinderDown THEN
-	
-
-	GVL_CylinderTesT.qCylinderUp		:= TRUE;
-	
-ELSE GVL_CylinderTesT.qCylinderUp		:= FALSE;
-
-END_IF
-	
-IF NOT GVL_CylinderTesT.iCylinderDown AND NOT GVL_CylinderTest.iCylinderUp THEN
-	
-	GVL_CylinderTest.qCylinderDown		:= TRUE;
-	
-ELSE GVL_CylinderTest.qCylinderDown		:= FALSE;
-
-END_IF
 
 
 
@@ -154,13 +140,13 @@ stButtonsLamps.bResetButtonRisingEdge 		:= rtrigButton[3].Q ;
 
 ftrigButton[1](CLK 							:= dw_T08_EL1809.iStartButoon);
 rtrigButton[1](CLK							:= dw_T08_EL1809.iStartButoon);
-ftrigButton[2](CLK							:= dw_T08_EL1809.iStopButton);
-rtrigButton[2](CLK							:= dw_T08_EL1809.iStopButton);
+ftrigButton[2](CLK							:= NOT dw_T08_EL1809.iStopButton);
+rtrigButton[2](CLK							:= NOT dw_T08_EL1809.iStopButton);
 ftrigButton[3](CLK							:= dw_T04_EL1918.iResetButton);
 rtrigButton[3](CLK							:= dw_T04_EL1918.iResetButton);
 
-dw_T09_EL2809.qResetButtonLED				:= (stMachineStatus.bFault AND stPuls.bFlash4Hz) OR (stMachineStatus.bStopped AND stPuls.bFlash1Hz) OR stMachineStatus.bManualMode;
-dw_T09_EL2809.qStartButtonLED				:= (stMachineStatus.bReadyToStart AND stPuls.bFlash4Hz) OR stMachineStatus.bAutoCycle OR stMachineStatus.bManualMode;
+dw_T09_EL2809.qResetButtonLED				:= (stMachineStatus.bFault AND stPuls.bFlash1Hz) OR (stMachineStatus.bStopped AND stPuls.bFlash2Hz) OR stMachineStatus.bManualMode;
+dw_T09_EL2809.qStartButtonLED				:= (stMachineStatus.bReadyToStart AND stPuls.bFlash1Hz) OR stMachineStatus.bAutoCycle OR stMachineStatus.bManualMode;
 
 ]]></ST>
       </Implementation>
@@ -315,8 +301,11 @@ dw_T10_EL2809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T10_EL280
 dw_T11_EL3058.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T11_EL3058.stTerminalInfo.nTerminal_State,
 												sTerminalState						=> dw_T11_EL3058.stTerminalInfo.sTerminalInfo);
 												
-dw_T12_EL6633.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T12_EL6633.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T12_EL6633.stTerminalInfo.sTerminalInfo);
+dw_T12_EL1918.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T12_EL1918.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T12_EL1918.stTerminalInfo.sTerminalInfo);
+												
+dw_T13_EL6633.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T13_EL6633.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T13_EL6633.stTerminalInfo.sTerminalInfo);
 												
 //add boxes]]></ST>
       </Implementation>
@@ -367,12 +356,32 @@ END_IF
     </Action>
     <Action Name="i_ACT_TwinSAFE" Id="{0ecb0e06-5557-4943-b4e7-d2562aeb50f9}">
       <Implementation>
-        <ST><![CDATA[stTwinSAFE.iAirSupplyMeasurement 		:= REAL_TO_UINT(0.0003 * GVL_IO.dw_T11_EL3058.iMainPressure); 
+        <ST><![CDATA[	
+stTwinSAFE.iSafetyErrorAcknowledge		:= rtrigButton[3].Q;
+
+fbScaleAirSupply( 			nRawValue						:= UINT_TO_REAL(GVL_IO.dw_T11_EL3058.iMainPressure),
+							X1								:= 0,
+							X2								:= 32768,
+							Y1								:= 0,
+							Y2								:= 10,
+							
+							nOutPut							=> stTwinSAFE.iAirSupplyMeasurement);
 
 stTwinSAFE.iAirPressureMaxValue			:= nAirPressureMaxValue;
 stTwinSAFE.iAirPressureMinValue			:= nAirPressureMinValue;
 stTwinSAFE.iProcessDoorClosing			:= bDoorClosingFlag;
-stTwinSAFE.iProcessDoorClosedCondition	:= bProcessDoorClosedConditionFlag;]]></ST>
+
+bMainDoor_AirFlag						:= (stMachineStatus.eMachineState = E_MachineState.SYSTEM_AUTO_CYCLE) OR ( stMachineStatus.eMachineState = E_MachineState.MANUAL_MODE) OR (stMachineStatus.eMachineState = E_MachineState.SYSTEM_INITIALISING) OR (stMachineStatus.eMachineState = E_MachineState.SAFETY);
+
+stTwinSAFE.iAirSupplyCondition1			:= bMainDoor_AirFlag;
+stTwinSAFE.iAirSupplyCondition2			:= bMainDoor_AirFlag;
+stTwinSAFE.iCloseMainDoorCondition1		:= bMainDoor_AirFlag;
+stTwinSAFE.iCloseMainDoorCondition2		:= bMainDoor_AirFlag;
+
+stTwinSAFE.iProcessCylinderLockCondition1 	:= bProcessCylinderLockConditionFlag;
+stTwinSAFE.iProcessCylinderLockCondition2 	:= bProcessCylinderLockConditionFlag;
+stTwinSAFE.iProcessDoorClosedCondition		:= bProcessDoorClosedConditionFlag;
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="j_ACT_MachineDefinition" Id="{d060be37-8904-4e66-8914-eb7f14b7082a}">

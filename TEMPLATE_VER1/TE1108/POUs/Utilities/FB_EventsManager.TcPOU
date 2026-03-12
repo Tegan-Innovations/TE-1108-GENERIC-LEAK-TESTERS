@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <POU Name="FB_EventsManager" Id="{a5f89ae0-d262-4bc0-baad-f557f917db4a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_EventsManager
 
@@ -187,7 +187,6 @@ ELSIF bResetFaults THEN
 	l												:= 0;
 	k[0]											:= 0;
 	k[1]											:= 0;	
-	bResetFaults									:= FALSE;
 ELSE
 	
 	k[0]											:= 0;
@@ -317,164 +316,5 @@ IF bDataWritedInCSV THEN
 END_IF]]></ST>
       </Implementation>
     </Action>
-    <LineIds Name="FB_EventsManager">
-      <LineId Id="83" Count="2" />
-      <LineId Id="158" Count="0" />
-      <LineId Id="86" Count="4" />
-      <LineId Id="95" Count="0" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="103" Count="0" />
-      <LineId Id="112" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_EventsManager.ACT_ActiveEvents_DataHistory">
-      <LineId Id="99" Count="1" />
-      <LineId Id="2" Count="1" />
-      <LineId Id="1" Count="0" />
-      <LineId Id="29" Count="0" />
-      <LineId Id="4" Count="0" />
-      <LineId Id="15" Count="0" />
-      <LineId Id="149" Count="0" />
-      <LineId Id="10" Count="1" />
-      <LineId Id="8" Count="0" />
-      <LineId Id="140" Count="0" />
-      <LineId Id="122" Count="0" />
-      <LineId Id="177" Count="0" />
-      <LineId Id="150" Count="0" />
-      <LineId Id="162" Count="0" />
-      <LineId Id="165" Count="0" />
-      <LineId Id="174" Count="0" />
-      <LineId Id="166" Count="1" />
-      <LineId Id="170" Count="0" />
-      <LineId Id="163" Count="0" />
-      <LineId Id="175" Count="0" />
-      <LineId Id="164" Count="0" />
-      <LineId Id="161" Count="0" />
-      <LineId Id="146" Count="1" />
-      <LineId Id="152" Count="0" />
-      <LineId Id="291" Count="0" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="254" Count="0" />
-      <LineId Id="265" Count="1" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="79" Count="0" />
-      <LineId Id="81" Count="1" />
-      <LineId Id="228" Count="0" />
-      <LineId Id="83" Count="2" />
-      <LineId Id="143" Count="0" />
-      <LineId Id="124" Count="0" />
-      <LineId Id="204" Count="0" />
-      <LineId Id="206" Count="9" />
-      <LineId Id="217" Count="3" />
-      <LineId Id="289" Count="0" />
-      <LineId Id="256" Count="1" />
-      <LineId Id="88" Count="0" />
-      <LineId Id="270" Count="1" />
-      <LineId Id="80" Count="0" />
-      <LineId Id="89" Count="0" />
-      <LineId Id="91" Count="1" />
-      <LineId Id="231" Count="0" />
-      <LineId Id="93" Count="2" />
-      <LineId Id="144" Count="0" />
-      <LineId Id="125" Count="0" />
-      <LineId Id="229" Count="0" />
-      <LineId Id="232" Count="9" />
-      <LineId Id="243" Count="3" />
-      <LineId Id="262" Count="0" />
-      <LineId Id="253" Count="0" />
-      <LineId Id="258" Count="1" />
-      <LineId Id="272" Count="0" />
-      <LineId Id="98" Count="0" />
-      <LineId Id="90" Count="0" />
-      <LineId Id="30" Count="0" />
-      <LineId Id="32" Count="0" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="7" Count="0" />
-      <LineId Id="6" Count="0" />
-      <LineId Id="273" Count="0" />
-      <LineId Id="101" Count="1" />
-      <LineId Id="105" Count="0" />
-      <LineId Id="108" Count="1" />
-      <LineId Id="113" Count="0" />
-      <LineId Id="107" Count="0" />
-      <LineId Id="145" Count="0" />
-      <LineId Id="104" Count="0" />
-      <LineId Id="126" Count="0" />
-      <LineId Id="130" Count="1" />
-      <LineId Id="127" Count="2" />
-      <LineId Id="132" Count="1" />
-      <LineId Id="136" Count="1" />
-      <LineId Id="139" Count="0" />
-      <LineId Id="138" Count="0" />
-      <LineId Id="134" Count="0" />
-      <LineId Id="117" Count="1" />
-      <LineId Id="120" Count="0" />
-      <LineId Id="103" Count="0" />
-      <LineId Id="121" Count="0" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="275" Count="0" />
-      <LineId Id="277" Count="0" />
-      <LineId Id="263" Count="0" />
-      <LineId Id="17" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_EventsManager.ACT_EventTextAssigment">
-      <LineId Id="19" Count="0" />
-      <LineId Id="1" Count="0" />
-      <LineId Id="4" Count="0" />
-      <LineId Id="8" Count="0" />
-      <LineId Id="13" Count="0" />
-      <LineId Id="11" Count="1" />
-      <LineId Id="81" Count="0" />
-      <LineId Id="84" Count="0" />
-      <LineId Id="15" Count="0" />
-      <LineId Id="21" Count="4" />
-      <LineId Id="16" Count="0" />
-      <LineId Id="90" Count="0" />
-      <LineId Id="94" Count="1" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="57" Count="0" />
-      <LineId Id="85" Count="2" />
-      <LineId Id="59" Count="5" />
-      <LineId Id="103" Count="0" />
-      <LineId Id="114" Count="1" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="116" Count="0" />
-      <LineId Id="67" Count="1" />
-      <LineId Id="88" Count="1" />
-      <LineId Id="69" Count="5" />
-      <LineId Id="66" Count="0" />
-      <LineId Id="117" Count="1" />
-      <LineId Id="42" Count="0" />
-      <LineId Id="54" Count="0" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="10" Count="0" />
-      <LineId Id="6" Count="1" />
-      <LineId Id="3" Count="0" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="52" Count="0" />
-      <LineId Id="75" Count="3" />
-    </LineIds>
-    <LineIds Name="FB_EventsManager.ACT_FaultTrig">
-      <LineId Id="2" Count="1" />
-      <LineId Id="41" Count="0" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="4" Count="1" />
-      <LineId Id="53" Count="1" />
-      <LineId Id="6" Count="6" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="57" Count="0" />
-      <LineId Id="59" Count="5" />
-      <LineId Id="56" Count="0" />
-      <LineId Id="52" Count="0" />
-      <LineId Id="42" Count="0" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="36" Count="1" />
-      <LineId Id="43" Count="0" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_EventsManager.ACT_WriteToCSV">
-      <LineId Id="2" Count="10" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

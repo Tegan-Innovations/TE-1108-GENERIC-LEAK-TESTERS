@@ -1,30 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <DUT Name="ST_TwinSAFE" Id="{53872549-54d4-4379-ac97-82f6a4774545}">
     <Declaration><![CDATA[TYPE ST_TwinSAFE :
 STRUCT
 	
 ///////////////////////////////////////////////////////////////////////////Safety OUTPUTS///////////////////////////////////////////////////////////////////////////////////////
-	
-	iErrorAcknowledge               		AT %Q*			: 	BOOL;	
-	iProcessDoorClosing              		AT %Q*			: 	BOOL;	
+		
 	iAirPressureMaxValue					AT %Q*			: 	UINT;
 	iAirPressureMinValue					AT %Q*			: 	UINT;
 	iAirSupplyMeasurement					AT %Q*			: 	UINT;
-	iProcessDoorClosedCondition				AT %Q*			: 	BOOL;	
+	iAirSupplyCondition1					AT %Q*			: 	BOOL;
+	iAirSupplyCondition2					AT %Q*			: 	BOOL;
+	iProcessCylinderLockCondition1			AT %Q*			: 	BOOL;
+	iProcessCylinderLockCondition2			AT %Q*			: 	BOOL;
+	iCloseMainDoorCondition1				AT %Q*			: 	BOOL;
+	iCloseMainDoorCondition2				AT %Q*			: 	BOOL;
+	iProcessDoorClosing              		AT %Q*			: 	BOOL;	
+	iProcessDoorClosedCondition				AT %Q*			: 	BOOL;
+	iSafetyErrorAcknowledge					AT %Q*			: 	BOOL;
 	
 ///////////////////////////////////////////////////////////////////////////Safety Inputs///////////////////////////////////////////////////////////////////////////////////////	
 
 	qAirErrorSignal							AT %I*			: 	BOOL;	
 	qAirPressureAbove						AT %I*			: 	BOOL;	
-	qAirPressureBelow						AT %I*			: 	BOOL;	
-	qProcessDoorClosed						AT %I*			: 	BOOL;	
-	qSafetyOk								AT %I*			: 	BOOL;	
-	qTwoHands								AT %I*			: 	BOOL;
+	qAirPressureBelow						AT %I*			: 	BOOL;
+	qAirPressureOK							AT %I*			: 	BOOL;
+	qSafetyOk								AT %I*			: 	BOOL;
 	qE_StopPressed							AT %I*			: 	BOOL;	
-	qMainDoorOpened							AT %I*			: 	BOOL;
-	qProcessDoorSafe						AT %I*			: 	BOOL;
-	qTwoHandsSafe							AT %I*			: 	BOOL;
+	qMainDoorUnsafe							AT %I*			: 	BOOL;
+	qProcessDoorUnSafe						AT %I*			: 	BOOL;
+	qTwoHandsUnsafe							AT %I*			: 	BOOL;
+	qProcessCylinderUnsafe					AT %I*			: 	BOOL;
+	
 
 END_STRUCT
 END_TYPE

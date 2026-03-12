@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <GVL Name="GVL_Master" Id="{ff1c03dd-d56c-490f-bced-572c30dff423}">
     <Declaration><![CDATA[VAR_GLOBAL
 ////////////////////////////////////////:	///////////////////////////////////////////////////
@@ -26,6 +26,9 @@
 	bDoorClosingFlag				: BOOL;
 	bDoorOpeningFlag				: BOOL;
 	bProcessDoorClosedConditionFlag	: BOOL;
+	bProcessCylinderLockConditionFlag: BOOL;
+	tonSafety						: TON;
+	bMainDoor_AirFlag				: BOOL;
 /////////////////////////////////////////////////////////////////////////////////////Event Log/////////////////////////////////////////////////////////////////////////////////////
 	
 	stStationEvents				: ARRAY[0..4] OF  ST_StationEvents;//0: GENERAL

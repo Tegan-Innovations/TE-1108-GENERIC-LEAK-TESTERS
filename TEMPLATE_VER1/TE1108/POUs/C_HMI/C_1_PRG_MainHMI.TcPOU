@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <POU Name="C_1_PRG_MainHMI" Id="{74beadf6-2d48-457c-a28f-741842f8514e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM C_1_PRG_MainHMI
 VAR
@@ -32,6 +32,16 @@ IF stMachineStatus.bInitialising THEN
 	stStatusBanner.sBannerBckColor 								:= sYELLOW;
 	stStatusBanner.sBannerTextColor 							:= sBLACK;
 END_IF
+
+(* SAFETY *)
+IF stMachineStatus.bSafety THEN	
+	stStatusBanner.sMachineStatusText 							:= 'SYSTE SAFE';		
+	stStatusBanner.nMachineStatusColour 						:= nORANGE;
+	stStatusBanner.nMachineStatusTxtCol 						:= nWHITE;
+	stStatusBanner.sBannerBckColor 								:= sORANGE;
+	stStatusBanner.sBannerTextColor 							:= sWHITE;
+END_IF
+
 
 (* SYSTEM READY TO START FLASH ON *)
 IF stMachineStatus.bReadyToStart AND stPuls.bFlash1Hz THEN
@@ -120,51 +130,5 @@ stTimers.tTwoHandsSignal		:= DINT_TO_TIME(stTimers.nTwoHandsSignal * 1000) ;
 stTimers.tHeightTest			:= DINT_TO_TIME(stTimers.nHeightTest * 1000) ;]]></ST>
       </Implementation>
     </Action>
-    <LineIds Name="C_1_PRG_MainHMI">
-      <LineId Id="5" Count="0" />
-      <LineId Id="12" Count="0" />
-    </LineIds>
-    <LineIds Name="C_1_PRG_MainHMI.a_ACT_MachineStatusBaner">
-      <LineId Id="2" Count="5" />
-      <LineId Id="144" Count="0" />
-      <LineId Id="143" Count="0" />
-      <LineId Id="8" Count="0" />
-      <LineId Id="16" Count="5" />
-      <LineId Id="147" Count="1" />
-      <LineId Id="22" Count="0" />
-      <LineId Id="30" Count="5" />
-      <LineId Id="149" Count="1" />
-      <LineId Id="183" Count="5" />
-      <LineId Id="36" Count="0" />
-      <LineId Id="44" Count="5" />
-      <LineId Id="154" Count="0" />
-      <LineId Id="153" Count="0" />
-      <LineId Id="50" Count="0" />
-      <LineId Id="58" Count="5" />
-      <LineId Id="158" Count="0" />
-      <LineId Id="157" Count="0" />
-      <LineId Id="190" Count="5" />
-      <LineId Id="64" Count="0" />
-      <LineId Id="72" Count="5" />
-      <LineId Id="162" Count="0" />
-      <LineId Id="161" Count="0" />
-      <LineId Id="78" Count="6" />
-      <LineId Id="164" Count="0" />
-      <LineId Id="163" Count="0" />
-      <LineId Id="197" Count="4" />
-      <LineId Id="196" Count="0" />
-      <LineId Id="85" Count="0" />
-      <LineId Id="107" Count="5" />
-      <LineId Id="172" Count="0" />
-      <LineId Id="171" Count="0" />
-      <LineId Id="113" Count="0" />
-      <LineId Id="139" Count="0" />
-      <LineId Id="141" Count="0" />
-    </LineIds>
-    <LineIds Name="C_1_PRG_MainHMI.b_ACT_Timers">
-      <LineId Id="2" Count="0" />
-      <LineId Id="1" Count="0" />
-      <LineId Id="3" Count="5" />
-    </LineIds>
   </POU>
 </TcPlcObject>

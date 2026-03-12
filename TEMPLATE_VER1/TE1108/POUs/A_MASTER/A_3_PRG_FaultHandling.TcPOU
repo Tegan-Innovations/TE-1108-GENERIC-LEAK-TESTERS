@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <POU Name="A_3_PRG_FaultHandling" Id="{1ed57a34-1c0a-4c7e-a0fc-90a123d0d2dc}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM A_3_PRG_FaultHandling
 VAR
@@ -30,7 +30,7 @@ stMasterCtrl.bCycleStopRequest										:= stStationEvents[0].bCycleStopRequest 
     <Action Name="a_ACT_Set_Events" Id="{42aebdbb-fe1e-4d30-8c60-8dfb7c659f09}">
       <Implementation>
         <ST><![CDATA[/////////////////////////////////////////////////////////////////////////////////////TwinSAFE/////////////////////////////////////////////////////////////////////////////////////
-(*
+
 stStationEvents[0].aEvents[0].bFault						:= TRUE;
 stStationEvents[0].aEvents[0].bEventFlag					:= stTwinSAFE.qAirErrorSignal;
 stStationEvents[0].aEvents[0].bEventText					:= 'Pressure Error';
@@ -61,28 +61,29 @@ stStationEvents[0].aEvents[5].bEventFlag					:= stTwinSAFE.qE_StopPressed;
 stStationEvents[0].aEvents[5].bEventText					:= 'E-STOP Pressed' ;
 stStationEvents[0].aEvents[5].sSolution						:= 'Release E-STOP';
 
-stStationEvents[0].aEvents[6].bFault						:= TRUE;
-stStationEvents[0].aEvents[6].bEventFlag					:= NOT stTwinSAFE.qSafetyOk;
+(*stStationEvents[0].aEvents[6].bFault						:= TRUE;
+stStationEvents[0].aEvents[6].bEventFlag					:= ((tonSafety.Q AND stMachineStatus.eMachineState = E_MachineState.SAFETY) OR bMainDoor_AirFlag) AND NOT stTwinSAFE.qSafetyOk;
 stStationEvents[0].aEvents[6].bEventText					:= 'Safe system error' ;
-stStationEvents[0].aEvents[6].sSolution						:= 'Check safety elements';
-
-stStationEvents[0].aEvents[7].bFault						:= TRUE;
-stStationEvents[0].aEvents[7].bEventFlag					:= stTwinSAFE.qMainDoorOpened;
-stStationEvents[0].aEvents[7].bEventText					:= 'Main Door Opened' ;
-stStationEvents[0].aEvents[7].sSolution						:= 'Close Door';
+stStationEvents[0].aEvents[6].sSolution						:= 'Check safety elements';*)
 
 stStationEvents[0].aEvents[8].bFault						:= TRUE;
-stStationEvents[0].aEvents[8].bEventFlag					:= NOT stTwinSAFE.qProcessDoorSafe;
+stStationEvents[0].aEvents[8].bEventFlag					:= stTwinSAFE.qProcessDoorUnSafe;
 stStationEvents[0].aEvents[8].bEventText					:= 'Process door movement unsafe' ;
 stStationEvents[0].aEvents[8].sSolution						:= 'Reset system';
 
 stStationEvents[0].aEvents[9].bFault						:= TRUE;
-stStationEvents[0].aEvents[9].bEventFlag					:= NOT stTwinSAFE.qTwoHandsSafe;
+stStationEvents[0].aEvents[9].bEventFlag					:= stTwinSAFE.qTwoHandsUnsafe;
 stStationEvents[0].aEvents[9].bEventText					:= 'Hands in unsafe position' ;
-stStationEvents[0].aEvents[9].sSolution						:= 'Reset system';*)
+stStationEvents[0].aEvents[9].sSolution						:= 'Reset system';
+
+stStationEvents[0].aEvents[25].bFault						:= TRUE;
+stStationEvents[0].aEvents[25].bEventFlag					:= NOT GVL_IO.dw_T04_EL1918.iD1MainDoorFB AND tonSafety.Q;
+stStationEvents[0].aEvents[25].bEventText					:= 'Door openned during initialization' ;
+stStationEvents[0].aEvents[25].sSolution					:= 'Close door and Reset system';
+
 
 /////////////////////////////////////////////////////////////////////////////////////Cards status/////////////////////////////////////////////////////////////////////////////////////
-(*
+
 stStationEvents[0].aEvents[10].bFault						:= TRUE;
 stStationEvents[0].aEvents[10].bEventFlag					:= NOT stMachineStatus.bSystemPowerUp AND dw_T01_EK1100.stTerminalInfo.nTerminal_State <> 8;
 stStationEvents[0].aEvents[10].bEventText					:= 'T01_EK1100 card in fault' ;
@@ -138,96 +139,21 @@ stStationEvents[0].aEvents[20].bEventFlag					:= NOT stMachineStatus.bSystemPowe
 stStationEvents[0].aEvents[20].bEventText					:= 'T11_EL3058 card in fault' ;
 stStationEvents[0].aEvents[20].sSolution					:= 'Reset System';
 
-stStationEvents[0].aEvents[21].bFault						:= TRUE;
-stStationEvents[0].aEvents[21].bEventFlag					:= NOT stMachineStatus.bSystemPowerUp AND dw_T12_EL6633.stTerminalInfo.nTerminal_State <> 8;
-stStationEvents[0].aEvents[21].bEventText					:= 'T12_EL6633 card in fault' ;
-stStationEvents[0].aEvents[21].sSolution					:= 'Reset System';*)
-
 stStationEvents[0].aEvents[22].bFault						:= TRUE;
-stStationEvents[0].aEvents[22].bEventFlag					:= bTestFlag[0] OR bTestFlag[3];
-stStationEvents[0].aEvents[22].bEventText					:= WORD_TO_STRING(Counter.CV);
-stStationEvents[0].aEvents[22].sSolution					:= 'TEST1';
+stStationEvents[0].aEvents[22].bEventFlag					:= NOT stMachineStatus.bSystemPowerUp AND dw_T12_EL1918.stTerminalInfo.nTerminal_State <> 8;
+stStationEvents[0].aEvents[22].bEventText					:= 'T12_EL1918 card in fault' ;
+stStationEvents[0].aEvents[22].sSolution					:= 'Reset System';
 
-stStationEvents[0].aEvents[23].bMessage						:= TRUE;
-stStationEvents[0].aEvents[23].bEventFlag					:= bTestFlag[1] OR bTestFlag[4];
-stStationEvents[0].aEvents[23].bEventText					:= WORD_TO_STRING(Counter.CV);
-stStationEvents[0].aEvents[23].sSolution					:= 'TEST2';
+stStationEvents[0].aEvents[23].bFault						:= TRUE;
+stStationEvents[0].aEvents[23].bEventFlag					:= NOT stMachineStatus.bSystemPowerUp AND dw_T13_EL6633.stTerminalInfo.nTerminal_State <> 8;
+stStationEvents[0].aEvents[23].bEventText					:= 'T13_EL6633 card in fault' ;
+stStationEvents[0].aEvents[23].sSolution					:= 'Reset System';
 
-stStationEvents[0].aEvents[24].bCycleStopRequest			:= TRUE;
-stStationEvents[0].aEvents[24].bEventFlag					:= bTestFlag[2] OR bTestFlag[5];
-stStationEvents[0].aEvents[24].bEventText					:= WORD_TO_STRING(Counter.CV);
-stStationEvents[0].aEvents[24].sSolution					:= 'TEST3';
 
-Counter( CU := (bTestFlag[0] OR bTestFlag[3]) OR (bTestFlag[1] OR bTestFlag[4]) OR (bTestFlag[2] OR bTestFlag[5]), RESET := bTestFlag[6]);
 
 
 ]]></ST>
       </Implementation>
     </Action>
-    <LineIds Name="A_3_PRG_FaultHandling">
-      <LineId Id="317" Count="0" />
-      <LineId Id="278" Count="0" />
-      <LineId Id="306" Count="0" />
-      <LineId Id="279" Count="1" />
-      <LineId Id="286" Count="1" />
-      <LineId Id="296" Count="0" />
-      <LineId Id="307" Count="0" />
-      <LineId Id="297" Count="1" />
-      <LineId Id="21" Count="0" />
-    </LineIds>
-    <LineIds Name="A_3_PRG_FaultHandling.a_ACT_Set_Events">
-      <LineId Id="50" Count="5" />
-      <LineId Id="65" Count="0" />
-      <LineId Id="70" Count="3" />
-      <LineId Id="75" Count="3" />
-      <LineId Id="1" Count="0" />
-      <LineId Id="80" Count="3" />
-      <LineId Id="79" Count="0" />
-      <LineId Id="85" Count="3" />
-      <LineId Id="84" Count="0" />
-      <LineId Id="91" Count="3" />
-      <LineId Id="90" Count="0" />
-      <LineId Id="96" Count="4" />
-      <LineId Id="95" Count="0" />
-      <LineId Id="104" Count="3" />
-      <LineId Id="109" Count="4" />
-      <LineId Id="115" Count="3" />
-      <LineId Id="114" Count="0" />
-      <LineId Id="108" Count="0" />
-      <LineId Id="119" Count="4" />
-      <LineId Id="89" Count="0" />
-      <LineId Id="127" Count="3" />
-      <LineId Id="126" Count="0" />
-      <LineId Id="132" Count="3" />
-      <LineId Id="131" Count="0" />
-      <LineId Id="137" Count="3" />
-      <LineId Id="136" Count="0" />
-      <LineId Id="142" Count="3" />
-      <LineId Id="141" Count="0" />
-      <LineId Id="147" Count="3" />
-      <LineId Id="146" Count="0" />
-      <LineId Id="152" Count="3" />
-      <LineId Id="151" Count="0" />
-      <LineId Id="157" Count="3" />
-      <LineId Id="156" Count="0" />
-      <LineId Id="162" Count="3" />
-      <LineId Id="161" Count="0" />
-      <LineId Id="167" Count="3" />
-      <LineId Id="166" Count="0" />
-      <LineId Id="172" Count="3" />
-      <LineId Id="171" Count="0" />
-      <LineId Id="177" Count="3" />
-      <LineId Id="176" Count="0" />
-      <LineId Id="182" Count="4" />
-      <LineId Id="233" Count="3" />
-      <LineId Id="232" Count="0" />
-      <LineId Id="238" Count="3" />
-      <LineId Id="237" Count="0" />
-      <LineId Id="242" Count="0" />
-      <LineId Id="188" Count="0" />
-      <LineId Id="181" Count="0" />
-      <LineId Id="125" Count="0" />
-      <LineId Id="124" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

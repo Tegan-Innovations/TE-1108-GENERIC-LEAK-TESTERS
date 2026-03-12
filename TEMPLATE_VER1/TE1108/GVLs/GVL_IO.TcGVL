@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
   <GVL Name="GVL_IO" Id="{45216df1-d642-48c2-a25b-8ce51cdc643d}">
     <Declaration><![CDATA[VAR_GLOBAL
 	
@@ -16,7 +16,8 @@
 	dw_T09_EL2809														: st_EL2809_A;// 16 Channel Digital Output ( 24VDC ) 
 	dw_T10_EL2809														: st_EL2809_B;// 16 Channel Digital Output ( 24VDC ) 
 	dw_T11_EL3058                                                		: st_EL3058;// 4 Channel Analog Input
-	dw_T12_EL6633                                                		: ST_EL6633; // Profinet Protocol
+	dw_T12_EL1918														: st_EL1918_C;//EL1918 8 Channel Safety Digital Input
+	dw_T13_EL6633                                                		: ST_EL6633; // Profinet Protocol
 	
 	stTwinSAFE															: ST_TwinSAFE;
 	

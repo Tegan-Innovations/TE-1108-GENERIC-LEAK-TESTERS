@@ -67,7 +67,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
 			<BitSize>6</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -140,7 +140,7 @@
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff00ff0000ff0000ff0000ff0000ff0000ff00c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1007">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{AAED4EA2-0931-43D2-8590-E4ACDEB76CAB}" TargetNetId="172.18.235.65.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+	<Project ProjectGUID="{AAED4EA2-0931-43D2-8590-E4ACDEB76CAB}" TargetNetId="192.168.7.20.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Settings MaxCpus="20" NonWinCpus="1">
 				<Cpu CpuId="3"/>
@@ -148,6 +148,10 @@
 			<Licenses>
 				<Target>
 					<ManualSelect>{796D380F-D49E-4C0C-A05F-500052FAC883}</ManualSelect>
+					<ManualSelect>{520DE751-9DB6-47CB-8240-BD5C466E7E64}</ManualSelect>
+					<ManualSelect>{8C57D0A8-BD63-4554-BAE1-E9C797EF0D0E}</ManualSelect>
+					<TargetSelect TargetId="2">{8C57D0A8-BD63-4554-BAE1-E9C797EF0D0E}</TargetSelect>
+					<LicenseDevice DongleHardwareId="2" DongleDevice="#x03020002" DongleLevel="50" DongleSystemId="{55985181-F5AF-1CAA-0E55-F234B18FFA8D}" DongleSerialNumber="000btriu" DongleCacheLicense="true"/>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -158,19 +162,11 @@
 		</System>
 		<Plc>
 			<Project GUID="{997013A6-75D1-424B-98F5-A30289B2B96E}" Name="TE1108" PrjFilePath="TE1108\TE1108.plcproj" TmcFilePath="TE1108\TE1108.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{9BD105A8-3B21-C4B5-74E6-A7AE999E1A77}" TmcPath="TE1108\TE1108.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{8325FA69-3290-BCD6-C592-6C629D858A7C}" TmcPath="TE1108\TE1108.tmc">
 					<Name>TE1108 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
-						<Var>
-							<Name>GVL_CylinderTest.qCylinderUp</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_CylinderTest.qCylinderDown</Name>
-							<Type>BOOL</Type>
-						</Var>
 						<Var>
 							<Name>GVL_IO.dw_T06_EL2904.qEnableAirSupply_PSR1</Name>
 							<Comment><![CDATA[ EL2904 channel 1]]></Comment>
@@ -187,7 +183,7 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.dw_T06_EL2904.qEL2904_Ch4</Name>
+							<Name>GVL_IO.dw_T06_EL2904.qLockProcessCylinder</Name>
 							<Comment><![CDATA[ EL2904 channel 4 ]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -352,16 +348,8 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.iErrorAcknowledge</Name>
-							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety OUTPUTS///////////////////////////////////////////////////////////////////////////////////////]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosing</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_IO.stTwinSAFE.iAirPressureMaxValue</Name>
+							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety OUTPUTS///////////////////////////////////////////////////////////////////////////////////////]]></Comment>
 							<Type>UINT</Type>
 						</Var>
 						<Var>
@@ -373,7 +361,39 @@
 							<Type>UINT</Type>
 						</Var>
 						<Var>
+							<Name>GVL_IO.stTwinSAFE.iAirSupplyCondition1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iAirSupplyCondition2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iCloseMainDoorCondition1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iCloseMainDoorCondition2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosing</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosedCondition</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iSafetyErrorAcknowledge</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -558,12 +578,276 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>GVL_CylinderTest.iCylinderUp</Name>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUniqueID</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inChannelNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inProgramNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inTestPort</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inPartEvaluation</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inTestType</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inPrecisionCode</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation0</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_CylinderTest.iCylinderDown</Name>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation1</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inMeasurement1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inVariableCode1</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUnitCode1</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inMeasurement2</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inVariableCode2</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUnitCode2</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUniqueID</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inChannelNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inProgramNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inTestPort</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inPartEvaluation</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inTestType</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inPrecisionCode</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inMeasurement1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inVariableCode1</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUnitCode1</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inMeasurement2</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inVariableCode2</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUnitCode2</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUniqueID</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inChannelNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inProgramNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inTestPort</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inPartEvaluation</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inTestType</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inPrecisionCode</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inMeasurement1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inVariableCode1</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUnitCode1</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inMeasurement2</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inVariableCode2</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUnitCode2</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUniqueID</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inChannelNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inProgramNumber</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inTestPort</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inPartEvaluation</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inTestType</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inPrecisionCode</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation0</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation3</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inMeasurement1</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inVariableCode1</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUnitCode1</Name>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inMeasurement2</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inVariableCode2</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUnitCode2</Name>
+							<Type>USINT</Type>
 						</Var>
 						<Var>
 							<Name>GVL_IO.dw_T01_EK1100.stTerminalInfo.nTerminal_State</Name>
@@ -801,7 +1085,52 @@
 							<Type>UINT</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.dw_T12_EL6633.stTerminalInfo.nTerminal_State</Name>
+							<Name>GVL_IO.dw_T12_EL1918.iD3ProcessCylinderRetracted1</Name>
+							<Comment><![CDATA[ EL1918 channel 1]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iD3ProcessCylinderRetracted2</Name>
+							<Comment><![CDATA[ EL1918 channel 2]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iD3ProcessCylinderFeedback</Name>
+							<Comment><![CDATA[ EL1918 channel 3]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iEL1918_Ch4</Name>
+							<Comment><![CDATA[ EL1918 channel 4]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iEL1918_Ch5</Name>
+							<Comment><![CDATA[ EL1918 channel 5 		     			]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iEL1918_Ch6</Name>
+							<Comment><![CDATA[ EL1918 channel 6]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iEL1918_Ch7</Name>
+							<Comment><![CDATA[ EL1918 channel 7 ]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.iEL1918_Ch8</Name>
+							<Comment><![CDATA[ EL1918 channel 8]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T12_EL1918.stTerminalInfo.nTerminal_State</Name>
+							<Comment><![CDATA[ Terminal State from IO Terminal Info Data]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.dw_T13_EL6633.stTerminalInfo.nTerminal_State</Name>
 							<Comment><![CDATA[ Terminal State from IO Terminal Info Data]]></Comment>
 							<Type>UINT</Type>
 						</Var>
@@ -819,7 +1148,7 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.qProcessDoorClosed</Name>
+							<Name>GVL_IO.stTwinSAFE.qAirPressureOK</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -827,23 +1156,23 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.qTwoHands</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_IO.stTwinSAFE.qE_StopPressed</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.qMainDoorOpened</Name>
+							<Name>GVL_IO.stTwinSAFE.qMainDoorUnsafe</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.qProcessDoorSafe</Name>
+							<Name>GVL_IO.stTwinSAFE.qProcessDoorUnSafe</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.qTwoHandsSafe</Name>
+							<Name>GVL_IO.stTwinSAFE.qTwoHandsUnsafe</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qProcessCylinderUnsafe</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1318,278 +1647,6 @@
 						</Var>
 						<Var>
 							<Name>GVL_IO.LeakTester2_IO.sti28LiveMeasurement.inPrecisionCode4</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUniqueID</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inChannelNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inProgramNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inTestPort</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inPartEvaluation</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inTestType</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inPrecisionCode</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation0</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.ibTestEvaluation3</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inMeasurement1</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inVariableCode1</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUnitCode1</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inMeasurement2</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inVariableCode2</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult1.inUnitCode2</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUniqueID</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inChannelNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inProgramNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inTestPort</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inPartEvaluation</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inTestType</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inPrecisionCode</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation0</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.ibTestEvaluation3</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inMeasurement1</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inVariableCode1</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUnitCode1</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inMeasurement2</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inVariableCode2</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[0].aLeakTesterLastResult2.inUnitCode2</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUniqueID</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inChannelNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inProgramNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inTestPort</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inPartEvaluation</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inTestType</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inPrecisionCode</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation0</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.ibTestEvaluation3</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inMeasurement1</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inVariableCode1</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUnitCode1</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inMeasurement2</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inVariableCode2</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult1.inUnitCode2</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUniqueID</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inChannelNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inProgramNumber</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inTestPort</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inPartEvaluation</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inTestType</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inPrecisionCode</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation0</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.ibTestEvaluation3</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inMeasurement1</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inVariableCode1</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUnitCode1</Name>
-							<Type>USINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inMeasurement2</Name>
-							<Type>UDINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inVariableCode2</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Master.stCycleData.stLeakTester_CycleData[1].aLeakTesterLastResult2.inUnitCode2</Name>
 							<Type>USINT</Type>
 						</Var>
 						<Var>
@@ -56272,6 +56329,28 @@
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2026-03-11T12:23:17">
+						<OwnerA Name="InputDst" Prefix="TIPC^TE1108^TE1108 Instance" Type="1">
+							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 8 (EL1809)">
+								<Link VarA="GVL_CylinderTest.iCylinderDown" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_CylinderTest.iCylinderUp" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^TE1108^TE1108 Instance" Type="2">
+							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 9 (EL2809)">
+								<Link VarA="GVL_CylinderTest.qCylinderDown" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 4^Output" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_CylinderTest.qCylinderUp" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Output" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2026-03-12T09:40:06">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^TE1108^TE1108 Instance" Type="2">
+							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+								<Link VarA="GVL_IO.stTwinSAFE.iProcessDoorClosedCondition1" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition1_42" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL_IO.stTwinSAFE.iProcessDoorClosedCondition2" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition2_48" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
 					<Contexts>
 						<Context>
 							<Id>0</Id>
@@ -56307,13 +56386,13 @@
 			</Project>
 		</Safety>
 		<Io>
-			<Device Id="3" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="172.18.235.65.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
+			<Device Id="3" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="192.168.7.156.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
 				<Name>Device 3 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
-						<DeviceDesc>EtheCAT (TwinCAT-Intel PCI Ethernet Adapter (Gigabi</DeviceDesc>
-						<DeviceName>\DEVICE\{7E841689-C521-48DD-8716-4C4467345031}</DeviceName>
-						<DeviceData>000105a8eee3</DeviceData>
+						<DeviceDesc>EtherCAT (TwinCAT-Intel PCI Ethernet Adapter (Gigab</DeviceDesc>
+						<DeviceName>\DEVICE\{CCF6E0FA-BE83-4FCE-81DC-B6449323B37D}</DeviceName>
+						<DeviceData>000105a8eee1</DeviceData>
 					</Pnp>
 				</AddressInfo>
 				<Image Id="2" AddrType="9" ImageType="3">
@@ -56340,7 +56419,7 @@
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x1afe3052" RevisionNo="#x00150000" BIC="1P135389SBTNsee COE!1KEL6910                        Q1    " InfoDataAddr="true" RepeatSupport="true" TimeoutStateChange1="5000" TimeoutMailbox2="10000" TComSupport="true" PortPhys="51" DebugMemory="8" SafetyLogicSupported="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6910, TwinSAFE PLC" Desc="EL6910" PortABoxInfo="#x01000002">
 							<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
 							<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
-							<SyncMan>00121e002400010003000000000000000200001224010000</SyncMan>
+							<SyncMan>001225002400010003000000000000000200001224010000</SyncMan>
 							<SyncMan>001d1c002000010004000000000000000200001d20010000</SyncMan>
 							<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
 							<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
@@ -56361,6 +56440,9 @@
 								<Entry Name="Message_10 TxPDO" Index="#x7000" Sub="#x03">
 									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
 								</Entry>
+								<Entry Name="Message_38 TxPDO" Index="#x7000" Sub="#x04">
+									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
 							</Pdo>
 							<Pdo Name="ConnectionOutputs" Index="#x1600" InOut="1" Flags="#x2011" SyncMan="2">
 								<Entry Name="Message_8 RxPDO" Index="#x6000" Sub="#x01">
@@ -56371,6 +56453,9 @@
 								</Entry>
 								<Entry Name="Message_10 RxPDO" Index="#x6000" Sub="#x03">
 									<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+								</Entry>
+								<Entry Name="Message_38 RxPDO" Index="#x6000" Sub="#x04">
+									<Type GUID="{B05FDAB7-3241-ACD3-D16C-0FDAF8825BC9}">FSOE_7</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="StandardInputs" Index="#x1bf0" Flags="#x2011" SyncMan="3">
@@ -56386,22 +56471,22 @@
 								<Entry Name="TwinSafeGroup1.SafetyOK_30" Index="#x7000" Sub="#x04">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessDoorClosed_31" Index="#x7000" Sub="#x05">
+								<Entry Name="TwinSafeGroup1.E_StopPressed_32" Index="#x7000" Sub="#x05">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.E_StopPressed_32" Index="#x7000" Sub="#x06">
+								<Entry Name="TwinSafeGroup1.ProcessDoorUnsafe_34" Index="#x7000" Sub="#x06">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.MainDoorOpened_33" Index="#x7000" Sub="#x07">
+								<Entry Name="TwinSafeGroup1.TwoHandsUnsafe_35" Index="#x7000" Sub="#x07">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessDoorSafe_34" Index="#x7000" Sub="#x08">
+								<Entry Name="TwinSafeGroup1.AirPressureOK_41" Index="#x7000" Sub="#x08">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.TwoHandsSafe_35" Index="#x7000" Sub="#x09">
+								<Entry Name="TwinSafeGroup1.MainDoorSafe_49" Index="#x7000" Sub="#x09">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.TwoHands_36" Index="#x7000" Sub="#x0a">
+								<Entry Name="TwinSafeGroup1.ProcessCylinderUnsafe_54" Index="#x7000" Sub="#x0a">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -56409,37 +56494,44 @@
 								</Entry>
 							</Pdo>
 							<Pdo Name="StandardOutputs" Index="#x17f0" InOut="1" Flags="#x2011" SyncMan="2">
-								<Entry Name="TwinSafeGroup1.ErrorAcknowledgement_1" Index="#x6000" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessDoorClosedCondition_16" Index="#x6000" Sub="#x02">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry>
-									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.AirSupplyMeasurement_19" Index="#x6000" Sub="#x03">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.AirPressureMinVal_22" Index="#x6000" Sub="#x04">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.AirPressureMaxVal_23" Index="#x6000" Sub="#x05">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessDoor Closing_29" Index="#x6000" Sub="#x06">
+								<Entry Name="TwinSafeGroup1.ProcessDoorClosedCondition_16" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
 									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
 								</Entry>
-							</Pdo>
-							<Pdo Name="Device Info Data" Index="#x1bfe" Flags="#x2011" SyncMan="3">
-								<Entry Name="Project CRC" Index="#x7000" Sub="#x01">
-									<Type>WORD</Type>
+								<Entry Name="TwinSafeGroup1.AirSupplyMeasurement_19" Index="#x6000" Sub="#x02">
+									<Type>UINT</Type>
 								</Entry>
-								<Entry Name="Serial Number" Index="#x7000" Sub="#x02">
-									<Type>UDINT</Type>
+								<Entry Name="TwinSafeGroup1.AirPressureMinVal_22" Index="#x6000" Sub="#x03">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.AirPressureMaxVal_23" Index="#x6000" Sub="#x04">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.ProcessDoor Closing_29" Index="#x6000" Sub="#x05">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.MainDoorClosedCondition1_42" Index="#x6000" Sub="#x06">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.AirSupplySignal1_46" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.AirSupplySignal2_47" Index="#x6000" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.MainDoorClosedCondition2_48" Index="#x6000" Sub="#x09">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition1_52" Index="#x6000" Sub="#x0a">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition2_53" Index="#x6000" Sub="#x0b">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="TwinSafeGroup1.SafetyErrorAcknowledge_55" Index="#x6000" Sub="#x0c">
+									<Type>BIT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="FSLOGIC Inputs" Index="#x1bff" Flags="#x0011" SyncMan="3">
@@ -57164,6 +57256,42 @@
 					<Box Id="11" BoxType="9099" BoxFlags="#x00000020">
 						<Name>Term 11 (EL3058)</Name>
 						<ImageId>1006</ImageId>
+						<Xml>
+							<BeckhoffEcatSlavePlugIn>
+								<Channel>
+									<ChannelNo>0</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>1</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>2</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>3</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>4</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>5</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>6</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>7</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+							</BeckhoffEcatSlavePlugIn>
+						</Xml>
 						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0bf23052" RevisionNo="#x00160000" BIC="1P068992SBTN999ko8r71KEL3058                        Q1    2P362509180022" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3058 8Ch. Ana. Input 4-20mA" Desc="EL3058" PortABoxInfo="#x0100000a">
 							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
@@ -57174,385 +57302,385 @@
 							<BootStrapData>0010f400f410f400</BootStrapData>
 							<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a01</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6000" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6000" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6000" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6000" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6000" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6000" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6000" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6000" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6000" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 1" Index="#x1a01" Flags="#x0010">
 								<ExcludePdo>#x1a00</ExcludePdo>
-								<Entry Name="Value" Index="#x6000" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6000" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a03</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6010" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6010" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6010" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6010" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6010" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6010" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6010" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6010" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6010" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6010" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6010" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 2" Index="#x1a03" Flags="#x0010">
 								<ExcludePdo>#x1a02</ExcludePdo>
-								<Entry Name="Value" Index="#x6010" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6010" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 3" Index="#x1a04" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a05</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6020" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6020" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6020" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6020" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6020" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6020" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6020" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6020" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6020" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6020" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6020" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 3" Index="#x1a05" Flags="#x0010">
 								<ExcludePdo>#x1a04</ExcludePdo>
-								<Entry Name="Value" Index="#x6020" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6020" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 4" Index="#x1a06" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a07</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6030" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6030" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6030" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6030" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6030" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6030" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6030" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6030" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6030" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6030" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6030" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 4" Index="#x1a07" Flags="#x0010">
 								<ExcludePdo>#x1a06</ExcludePdo>
-								<Entry Name="Value" Index="#x6030" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6030" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 5" Index="#x1a08" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a09</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6040" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6040" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6040" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6040" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6040" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6040" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6040" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6040" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6040" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6040" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6040" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6040" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6040" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6040" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6040" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6040" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 5" Index="#x1a09" Flags="#x0010">
 								<ExcludePdo>#x1a08</ExcludePdo>
-								<Entry Name="Value" Index="#x6040" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6040" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 6" Index="#x1a0a" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a0b</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6050" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6050" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6050" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6050" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6050" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6050" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6050" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6050" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6050" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6050" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6050" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6050" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6050" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6050" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6050" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6050" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 6" Index="#x1a0b" Flags="#x0010">
 								<ExcludePdo>#x1a0a</ExcludePdo>
-								<Entry Name="Value" Index="#x6050" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6050" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 7" Index="#x1a0c" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a0d</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6060" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6060" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6060" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6060" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6060" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6060" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6060" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6060" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6060" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6060" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6060" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6060" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6060" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6060" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6060" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6060" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 7" Index="#x1a0d" Flags="#x0010">
 								<ExcludePdo>#x1a0c</ExcludePdo>
-								<Entry Name="Value" Index="#x6060" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6060" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 8" Index="#x1a0e" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a0f</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6070" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6070" Sub="#x01" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Underrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6070" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6070" Sub="#x02" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Overrange event active]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6070" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6070" Sub="#x03" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit1
 Bit1: Value bigger/equal Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6070" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6070" Sub="#x05" Flags="#x00040000">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value smaller/equal Limit2
 Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6070" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6070" Sub="#x07" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="6">
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6070" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6070" Sub="#x0f" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6070" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6070" Sub="#x10" Flags="#x00040000">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
 								</Entry>
-								<Entry Name="Value" Index="#x6070" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6070" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 8" Index="#x1a0f" Flags="#x0010">
 								<ExcludePdo>#x1a0e</ExcludePdo>
-								<Entry Name="Value" Index="#x6070" Sub="#x11" Flags="#x00040000">
+								<Entry Name="Value" BitLen="16" Index="#x6070" Sub="#x11" Flags="#x00040000">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
@@ -57731,7 +57859,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Box Id="13" BoxType="9171" BoxFlags="#x00000020">
 						<Name>Term 13 (EL6633)</Name>
 						<ImageId>1001</ImageId>
-						<EtherCAT SlaveType="8" AdsServerAddress="ac12eb41040e0000" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x00000002" ProductCode="#x19e93052" RevisionNo="#x00110000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="60000" TimeoutStateChange2="30000" TimeoutStateChange3="30000" TimeoutStateChange4="300" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6633 PROFINET IO Controller" Desc="EL6633" PortABoxInfo="#x0100000c">
+						<EtherCAT SlaveType="8" AdsServerAddress="c0a80714040e0000" FixedAdsServerNetId="true" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" FoeType="1" VendorId="#x00000002" ProductCode="#x19e93052" RevisionNo="#x00110000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="60000" TimeoutStateChange2="30000" TimeoutStateChange3="30000" TimeoutStateChange4="300" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6633 PROFINET IO Controller" Desc="EL6633" PortABoxInfo="#x0100000c">
 							<SyncMan>001000042600010001000000400000040004001026010000</SyncMan>
 							<SyncMan>001400042200010002000000400000040004001422010000</SyncMan>
 							<SyncMan>001800006400000003000000000000000000001864010000</SyncMan>
@@ -57761,8 +57889,15 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500831000403}" Id="#x02030030"/>
 		<MappingInfo Identifier="{03040020-0020-0304-2000-040320000403}" Id="#x02030020" Watchdog="04000000040000000400000004000000"/>
 		<OwnerA Name="TIID^Device 3 (EtherCAT)">
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 12 (EL1918)">
+				<Link VarA="Term 1 (EK1100)^Term 3 (EL6910)^ConnectionInputs^Message_38 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+				<Link VarA="Term 1 (EK1100)^Term 12 (EL1918)^Module 1 (FSOE)^FSoE Inputs^FSOE" VarB="ConnectionOutputs^Message_38 RxPDO"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 4 (EL1918)">
 				<Link VarA="Term 1 (EK1100)^Term 3 (EL6910)^ConnectionInputs^Message_8 TxPDO" VarB="Module 1 (FSOE)^FSoE Outputs^FSOE"/>
 				<Link VarA="Term 1 (EK1100)^Term 3 (EL6910)^ConnectionOutputs^Message_8 RxPDO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE"/>
@@ -57777,13 +57912,115 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^TE1108^TE1108 Instance">
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T01_EK1100.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 10 (EL2809-0015)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T10_EL2809.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 11 (EL3058)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T11_EL3058.iMainPressure" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T11_EL3058.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 12 (EL1918)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T12_EL1918.iD3ProcessCylinderFeedback" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T12_EL1918.iD3ProcessCylinderRetracted1" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T12_EL1918.iD3ProcessCylinderRetracted2" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T12_EL1918.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 13 (EL6633)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T13_EL6633.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL6070-0033)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T02_EL6070.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T03_EL6910.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirErrorSignal" VarB="StandardInputs^TwinSafeGroup1.AirErrorSignal_17"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureAbove" VarB="StandardInputs^TwinSafeGroup1.AirPressureAbove_26"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureBelow" VarB="StandardInputs^TwinSafeGroup1.AirPressureBelow_25"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureOK" VarB="StandardInputs^TwinSafeGroup1.AirPressureOK_41"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qE_StopPressed" VarB="StandardInputs^TwinSafeGroup1.E_StopPressed_32"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qMainDoorUnsafe" VarB="StandardInputs^TwinSafeGroup1.MainDoorSafe_49"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qProcessCylinderUnsafe" VarB="StandardInputs^TwinSafeGroup1.ProcessCylinderUnsafe_54"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qProcessDoorUnSafe" VarB="StandardInputs^TwinSafeGroup1.ProcessDoorUnsafe_34"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qSafetyOk" VarB="StandardInputs^TwinSafeGroup1.SafetyOK_30"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qTwoHandsUnsafe" VarB="StandardInputs^TwinSafeGroup1.TwoHandsUnsafe_35"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirPressureMaxValue" VarB="StandardOutputs^TwinSafeGroup1.AirPressureMaxVal_23"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirPressureMinValue" VarB="StandardOutputs^TwinSafeGroup1.AirPressureMinVal_22"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyCondition1" VarB="StandardOutputs^TwinSafeGroup1.AirSupplySignal1_46"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyCondition2" VarB="StandardOutputs^TwinSafeGroup1.AirSupplySignal2_47"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyMeasurement" VarB="StandardOutputs^TwinSafeGroup1.AirSupplyMeasurement_19"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iCloseMainDoorCondition1" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition1_42"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iCloseMainDoorCondition2" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition2_48"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessCylinderLockCondition1" VarB="StandardOutputs^TwinSafeGroup1.ProcessCylinderLockCondition1_52"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessCylinderLockCondition2" VarB="StandardOutputs^TwinSafeGroup1.ProcessCylinderLockCondition2_53"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessDoorClosedCondition" VarB="StandardOutputs^TwinSafeGroup1.ProcessDoorClosedCondition_16"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessDoorClosing" VarB="StandardOutputs^TwinSafeGroup1.ProcessDoor Closing_29"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iSafetyErrorAcknowledge" VarB="StandardOutputs^TwinSafeGroup1.SafetyErrorAcknowledge_55"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 4 (EL1918)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iD1MainDoorFB" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 6.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iD1MainDoorLocked1" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iD1MainDoorLocked2" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 5.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iEStopChannel1" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iEStopChannel2" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iFestoMS6DumpValveFB" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 8.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iFestoMS6ValveFB" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 7.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.iResetButton" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T04_EL1918.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 5 (EL1918)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iLeftTouchButtonNC" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 1.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iLeftTouchButtonNO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 3.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iProcessDoorClosed1" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 5.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iProcessDoorClosed2" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 6.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iProcessDoorFB" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 7.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iRightTouchButtonNC" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 2.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.iRightTouchButtonNO" VarB="Module 1 (FSOE)^FSoE Inputs^FSOE^FSIN Module 4.Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T05_EL1918.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 6 (EL2904)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T06_EL2904.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T06_EL2904.qEnableAirSupply_PSR1" VarB="Module 2 (DO)^RxPDO^Output Channel 1"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T06_EL2904.qLockMainDoor" VarB="Module 2 (DO)^RxPDO^Output Channel 3"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T06_EL2904.qLockProcessCylinder" VarB="Module 2 (DO)^RxPDO^Output Channel 4"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T06_EL2904.qResetAirSupply_PSR2" VarB="Module 2 (DO)^RxPDO^Output Channel 2"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 7 (EL9410)">
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T07_EL9410.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 8 (EL1809)">
-				<Link VarA="PlcTask Inputs^GVL_CylinderTest.iCylinderDown" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_CylinderTest.iCylinderUp" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iPartPresentNest1" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iPartPresentNest2" VarB="Channel 6^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iPartPresentNest3" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iPartPresentNest4" VarB="Channel 8^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iProcessCylinder1Extended" VarB="Channel 10^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iProcessCylinder1Retracted" VarB="Channel 9^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iProcessCylinder2Extended" VarB="Channel 12^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iProcessCylinder2Retracted" VarB="Channel 11^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iRejectSensor" VarB="Channel 13^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iStartButoon" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iStopButton" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iUP_OK" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.iUS_OK" VarB="Channel 4^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T08_EL1809.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 9 (EL2809)">
-				<Link VarA="PlcTask Outputs^GVL_CylinderTest.qCylinderDown" VarB="Channel 4^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_CylinderTest.qCylinderUp" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.dw_T09_EL2809.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qExtendProcessCylinder1" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED1_Green" VarB="Channel 9^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED1_Red" VarB="Channel 8^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED2_Green" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED2_Red" VarB="Channel 10^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED3_Green" VarB="Channel 13^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED3_Red" VarB="Channel 12^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED4_Green" VarB="Channel 15^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qIndicatorLED4_Red" VarB="Channel 14^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qPanelLightLED" VarB="Channel 7^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qResetButtonLED" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qRetractProcessCylinder1" VarB="Channel 3^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.dw_T09_EL2809.qStartButtonLED" VarB="Channel 1^Output"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

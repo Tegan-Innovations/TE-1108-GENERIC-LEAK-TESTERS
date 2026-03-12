@@ -146,6 +146,7 @@
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
     <Folder Include="Contents" />
+    <Folder Include="Server\TcHmiLua" />
     <Folder Include="Server\TcHmiReporting" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base-Dark\Images\" />
