@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Crc="3252870436" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project Crc="197625092" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
@@ -17,7 +17,7 @@
     <IsNewCreated>false</IsNewCreated>
     <SPlcProjVersion>1.8.0.0</SPlcProjVersion>
     <Name>SAFETY_TE1108_LEAKTESTERS</Name>
-    <NextSdsId>56</NextSdsId>
+    <NextSdsId>60</NextSdsId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -33,11 +33,9 @@
     <None Include="TwinSafeGroup1\Alias Devices\AirPressureMinVal.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\AirPressureOK.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\AirSupplyMeasurement.sds" />
-    <None Include="TwinSafeGroup1\Alias Devices\AirSupplySignal1.sds" />
-    <None Include="TwinSafeGroup1\Alias Devices\AirSupplySignal2.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\bMainDoor_AirFlag_CompleteSafe.sds" />
+    <None Include="TwinSafeGroup1\Alias Devices\bMainDoor_AirFlag_Stopped.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\E_StopPressed.sds" />
-    <None Include="TwinSafeGroup1\Alias Devices\MainDoorClosedCondition1.sds" />
-    <None Include="TwinSafeGroup1\Alias Devices\MainDoorClosedCondition2.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\MainDoorSafe.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\ProcessCylinderLockCondition1.sds" />
     <None Include="TwinSafeGroup1\Alias Devices\ProcessCylinderLockCondition2.sds" />

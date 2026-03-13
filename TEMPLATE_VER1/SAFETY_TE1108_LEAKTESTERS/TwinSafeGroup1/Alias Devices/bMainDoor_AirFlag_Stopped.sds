@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SafetyDeviceDesc Crc="2617484165" FileFormatVersion="1.9">
+<SafetyDeviceDesc Crc="1953514122" FileFormatVersion="1.9">
   <AliasDeviceType>
     <Type>1</Type>
     <SubType>1</SubType>
     <VendorId>0</VendorId>
   </AliasDeviceType>
-  <SDSID>47</SDSID>
+  <SDSID>58</SDSID>
   <StandardAliasDevice>
     <LinkingMode>Manual</LinkingMode>
     <IO>

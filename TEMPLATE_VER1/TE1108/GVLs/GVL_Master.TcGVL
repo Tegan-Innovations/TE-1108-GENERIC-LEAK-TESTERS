@@ -28,7 +28,7 @@
 	bProcessDoorClosedConditionFlag	: BOOL;
 	bProcessCylinderLockConditionFlag: BOOL;
 	tonSafety						: TON;
-	bMainDoor_AirFlag				: BOOL;
+	bMainDoor_AirFlag				: ARRAY[0..1] OF  BOOL;
 /////////////////////////////////////////////////////////////////////////////////////Event Log/////////////////////////////////////////////////////////////////////////////////////
 	
 	stStationEvents				: ARRAY[0..4] OF  ST_StationEvents;//0: GENERAL

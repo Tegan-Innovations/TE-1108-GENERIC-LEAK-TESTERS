@@ -371,12 +371,13 @@ stTwinSAFE.iAirPressureMaxValue			:= nAirPressureMaxValue;
 stTwinSAFE.iAirPressureMinValue			:= nAirPressureMinValue;
 stTwinSAFE.iProcessDoorClosing			:= bDoorClosingFlag;
 
-bMainDoor_AirFlag						:= (stMachineStatus.eMachineState = E_MachineState.SYSTEM_AUTO_CYCLE) OR ( stMachineStatus.eMachineState = E_MachineState.MANUAL_MODE) OR (stMachineStatus.eMachineState = E_MachineState.SYSTEM_INITIALISING) OR (stMachineStatus.eMachineState = E_MachineState.SAFETY);
+bMainDoor_AirFlag[0]					:= (stMachineStatus.eMachineState = E_MachineState.SYSTEM_AUTO_CYCLE) OR ( stMachineStatus.eMachineState = E_MachineState.MANUAL_MODE) OR (stMachineStatus.eMachineState = E_MachineState.SYSTEM_INITIALISING) OR 
+											(stMachineStatus.eMachineState = E_MachineState.SAFETY);
 
-stTwinSAFE.iAirSupplyCondition1			:= bMainDoor_AirFlag;
-stTwinSAFE.iAirSupplyCondition2			:= bMainDoor_AirFlag;
-stTwinSAFE.iCloseMainDoorCondition1		:= bMainDoor_AirFlag;
-stTwinSAFE.iCloseMainDoorCondition2		:= bMainDoor_AirFlag;
+bMainDoor_AirFlag[1]					:= (stMachineStatus.eMachineState = E_MachineState.STOPPING) OR (stMachineStatus.eMachineState = E_MachineState.STOPPED);
+
+stTwinSAFE.bMainDoor_AirFlag[0]			:= bMainDoor_AirFlag[0];
+stTwinSAFE.bMainDoor_AirFlag[1]			:= bMainDoor_AirFlag[1];
 
 stTwinSAFE.iProcessCylinderLockCondition1 	:= bProcessCylinderLockConditionFlag;
 stTwinSAFE.iProcessCylinderLockCondition2 	:= bProcessCylinderLockConditionFlag;

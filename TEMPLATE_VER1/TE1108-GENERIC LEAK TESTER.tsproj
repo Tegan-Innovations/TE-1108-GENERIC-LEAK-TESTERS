@@ -11,6 +11,15 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
+			<Name GUID="{54195CC7-3340-E483-343B-EF7951C3211B}" IecBaseType="true" AutoDeleteType="true">ARRAY [0..1] OF BOOL</Name>
+			<BitSize>16</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
 			<Name GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety" TcBaseType="true">FSOE_6</Name>
 			<BitSize>48</BitSize>
 			<SubItem>
@@ -82,6 +91,15 @@
 			<ArrayInfo>
 				<LBound>0</LBound>
 				<Elements>7</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<BitSize>2</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -162,7 +180,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{997013A6-75D1-424B-98F5-A30289B2B96E}" Name="TE1108" PrjFilePath="TE1108\TE1108.plcproj" TmcFilePath="TE1108\TE1108.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{A4FA1721-732E-D5BA-DDA3-CAB7382F1E5B}" TmcPath="TE1108\TE1108.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{21B15EB7-5D83-39EF-E94F-8C79C21F5218}" TmcPath="TE1108\TE1108.tmc">
 					<Name>TE1108 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -348,55 +366,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_IO.stTwinSAFE.iAirPressureMaxValue</Name>
-							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety OUTPUTS///////////////////////////////////////////////////////////////////////////////////////]]></Comment>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iAirPressureMinValue</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iAirSupplyMeasurement</Name>
-							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iAirSupplyCondition1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iAirSupplyCondition2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iCloseMainDoorCondition1</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iCloseMainDoorCondition2</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosing</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosedCondition</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.iSafetyErrorAcknowledge</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_IO.LeakTester1_IO.sti28General_I_O.bOutput1</Name>
 							<Comment><![CDATA[OUTPUTS]]></Comment>
 							<Type>BOOL</Type>
@@ -573,6 +542,47 @@
 						<Var>
 							<Name>GVL_IO.LeakTester2_IO.sti28General_I_O.bSetProgram</Name>
 							<Type GUID="{481A0C15-D2DB-59F6-F498-C30AA9C1998C}">ARRAY [0..7] OF BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iAirPressureMaxValue</Name>
+							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety OUTPUTS///////////////////////////////////////////////////////////////////////////////////////]]></Comment>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iAirPressureMinValue</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iAirSupplyMeasurement</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iMachineStoppedCondition</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition1</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessCylinderLockCondition2</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosing</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iProcessDoorClosedCondition</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.iSafetyErrorAcknowledge</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.bMainDoor_AirFlag</Name>
+							<Type GUID="{54195CC7-3340-E483-343B-EF7951C3211B}">ARRAY [0..1] OF BOOL</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="1">
@@ -1133,47 +1143,6 @@
 							<Name>GVL_IO.dw_T13_EL6633.stTerminalInfo.nTerminal_State</Name>
 							<Comment><![CDATA[ Terminal State from IO Terminal Info Data]]></Comment>
 							<Type>UINT</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qAirErrorSignal</Name>
-							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety Inputs///////////////////////////////////////////////////////////////////////////////////////	]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qAirPressureAbove</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qAirPressureBelow</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qAirPressureOK</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qSafetyOk</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qE_StopPressed</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qMainDoorUnsafe</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qProcessDoorUnSafe</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qTwoHandsUnsafe</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stTwinSAFE.qProcessCylinderUnsafe</Name>
-							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_IO.LeakTester1_IO.sti28General_I_O.bInput1</Name>
@@ -56321,6 +56290,47 @@
 							<Name>GVL_Persistent.aDataHistory[200].stLeakTester_CycleData[1].aLeakTesterLastResult2.inUnitCode2</Name>
 							<Type>USINT</Type>
 						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qAirErrorSignal</Name>
+							<Comment><![CDATA[////////////////////////////////////////////////////////////////////////Safety Inputs///////////////////////////////////////////////////////////////////////////////////////	]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qAirPressureAbove</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qAirPressureBelow</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qAirPressureOK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qSafetyOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qE_StopPressed</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qMainDoorUnsafe</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qProcessDoorUnSafe</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qTwoHandsUnsafe</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stTwinSAFE.qProcessCylinderUnsafe</Name>
+							<Type>BOOL</Type>
+						</Var>
 					</Vars>
 					<UnrestoredVarLinks ImportTime="2026-02-16T14:24:37">
 						<OwnerA Name="InputDst" Prefix="TIPC^TE1108^TE1108 Instance" Type="1">
@@ -56348,6 +56358,13 @@
 							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
 								<Link VarA="GVL_IO.stTwinSAFE.iProcessDoorClosedCondition1" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition1_42" Size="1" RestoreInfo="ANotFound"/>
 								<Link VarA="GVL_IO.stTwinSAFE.iProcessDoorClosedCondition2" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition2_48" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2026-03-13T09:05:31">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^TE1108^TE1108 Instance" Type="2">
+							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
+								<Link VarA="GVL_IO.stTwinSAFE.iAirSupplyCondition1" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="StandardOutputs^TwinSafeGroup1.AirSupplySignal_46" Size="1" RestoreInfo="ANotFound"/>
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
@@ -56459,34 +56476,34 @@
 								</Entry>
 							</Pdo>
 							<Pdo Name="StandardInputs" Index="#x1bf0" Flags="#x2011" SyncMan="3">
-								<Entry Name="TwinSafeGroup1.AirErrorSignal_17" Index="#x7000" Sub="#x01">
+								<Entry Name="TwinSafeGroup1.AirPressureBelow_25" Index="#x7000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.AirPressureBelow_25" Index="#x7000" Sub="#x02">
+								<Entry Name="TwinSafeGroup1.AirPressureAbove_26" Index="#x7000" Sub="#x02">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.AirPressureAbove_26" Index="#x7000" Sub="#x03">
+								<Entry Name="TwinSafeGroup1.SafetyOK_30" Index="#x7000" Sub="#x03">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.SafetyOK_30" Index="#x7000" Sub="#x04">
+								<Entry Name="TwinSafeGroup1.E_StopPressed_32" Index="#x7000" Sub="#x04">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.E_StopPressed_32" Index="#x7000" Sub="#x05">
+								<Entry Name="TwinSafeGroup1.ProcessDoorUnsafe_34" Index="#x7000" Sub="#x05">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessDoorUnsafe_34" Index="#x7000" Sub="#x06">
+								<Entry Name="TwinSafeGroup1.TwoHandsUnsafe_35" Index="#x7000" Sub="#x06">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.TwoHandsUnsafe_35" Index="#x7000" Sub="#x07">
+								<Entry Name="TwinSafeGroup1.AirPressureOK_41" Index="#x7000" Sub="#x07">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.AirPressureOK_41" Index="#x7000" Sub="#x08">
+								<Entry Name="TwinSafeGroup1.MainDoorSafe_49" Index="#x7000" Sub="#x08">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.MainDoorSafe_49" Index="#x7000" Sub="#x09">
+								<Entry Name="TwinSafeGroup1.ProcessCylinderUnsafe_54" Index="#x7000" Sub="#x09">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessCylinderUnsafe_54" Index="#x7000" Sub="#x0a">
+								<Entry Name="TwinSafeGroup1.AirErrorSignal_59" Index="#x7000" Sub="#x0a">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -56512,26 +56529,23 @@
 								<Entry Name="TwinSafeGroup1.ProcessDoor Closing_29" Index="#x6000" Sub="#x05">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.MainDoorClosedCondition1_42" Index="#x6000" Sub="#x06">
+								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition1_52" Index="#x6000" Sub="#x06">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.AirSupplySignal1_46" Index="#x6000" Sub="#x07">
+								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition2_53" Index="#x6000" Sub="#x07">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.AirSupplySignal2_47" Index="#x6000" Sub="#x08">
+								<Entry Name="TwinSafeGroup1.SafetyErrorAcknowledge_55" Index="#x6000" Sub="#x08">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.MainDoorClosedCondition2_48" Index="#x6000" Sub="#x09">
+								<Entry Name="TwinSafeGroup1.bMainDoor_AirFlag_CompleteSafe_57" Index="#x6000" Sub="#x09">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition1_52" Index="#x6000" Sub="#x0a">
+								<Entry Name="TwinSafeGroup1.bMainDoor_AirFlag_Stopped_58" Index="#x6000" Sub="#x0a">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="TwinSafeGroup1.ProcessCylinderLockCondition2_53" Index="#x6000" Sub="#x0b">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="TwinSafeGroup1.SafetyErrorAcknowledge_55" Index="#x6000" Sub="#x0c">
-									<Type>BIT</Type>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="FSLOGIC Inputs" Index="#x1bff" Flags="#x0011" SyncMan="3">
@@ -57936,7 +57950,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL6910)">
 				<Link VarA="PlcTask Inputs^GVL_IO.dw_T03_EL6910.stTerminalInfo.nTerminal_State" VarB="InfoData^State"/>
-				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirErrorSignal" VarB="StandardInputs^TwinSafeGroup1.AirErrorSignal_17"/>
+				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirErrorSignal" VarB="StandardInputs^TwinSafeGroup1.AirErrorSignal_59"/>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureAbove" VarB="StandardInputs^TwinSafeGroup1.AirPressureAbove_26"/>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureBelow" VarB="StandardInputs^TwinSafeGroup1.AirPressureBelow_25"/>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qAirPressureOK" VarB="StandardInputs^TwinSafeGroup1.AirPressureOK_41"/>
@@ -57946,13 +57960,11 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qProcessDoorUnSafe" VarB="StandardInputs^TwinSafeGroup1.ProcessDoorUnsafe_34"/>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qSafetyOk" VarB="StandardInputs^TwinSafeGroup1.SafetyOK_30"/>
 				<Link VarA="PlcTask Inputs^GVL_IO.stTwinSAFE.qTwoHandsUnsafe" VarB="StandardInputs^TwinSafeGroup1.TwoHandsUnsafe_35"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.bMainDoor_AirFlag[0]" VarB="StandardOutputs^TwinSafeGroup1.bMainDoor_AirFlag_CompleteSafe_57"/>
+				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.bMainDoor_AirFlag[1]" VarB="StandardOutputs^TwinSafeGroup1.bMainDoor_AirFlag_Stopped_58"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirPressureMaxValue" VarB="StandardOutputs^TwinSafeGroup1.AirPressureMaxVal_23"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirPressureMinValue" VarB="StandardOutputs^TwinSafeGroup1.AirPressureMinVal_22"/>
-				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyCondition1" VarB="StandardOutputs^TwinSafeGroup1.AirSupplySignal1_46"/>
-				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyCondition2" VarB="StandardOutputs^TwinSafeGroup1.AirSupplySignal2_47"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iAirSupplyMeasurement" VarB="StandardOutputs^TwinSafeGroup1.AirSupplyMeasurement_19"/>
-				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iCloseMainDoorCondition1" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition1_42"/>
-				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iCloseMainDoorCondition2" VarB="StandardOutputs^TwinSafeGroup1.MainDoorClosedCondition2_48"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessCylinderLockCondition1" VarB="StandardOutputs^TwinSafeGroup1.ProcessCylinderLockCondition1_52"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessCylinderLockCondition2" VarB="StandardOutputs^TwinSafeGroup1.ProcessCylinderLockCondition2_53"/>
 				<Link VarA="PlcTask Outputs^GVL_IO.stTwinSAFE.iProcessDoorClosedCondition" VarB="StandardOutputs^TwinSafeGroup1.ProcessDoorClosedCondition_16"/>
