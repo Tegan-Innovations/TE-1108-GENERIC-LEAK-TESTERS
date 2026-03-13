@@ -60,11 +60,11 @@ stStationEvents[0].aEvents[5].bFault						:= TRUE;
 stStationEvents[0].aEvents[5].bEventFlag					:= stTwinSAFE.qE_StopPressed;
 stStationEvents[0].aEvents[5].bEventText					:= 'E-STOP Pressed' ;
 stStationEvents[0].aEvents[5].sSolution						:= 'Release E-STOP';
-(*
+
 stStationEvents[0].aEvents[6].bFault						:= TRUE;
-stStationEvents[0].aEvents[6].bEventFlag					:= ((bMainDoor_AirFlag[0] AND NOT (stMachineStatus.eMachineState = E_MachineState.SAFETY)) OR tonSafety.Q)AND NOT stTwinSAFE.qSafetyOk;
+stStationEvents[0].aEvents[6].bEventFlag					:= ((bMainDoor_AirFlag[0] AND tonSafety.Q) OR bMainDoor_AirFlag[1]) AND NOT stTwinSAFE.qSafetyOk;
 stStationEvents[0].aEvents[6].bEventText					:= 'Safe system error' ;
-stStationEvents[0].aEvents[6].sSolution						:= 'Check safety elements';*)
+stStationEvents[0].aEvents[6].sSolution						:= 'Check safety elements';
 
 stStationEvents[0].aEvents[8].bFault						:= TRUE;
 stStationEvents[0].aEvents[8].bEventFlag					:= stTwinSAFE.qProcessDoorUnSafe;
