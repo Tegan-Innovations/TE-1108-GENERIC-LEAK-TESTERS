@@ -53,6 +53,7 @@ tonSys_InitTimeout(IN:=stMachineStatus.bInitialising);
 tonSafety( IN := stMachineStatus.eMachineState = E_MachineState.SAFETY, PT := T#10S);
 
 
+
 /////////////////////////////////////////////////////////////////////////////////////CONDITIONS/////////////////////////////////////////////////////////////////////////////////////
 				IF NOT stMasterCtrl.bNoFault THEN
 					stMachineStatus.eMachineState 		:= E_MachineState.FAULT;
@@ -111,7 +112,7 @@ E_MachineState.STOPPED:
 E_MachineState.SAFETY:
 
 					
-					IF stTwinSAFE.qSafetyOk THEN
+					IF stTwinSAFE.qSafetyOk AND (tonSafety.ET > T#1S) THEN
 						
 						stMachineStatus.eMachineState 	:= E_MachineState.SYSTEM_INITIALISING;
 						

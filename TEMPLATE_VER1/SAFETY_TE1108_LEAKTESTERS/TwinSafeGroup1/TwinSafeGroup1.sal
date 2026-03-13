@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<safetyApplication Crc="2638668211" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.5.0.0" Id="b554177b-8ed9-482d-a64f-a71618096704" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" userFbId="00000000-0000-0000-0000-000000000000" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
+<safetyApplication Crc="2332102116" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.5.0.0" Id="b554177b-8ed9-482d-a64f-a71618096704" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" userFbId="00000000-0000-0000-0000-000000000000" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
   <networks>
     <safetyApplicationHasNetworks Id="2c7ab9e7-cadf-45a1-8028-d940d0610258">
       <Network Id="d2dcfc47-a4f1-4dd3-9dfe-651bebdf9be0" name="Network2" networkName="SafeCondition" intId="2" networkOrderId="1">
@@ -870,6 +870,31 @@
               </outPorts>
             </fBOr>
           </networkHasFunctionBlocks>
+          <networkHasFunctionBlocks Id="d2c8c37f-724d-4000-afb2-dd44d83892c1">
+            <fBTon Id="ec3d1a9b-7548-41de-a532-da13368a4050" name="FBTon3" instanceName="FBTon7" orderOfExecution="30" mapState="false" mapDiag="false" functionName="safeTon">
+              <inPorts>
+                <functioBlockHasInPorts Id="62c4cc66-19ba-4f53-b574-6793202fe55e">
+                  <inPort Id="191cde23-37c7-4d03-b78b-b663babda719" name="TonIn" portName="TonIn" portNum="2" objectIndex="8" varId="1" filter="2" portDataType="1" channelInterface="Activated" deactivate1="Break Contact (NC)" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+              </inPorts>
+              <outPorts>
+                <functionBlockHasOutPorts Id="a2d428ad-0389-484f-afb6-3accc7072b13">
+                  <outPort Id="492fb76e-164d-48c4-bd1a-dd41b1f3a1c2" name="TonOut" portName="TonOut" portNum="4" objectIndex="1" varId="4" filter="6" portDataType="1" replacementValue="0">
+                    <targetFunctionBlockPorts>
+                      <wiredLink Id="789a5495-c353-4eb4-a248-e47b12929f95">
+                        <inPortMoniker name="//Network6/FBAnd1/AndIn2" />
+                      </wiredLink>
+                    </targetFunctionBlockPorts>
+                  </outPort>
+                </functionBlockHasOutPorts>
+              </outPorts>
+              <parameterPorts>
+                <functionBlockHasParamPorts Id="700a18ee-d0fe-471c-b633-e5298c3d483f">
+                  <parameterPort Id="9807fd09-f594-44e9-aff1-2bbe171f6e3d" name="Delay Time (s)" portName="Delay Time (s)" portNum="4" objectIndex="0" varId="0" filter="0" portDataType="0" timing="1" userFbPortName="Delay Time (s)" useInUserFb="false" />
+                </functionBlockHasParamPorts>
+              </parameterPorts>
+            </fBTon>
+          </networkHasFunctionBlocks>
         </functionBlocks>
       </Network>
     </safetyApplicationHasNetworks>
@@ -1548,11 +1573,11 @@
                     </functionBlockPort>
                   </fbPortUsage>
                 </variableUsagesHasUsages>
-                <variableUsagesHasUsages Id="8a66a429-142d-4079-a0d5-42b6404b615d">
-                  <fbPortUsage Id="0e2765b4-edb5-46d5-9f0c-d61ae5b524df">
+                <variableUsagesHasUsages Id="1fc05ade-8bfe-4af8-a502-25550eb0a844">
+                  <fbPortUsage Id="a933b323-6b35-4b64-a2bf-2c40258ba19f">
                     <functionBlockPort>
-                      <fbPortUsageReferencesFunctionBlockPort Id="a45ad5ae-5725-48a1-bcbb-96993a63b035">
-                        <inPortMoniker name="//Network6/FBAnd1/AndIn2" />
+                      <fbPortUsageReferencesFunctionBlockPort Id="482c9851-a972-47cc-8e14-47ec405daefc">
+                        <inPortMoniker name="//Network6/FBTon3/TonIn" />
                       </fbPortUsageReferencesFunctionBlockPort>
                     </functionBlockPort>
                   </fbPortUsage>
