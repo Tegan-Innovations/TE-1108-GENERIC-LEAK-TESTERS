@@ -189,13 +189,13 @@ stProcessCylinder.Status.bStopped	:= 	NOT stProcessCylinder.Status.bBusy;]]></ST
         <ST><![CDATA[
 bExtended[0]							:= dw_T08_EL1809.iProcessCylinder1Extended;
 bExtended[1]							:= dw_T08_EL1809.iProcessCylinder2Extended;
-bRetracted[0]							:= dw_T08_EL1809.iProcessCylinder1Retracted;
-bRetracted[1]							:= dw_T08_EL1809.iProcessCylinder2Retracted;
+bRetracted[0]							:= stTwinSAFE.qProcessCylinder1Retracted;
+bRetracted[1]							:= stTwinSAFE.qProcessCylinder2Retracted;
 
-dw_T09_EL2809.qExtendProcessCylinder1	:= bExtend[0];	
-dw_T09_EL2809.qExtendProcessCylinder2	:= bExtend[1];	
-dw_T09_EL2809.qRetractProcessCylinder1	:= bRetract[0];
-dw_T09_EL2809.qRetractProcessCylinder2	:= bRetract[1];
+dw_T09_EL2809.qExtendProcessCylinder1	:= bExtend[0] OR bProcessCylinder1_Down;	
+dw_T10_EL2809.qExtendProcessCylinder2	:= bExtend[1];	
+dw_T09_EL2809.qRetractProcessCylinder1	:= bRetract[0] OR bProcessCylinder1_Up;
+dw_T10_EL2809.qRetractProcessCylinder2	:= bRetract[1];
 
 IF stStationEvents[3].aEvents[0].bEventTimer.Q THEN
 	
@@ -226,7 +226,7 @@ END_IF
     </Action>
     <Action Name="c_Manual" Id="{0d3727e7-45d5-4409-b537-12f65f0f5507}">
       <Implementation>
-        <ST><![CDATA[
+        <ST><![CDATA[(*
 IF bProcessCylinder1_Up THEN
 	
 	bRetract[0] := TRUE;
@@ -266,7 +266,7 @@ ELSIF bExtended[1] THEN
 	bExtend[1] := FALSE;
 
 END_IF
-]]></ST>
+*)]]></ST>
       </Implementation>
     </Action>
     <Action Name="d_ACT_Set_Events_Station_4A" Id="{d00bfd1e-e9ca-4865-8264-d52001d7fb58}">

@@ -1694,6 +1694,136 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMaximumDistance[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMaximumDistance[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMaximumDistance[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMinimumDistance[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMinimumDistance[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anMinimumDistance[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anRealDistance2[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anRealDistance2[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_2_1_PRG_Master_Height_Test::anRealDistance2[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_4_1_PRG_Master_ProcessCylinder.bExtended.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_4_1_PRG_Master_ProcessCylinder::bExtended[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_4_1_PRG_Master_ProcessCylinder.bRetracted.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_4_1_PRG_Master_ProcessCylinder::bRetracted[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_4_2_PRG_Master_ProcessDoor.bDoorClosed": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_4_2_PRG_Master_ProcessDoor::bDoorClosed",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.B_4_2_PRG_Master_ProcessDoor.bDoorOpened": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::B_4_2_PRG_Master_ProcessDoor::bDoorOpened",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.GVL_HMI.abMachineDefinition.0": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -1739,6 +1869,46 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::abMachineDefinition[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.abPresetProbe.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::abPresetProbe[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.abPresetProbe.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::abPresetProbe[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.abPresetProbe.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::abPresetProbe[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.abPresetProbe.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::abPresetProbe[7]",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -1809,6 +1979,26 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::bCameraTrigger[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bEnableSetCablibrationBlock1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bEnableSetCablibrationBlock1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bEnableSetCablibrationBlock2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bEnableSetCablibrationBlock2",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -1891,6 +2081,46 @@
             },
             "USEMAPPING": true
         },
+        "ADS.PLC1.GVL_HMI.bProcessCylinder1_Down": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bProcessCylinder1_Down",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bProcessCylinder1_Up": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bProcessCylinder1_Up",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bProcessDoor_Down": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bProcessDoor_Down",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bProcessDoor_Up": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bProcessDoor_Up",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "ADS.PLC1.GVL_HMI.bRightHand": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -1898,6 +2128,43 @@
             "MAPPING": "PLC1::GVL_HMI::bRightHand",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bSetCalibrationBlock1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bSetCalibrationBlock1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bSetCalibrationBlock2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bSetCalibrationBlock2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_HMI.bSetTolerances": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bSetTolerances",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "comment": "Probes"
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -2187,6 +2454,166 @@
                         "propertyOrder": 41
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anRawMeasurement[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anRawMeasurement[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anRawMeasurement[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anRawMeasurement[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anScaledRawMeasurement[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anScaledRawMeasurement[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anScaledRawMeasurement[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[0]::anScaledRawMeasurement[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anRawMeasurement[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anRawMeasurement[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anRawMeasurement[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anRawMeasurement[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anScaledRawMeasurement[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anScaledRawMeasurement[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anScaledRawMeasurement[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_IO::Probes::stProbesSet[1]::anScaledRawMeasurement[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
             },
             "USEMAPPING": true
         },
@@ -3566,6 +3993,176 @@
                         "propertyOrder": 3
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anDistanceCalibrationBlock[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anDistanceCalibrationBlock[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anDistanceCalibrationBlock[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anExpectedDistances[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anExpectedDistances[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anExpectedDistances[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration1[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration1[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration1[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration1[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/DINT"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration2[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration2[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration2[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anHeightSetByCalibration2[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anTolerances[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anTolerances[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
+            },
+            "USEMAPPING": true
+        },
+        "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_Persistent::stProbesSettings::anTolerances[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/REAL"
             },
             "USEMAPPING": true
         },
@@ -7225,11 +7822,28 @@
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.0": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.1": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMaximumDistance.2": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.0": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.1": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anMinimumDistance.2": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.0": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.1": 3,
+                "ADS.PLC1.B_2_1_PRG_Master_Height_Test.anRealDistance2.2": 3,
+                "ADS.PLC1.B_4_1_PRG_Master_ProcessCylinder.bExtended.0": 3,
+                "ADS.PLC1.B_4_1_PRG_Master_ProcessCylinder.bRetracted.0": 3,
+                "ADS.PLC1.B_4_2_PRG_Master_ProcessDoor.bDoorClosed": 3,
+                "ADS.PLC1.B_4_2_PRG_Master_ProcessDoor.bDoorOpened": 3,
                 "ADS.PLC1.GVL_HMI.abMachineDefinition.0": 3,
                 "ADS.PLC1.GVL_HMI.abMachineDefinition.1": 3,
                 "ADS.PLC1.GVL_HMI.abMachineDefinition.2": 3,
                 "ADS.PLC1.GVL_HMI.abMachineDefinition.3": 3,
                 "ADS.PLC1.GVL_HMI.abMachineDefinition.4": 3,
+                "ADS.PLC1.GVL_HMI.abPresetProbe.4": 3,
+                "ADS.PLC1.GVL_HMI.abPresetProbe.5": 3,
+                "ADS.PLC1.GVL_HMI.abPresetProbe.6": 3,
+                "ADS.PLC1.GVL_HMI.abPresetProbe.7": 3,
                 "ADS.PLC1.GVL_HMI.bCameraSetTreshold.1": 3,
                 "ADS.PLC1.GVL_HMI.bCameraSettingVal.0": 3,
                 "ADS.PLC1.GVL_HMI.bCameraSettingVal.1": 3,
@@ -7237,6 +7851,8 @@
                 "ADS.PLC1.GVL_HMI.bCameraTrigger.1": 3,
                 "ADS.PLC1.GVL_HMI.bCameraTrigger.2": 3,
                 "ADS.PLC1.GVL_HMI.bCameraTrigger.3": 3,
+                "ADS.PLC1.GVL_HMI.bEnableSetCablibrationBlock1": 3,
+                "ADS.PLC1.GVL_HMI.bEnableSetCablibrationBlock2": 3,
                 "ADS.PLC1.GVL_HMI.bLeaktester1_Reset": 3,
                 "ADS.PLC1.GVL_HMI.bLeaktester1_Start": 3,
                 "ADS.PLC1.GVL_HMI.bLeaktester1_Stop": 3,
@@ -7244,7 +7860,14 @@
                 "ADS.PLC1.GVL_HMI.bLeaktester2_Start": 3,
                 "ADS.PLC1.GVL_HMI.bLeaktester2_Stop": 3,
                 "ADS.PLC1.GVL_HMI.bLeftHand": 3,
+                "ADS.PLC1.GVL_HMI.bProcessCylinder1_Down": 3,
+                "ADS.PLC1.GVL_HMI.bProcessCylinder1_Up": 3,
+                "ADS.PLC1.GVL_HMI.bProcessDoor_Down": 3,
+                "ADS.PLC1.GVL_HMI.bProcessDoor_Up": 3,
                 "ADS.PLC1.GVL_HMI.bRightHand": 3,
+                "ADS.PLC1.GVL_HMI.bSetCalibrationBlock1": 3,
+                "ADS.PLC1.GVL_HMI.bSetCalibrationBlock2": 3,
+                "ADS.PLC1.GVL_HMI.bSetTolerances": 3,
                 "ADS.PLC1.GVL_IO.Camera1_IO.bResetStatistics": 3,
                 "ADS.PLC1.GVL_IO.Camera1_IO.bSetTreshold": 3,
                 "ADS.PLC1.GVL_IO.Camera1_IO.bSettingVal": 3,
@@ -7262,6 +7885,22 @@
                 "ADS.PLC1.GVL_IO.LeakTester2_IO.sti28General_I_O.bMalfunction": 3,
                 "ADS.PLC1.GVL_IO.LeakTester2_IO.sti28General_I_O.bProgramAccept": 3,
                 "ADS.PLC1.GVL_IO.LeakTester2_IO.sti28General_I_O.bProgramReject": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.0": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.1": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.2": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anRawMeasurement.3": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.0": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.1": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.2": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.0.anScaledRawMeasurement.3": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.0": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.1": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.2": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anRawMeasurement.3": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.0": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.1": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.2": 3,
+                "ADS.PLC1.GVL_IO.Probes.stProbesSet.1.anScaledRawMeasurement.3": 3,
                 "ADS.PLC1.GVL_IO.dw_T01_EK1100.stTerminalInfo.fbTerminalInfo.bTerminalOperational": 3,
                 "ADS.PLC1.GVL_IO.dw_T01_EK1100.stTerminalInfo.fbTerminalInfo.sTerminalState": 3,
                 "ADS.PLC1.GVL_IO.dw_T02_EL6070.stTerminalInfo.bTerminalOperational": 3,
@@ -7341,6 +7980,23 @@
                 "ADS.PLC1.GVL_IO.dw_T13_EL6633.stTerminalInfo.bTerminalOperational": 3,
                 "ADS.PLC1.GVL_IO.dw_T13_EL6633.stTerminalInfo.sTerminalInfo": 3,
                 "ADS.PLC1.GVL_IO.stTwinSAFE.iAirSupplyMeasurement": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.0": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.1": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anDistanceCalibrationBlock.2": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.0": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.1": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anExpectedDistances.2": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.0": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.1": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.2": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration1.3": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.0": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.1": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.2": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anHeightSetByCalibration2.3": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.0": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.1": 3,
+                "ADS.PLC1.GVL_Persistent.stProbesSettings.anTolerances.2": 3,
                 "ChangeUserSettings": 3,
                 "ConfirmAlarm": 3,
                 "CreateEvent": 3,

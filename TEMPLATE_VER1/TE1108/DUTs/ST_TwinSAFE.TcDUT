@@ -10,8 +10,8 @@ STRUCT
 	iAirPressureMinValue					AT %Q*			: 	UINT;
 	iAirSupplyMeasurement					AT %Q*			: 	UINT;
 	iMachineStoppedCondition				AT %Q*			: 	BOOL;
-	iProcessCylinderLockCondition1			AT %Q*			: 	BOOL;
-	iProcessCylinderLockCondition2			AT %Q*			: 	BOOL;
+	iProcessCylinder1UnlockCondition		AT %Q*			: 	BOOL;
+	iProcessCylinder2UnlockCondition		AT %Q*			: 	BOOL;
 	iProcessDoorClosing              		AT %Q*			: 	BOOL;	
 	iProcessDoorClosedCondition				AT %Q*			: 	BOOL;
 	iSafetyErrorAcknowledge					AT %Q*			: 	BOOL;
@@ -29,6 +29,8 @@ STRUCT
 	qProcessDoorUnSafe						AT %I*			: 	BOOL;
 	qTwoHandsUnsafe							AT %I*			: 	BOOL;
 	qProcessCylinderUnsafe					AT %I*			: 	BOOL;
+	qProcessCylinder1Retracted				AT %I*			: 	BOOL;
+	qProcessCylinder2Retracted				AT %I*			: 	BOOL;
 	
 
 END_STRUCT

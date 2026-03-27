@@ -176,9 +176,6 @@
     <Content Include="Contents\5_Manual.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\6_Settings.content">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="Contents\8_Info.content">
       <SubType>Content</SubType>
     </Content>
@@ -354,6 +351,21 @@
     <Content Include="Contents\popup\popup1_RejectedPart.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\Settings\6_Settings_LT_HW_VC.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\Calibration_Set2.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\Calibration_Set1.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\Distances.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\Tolerances.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\UserControl\08CH_Dig_IO_CARD.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -430,6 +442,13 @@
     <Content Include="Contents\UserControl\PopUp\YesNo.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Contents\UserControl\PopUp\YesNo.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Contents\UserControl\ProbeLevel_V2.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\ProbeLevel_V2.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\ProbeLevel_V2.usercontrol</DependentUpon>
     </Content>
     <Content Include="Images\40-408925_png-file-svg-file-eps-file-psd-file-cdr-file-milk-bottle-Photoroom.png">
       <SubType>Content</SubType>

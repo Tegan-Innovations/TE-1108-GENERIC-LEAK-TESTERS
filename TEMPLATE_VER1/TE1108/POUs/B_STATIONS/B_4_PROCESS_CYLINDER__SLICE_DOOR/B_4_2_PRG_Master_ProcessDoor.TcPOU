@@ -145,8 +145,8 @@ stProcessDoor.Status.bStopped		:= 	NOT stProcessDoor.Status.bBusy;]]></ST>
 bDoorClosed								:= dw_T05_EL1918.iProcessDoorClosed1 AND dw_T05_EL1918.iProcessDoorClosed2 AND dw_T05_EL1918.iProcessDoorFB;
 bDoorOpened								:= tonDoorOpened.Q; 
 
-dw_T10_EL2809.qOpenProcessDoor	:= bOpenDoor;	
-dw_T10_EL2809.qCloseProcessDoor	:= bCloseDoor;
+dw_T09_EL2809.qOpenProcessDoor	:= bOpenDoor OR bProcessDoor_Up;	
+dw_T09_EL2809.qCloseProcessDoor	:= bCloseDoor OR bProcessDoor_Down;
 
 
 ]]></ST>

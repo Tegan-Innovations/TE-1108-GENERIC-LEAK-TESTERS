@@ -52,6 +52,7 @@
 	bProcessCylinder1_Down				: BOOL;
 	bProcessCylinder2_Up				: BOOL;
 	bProcessCylinder2_Down				: BOOL;
+	
 	bProcessDoor_Up						: BOOL;
 	bProcessDoor_Down					: BOOL;
 	
@@ -66,6 +67,15 @@
 	bCameraSettingVal					: ARRAY[1..4] OF UDINT;
 	bCameraSetTreshold					: ARRAY[1..4] OF BOOL;
 	bCameraTrigger						: ARRAY[1..4] OF BOOL;
+	
+	//Probes
+	bSetTolerances						: BOOL;
+	abPresetProbe						: ARRAY [1..8] OF BOOL;
+	bSetCalibrationBlock1				: BOOL;
+	bSetCalibrationBlock2				: BOOL;
+	bEnableSetCablibrationBlock1		: BOOL;
+	bEnableSetCablibrationBlock2		: BOOL;
+	bSetDistances						: BOOL;
 	
 	
 	
@@ -89,13 +99,8 @@ VAR_GLOBAL PERSISTENT
 														
 	/////////////////////////////////////////////////////////////////////////////////////SETTINGS/////////////////////////////////////////////////////////////////////////////////////	
 	
-	//Height Test
-	anDistanceCalibrationBlock			: ARRAY [0..5] OF DINT;	
-	anExpectedDistances					: ARRAY [0..5] OF DINT;	
-	anHeightSetByCalibration			: ARRAY [0..7] OF DINT;	
-	anTolerances						: ARRAY [0..5] OF DINT;	
-	
-	bCalibrationButton					: ARRAY[0..1] OF  BOOL;
+
+
 	
 	//TwinSAFE
 	

@@ -43,7 +43,8 @@ END_VAR
     <Implementation>
       <ST><![CDATA[/////////////////////////////////////////////////////////////////////////////////////GENERAL/////////////////////////////////////////////////////////////////////////////////////
 a_ACT_MachineStatus();
-b_ACT_ProcessCycle();]]></ST>
+b_ACT_ProcessCycle();
+d_ACT_IO();]]></ST>
     </Implementation>
     <Action Name="a_ACT_MachineStatus" Id="{83375328-405c-4671-a979-0a97efed562c}">
       <Implementation>
@@ -247,7 +248,11 @@ tonExecute( IN := 	eCycleState = E_General_ProcessCycle.CLOSE_PROCESS_DOOR OR
 					eCycleState = E_General_ProcessCycle.HEIGHT_TEST OR
 					eCycleState = E_General_ProcessCycle.WAIT_TO_SAVE_DATA,
 					PT := T#500MS);
-				
+IF (stMachineStatus.eMachineState <> E_MachineState.SYSTEM_AUTO_CYCLE) THEN
+	
+	eCycleState												:= E_General_ProcessCycle.RESET_ALL_CMD;
+
+END_IF
 
 rFirstAutoCycle( CLK := stMachineStatus.bAutoCycle);
 
@@ -688,14 +693,14 @@ bProcessDoorClosedConditionFlag		:= eCycleState = E_General_ProcessCycle.PROCESS
 										eCycleState = E_General_ProcessCycle.WAIT_RETRACT_PROCESS_CYLINDER;
 					
  
-bProcessCylinderLockConditionFlag	:=	eCycleState = E_General_ProcessCycle.LEAK_TESTS_HEIGHT_TEST OR										
-										eCycleState = E_General_ProcessCycle.WAIT_LEAK_TEST_HEIGHT_TEST OR
-										eCycleState = E_General_ProcessCycle.HEIGHT_TEST OR
-										eCycleState = E_General_ProcessCycle.WAIT_HEIGHT_TEST OR
-										eCycleState = E_General_ProcessCycle.LEAK_TESTS OR
-										eCycleState = E_General_ProcessCycle.WAIT_LEAK_TEST OR
-										eCycleState = E_General_ProcessCycle.CAMERA_INSPECTION OR
-										eCycleState = E_General_ProcessCycle.WAIT_CAMERA;
+bProcessCylinderUnlockConditionFlag	:=	(eCycleState <> E_General_ProcessCycle.LEAK_TESTS_HEIGHT_TEST) AND										
+										(eCycleState <> E_General_ProcessCycle.WAIT_LEAK_TEST_HEIGHT_TEST) AND
+										(eCycleState <> E_General_ProcessCycle.HEIGHT_TEST) AND
+										(eCycleState <> E_General_ProcessCycle.WAIT_HEIGHT_TEST) AND
+										(eCycleState <> E_General_ProcessCycle.LEAK_TESTS) AND
+										(eCycleState <> E_General_ProcessCycle.WAIT_LEAK_TEST) AND
+										(eCycleState <> E_General_ProcessCycle.CAMERA_INSPECTION) AND
+										(eCycleState <> E_General_ProcessCycle.WAIT_CAMERA);
 										
 tonTwoHandsSignal( IN := (dw_T05_EL1918.iLeftTouchButtonNO AND dw_T05_EL1918.iRightTouchButtonNO) , PT := stTimers.tTwoHandsSignal);						
 				

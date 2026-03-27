@@ -26,7 +26,7 @@
 	bDoorClosingFlag				: BOOL;
 	bDoorOpeningFlag				: BOOL;
 	bProcessDoorClosedConditionFlag	: BOOL;
-	bProcessCylinderLockConditionFlag: BOOL;
+	bProcessCylinderUnlockConditionFlag: BOOL;
 	tonSafety						: TON;
 	bMainDoor_AirFlag				: ARRAY[0..1] OF  BOOL;
 /////////////////////////////////////////////////////////////////////////////////////Event Log/////////////////////////////////////////////////////////////////////////////////////

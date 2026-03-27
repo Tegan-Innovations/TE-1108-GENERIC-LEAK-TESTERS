@@ -369,7 +369,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ContentPath",
-                  "value": "Contents/6_Settings.content"
+                  "value": "Contents/Settings/6_Settings_LT_HW_VC.content"
                 },
                 "asyncWait": true
               }

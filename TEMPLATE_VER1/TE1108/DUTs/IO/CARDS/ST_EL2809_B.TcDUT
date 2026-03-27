@@ -7,8 +7,8 @@ STRUCT
 	sTerminalName                                           :   STRING(200):= 'EL2809 | 16-Channel Digital Output';
 	//=============================================================================================================
 	// TERMINAL - EL2809	16-Channel Digital Output Terminal	 (Term 10)
-	qOpenProcessDoor 						AT %Q*			: 	BOOL;	// EL2809 channel 1
-	qCloseProcessDoor						AT %Q* 			: 	BOOL;	// EL2809 channel 2
+	qRetractProcessCylinder2 				AT %Q*			: 	BOOL;	// EL2809 channel 1
+	qExtendProcessCylinder2					AT %Q* 			: 	BOOL;	// EL2809 channel 2
 	qiEL2809_Ch3             				AT %Q*	 		: 	BOOL;	// EL2809 channel 3 			
 	qiEL2809_Ch4      						AT %Q*	 		: 	BOOL;	// EL2809 channel 4 
 	qiEL2809_Ch5							AT %Q*	 		: 	BOOL;	// EL2809 channel 5

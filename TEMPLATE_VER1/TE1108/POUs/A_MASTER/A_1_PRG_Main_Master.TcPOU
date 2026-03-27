@@ -418,9 +418,8 @@ bMainDoor_AirFlag[1]					:= (stMachineStatus.eMachineState = E_MachineState.STOP
 stTwinSAFE.bMainDoor_AirFlag[0]			:= bMainDoor_AirFlag[0];
 stTwinSAFE.bMainDoor_AirFlag[1]			:= bMainDoor_AirFlag[1];
 
-stTwinSAFE.iProcessCylinderLockCondition1 	:= bProcessCylinderLockConditionFlag;
-stTwinSAFE.iProcessCylinderLockCondition2 	:= bProcessCylinderLockConditionFlag;
-stTwinSAFE.iProcessDoorClosedCondition		:= bProcessDoorClosedConditionFlag;
+stTwinSAFE.iProcessCylinder1UnlockCondition 	:=  bProcessCylinderUnlockConditionFlag;
+
 
 
 ////////////////////////////////////////////////////////////TwinSAFE Outputs reading//////////////////////////////////////////////////////////
