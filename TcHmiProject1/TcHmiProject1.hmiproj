@@ -29,7 +29,7 @@
     <HmiCommunicationRouterPort>10104</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13002</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.762.46</HmiInitial>
-    <HmiRecent>14.3.683.1</HmiRecent>
+    <HmiRecent>14.3.765.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -174,6 +174,9 @@
     <Content Include="Contents\CSS_JAVA\CssBehind1.css">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\CSS_JAVA\Heartbeat.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\CSS_JAVA\PDF Maker\jspdf.min.js">
       <SubType>Content</SubType>
     </Content>
@@ -211,10 +214,7 @@
     <Content Include="Contents\Hardware\C6010-0010.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\Keyence_Probe_Set2.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\Hardware\Keyence_Probe_Set1.content">
+    <Content Include="Contents\Hardware\Keyence_Probe_Set.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Hardware\KeyenceCamera4.content">
@@ -235,31 +235,22 @@
     <Content Include="Contents\Hardware\LeakTester1.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\T13_EL6633.content">
+    <Content Include="Contents\Hardware\T12_EL6633.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Hardware\T01_EK1100.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\T12-EL1918.content">
+    <Content Include="Contents\Hardware\T11-EL1918.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\T11_EL3058.content">
+    <Content Include="Contents\Hardware\T10_EL3058.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\T10_EL2809.content">
+    <Content Include="Contents\Hardware\T09_EL2809.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Hardware\T09_EL2809_B.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\Hardware\T09_EL2809_A.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\Hardware\T08_EL1809_B.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\Hardware\T08_EL1809_A.content">
+    <Content Include="Contents\Hardware\T08_EL1809.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Hardware\T07_EL9410.content">
@@ -278,12 +269,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Hardware\T02_EL6070.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\Hardware\EL1809T12.content">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Contents\IOs\3_IO_LT_HW_VC.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Manual\Cameras\CameraTriggerPopup.content">
@@ -343,6 +328,15 @@
     <Content Include="Contents\Screens\2_Menu.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\Screens\3_IO_HW.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\3_IO_LT.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\3_IO_LT_HW_VC.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\Screens\4_Events.content">
       <SubType>Content</SubType>
     </Content>
@@ -355,7 +349,10 @@
     <Content Include="Contents\Screens\5_Manual_LT_HW_VC.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Screens\6_Settings.content">
+    <Content Include="Contents\Screens\6_Settings_NoProbes.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\6_Settings_Probes.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Screens\7_Statistics_HW.content">
@@ -370,13 +367,22 @@
     <Content Include="Contents\Screens\8_Info.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Screens\9_Data_HistoryNest1.content">
+    <Content Include="Contents\Screens\9_Data_HistoryNest1_HW.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Screens\9_Data_HistoryNest2.content">
+    <Content Include="Contents\Screens\9_Data_HistoryNest1_LT.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\Screens\Statistics.content">
+    <Content Include="Contents\Screens\9_Data_HistoryNest1_LT_HW_VC.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\9_Data_HistoryNest2_HW.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\9_Data_HistoryNest2_LT.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Screens\9_Data_HistoryNest2_LT_HW_VC.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\Calibration_Set1.content">
@@ -386,6 +392,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\Distances.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\ProbePositions2.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\ProbePositions1.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\EnableNests.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\Tolerances.content">
@@ -440,6 +455,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Contents\UserControl\LED_Green.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Contents\UserControl\led_Red.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\led_Red.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\led_Red.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Contents\UserControl\led_RedAndGreen_1In_IO.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -460,6 +482,13 @@
     <Content Include="Contents\UserControl\led_RedAndGreen_2In.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Contents\UserControl\led_RedAndGreen_2In.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Contents\UserControl\PopUp\RejectPart.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\PopUp\RejectPart.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\PopUp\RejectPart.usercontrol</DependentUpon>
     </Content>
     <Content Include="Contents\UserControl\PopUp\Acknowledge.usercontrol">
       <SubType>Content</SubType>
@@ -523,6 +552,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\camera.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\dinesh.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\ethercat unit.png">
@@ -766,6 +798,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\probe.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\probepositions2.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\probes positions.png">

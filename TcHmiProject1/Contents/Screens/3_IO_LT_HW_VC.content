@@ -44,7 +44,7 @@
             "Name": "T07_EL9410"
           },
           {
-            "Name": "T13_EL6633"
+            "Name": "T12_EL6633"
           },
           {
             "Name": "Inputs",
@@ -57,6 +57,9 @@
                   },
                   {
                     "Name": "Term 5"
+                  },
+                  {
+                    "Name": "Term 11"
                   }
                 ]
               },
@@ -64,7 +67,7 @@
                 "Name": "T08_EL1809"
               },
               {
-                "Name": "T11_EL3058"
+                "Name": "T10_EL3058"
               }
             ]
           },
@@ -75,15 +78,7 @@
                 "Name": "T06_EL2904"
               },
               {
-                "Name": "EL2809",
-                "children": [
-                  {
-                    "Name": "Term 9"
-                  },
-                  {
-                    "Name": "Term 10"
-                  }
-                ]
+                "Name": "T09_EL2809"
               }
             ]
           }
@@ -124,15 +119,7 @@
         ]
       },
       {
-        "Name": "Probes set",
-        "children": [
-          {
-            "Name": "Probes Set 1"
-          },
-          {
-            "Name": "Probes Set 2"
-          }
-        ]
+        "Name": "Probes set"
       }
     ]
   }
@@ -328,7 +315,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T08_EL1809_A.content"
+                  "value": "Contents/Hardware/T08_EL1809.content"
                 },
                 "asyncWait": true
               }
@@ -338,7 +325,7 @@
             "caseValue": {
               "objectType": "StaticValue",
               "valueType": "tchmi:general#/definitions/Any",
-              "value": "Term 9"
+              "value": "T09_EL2809"
             },
             "actions": [
               {
@@ -348,7 +335,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T09_EL2809_A.content"
+                  "value": "Contents/Hardware/T09_EL2809.content"
                 },
                 "asyncWait": true
               }
@@ -358,7 +345,7 @@
             "caseValue": {
               "objectType": "StaticValue",
               "valueType": "tchmi:general#/definitions/Any",
-              "value": "Term 10"
+              "value": "T10_EL3058"
             },
             "actions": [
               {
@@ -368,7 +355,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T10_EL2809.content"
+                  "value": "Contents/Hardware/T10_EL3058.content"
                 },
                 "asyncWait": true
               }
@@ -378,7 +365,7 @@
             "caseValue": {
               "objectType": "StaticValue",
               "valueType": "tchmi:general#/definitions/Any",
-              "value": "T11_EL3058"
+              "value": "Term 11"
             },
             "actions": [
               {
@@ -388,7 +375,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T11_EL3058.content"
+                  "value": "Contents/Hardware/T11-EL1918.content"
                 },
                 "asyncWait": true
               }
@@ -398,7 +385,7 @@
             "caseValue": {
               "objectType": "StaticValue",
               "valueType": "tchmi:general#/definitions/Any",
-              "value": "Term 12"
+              "value": "T12_EL6633"
             },
             "actions": [
               {
@@ -408,27 +395,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T12-EL1918.content"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/Any",
-              "value": "T13_EL6633"
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%i%IO_Screen%/i%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/T13_EL6633.content"
+                  "value": "Contents/Hardware/T12_EL6633.content"
                 },
                 "asyncWait": true
               }
@@ -558,7 +525,7 @@
             "caseValue": {
               "objectType": "StaticValue",
               "valueType": "tchmi:general#/definitions/Any",
-              "value": "Probes Set 1"
+              "value": "Probes set"
             },
             "actions": [
               {
@@ -568,27 +535,7 @@
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/Keyence_Probe_Set1.content"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "caseValue": {
-              "objectType": "StaticValue",
-              "valueType": "tchmi:general#/definitions/Any",
-              "value": "Probes Set 2"
-            },
-            "actions": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%i%IO_Screen%/i%",
-                "value": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:framework#/definitions/Path",
-                  "value": "Contents/Hardware/Keyence_Probe_Set2.content"
+                  "value": "Contents/Hardware/Keyence_Probe_Set.content"
                 },
                 "asyncWait": true
               }

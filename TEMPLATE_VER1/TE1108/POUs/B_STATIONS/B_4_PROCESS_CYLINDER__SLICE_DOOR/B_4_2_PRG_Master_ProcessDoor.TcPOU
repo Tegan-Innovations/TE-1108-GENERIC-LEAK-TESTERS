@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
   <POU Name="B_4_2_PRG_Master_ProcessDoor" Id="{53a11cee-2388-4375-a004-26a2c48b086a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM B_4_2_PRG_Master_ProcessDoor
 
@@ -160,8 +160,9 @@ stProcessDoor.Status.bStopped		:= 	NOT stProcessDoor.Status.bBusy;]]></ST>
 bDoorClosed								:= dw_T05_EL1918.iProcessDoorClosed1 AND dw_T05_EL1918.iProcessDoorClosed2 AND dw_T05_EL1918.iProcessDoorFB;
 bDoorOpened								:= tonDoorOpened.Q; 
 
+bDoorOpenedFlag							:= bDoorOpened;
 
-dw_T09_EL2809.qOpenProcessDoor	:= bOpenDoor OR bProcessDoor_Up OR bProcessDoorUpInitialising;	
+dw_T09_EL2809.qOpenProcessDoor	:= bOpenDoor OR bProcessDoor_Up OR stTwinSAFE.iInitSafety;	
 dw_T09_EL2809.qCloseProcessDoor	:= bCloseDoor OR bCloseDoorHMI;
 
 
@@ -178,20 +179,22 @@ IF bProcessDoor_Down AND dw_T05_EL1918.iLeftTouchButtonNO AND dw_T05_EL1918.iRig
 	
 ELSE bCloseDoorHMI					:= FALSE;
 
-END_IF]]></ST>
+END_IF
+
+]]></ST>
       </Implementation>
     </Action>
     <Action Name="d_ACT_Set_Events_Station_4B" Id="{6917e64e-8f14-430a-8afe-2820b830fd4d}">
       <Implementation>
         <ST><![CDATA[//IMMEDIATE FAULTS
 
-stStationEvents[4].aEvents[0].bEventTimer( IN := bCloseDoor AND NOT bDoorClosed, PT := T#5S);
+stStationEvents[4].aEvents[0].bEventTimer( IN := bCloseDoor AND NOT bDoorClosed, PT := T#2S);
 stStationEvents[4].aEvents[0].bFault						:= TRUE;
 stStationEvents[4].aEvents[0].bEventFlag					:= stStationEvents[4].aEvents[0].bEventTimer.Q;
 stStationEvents[4].aEvents[0].bEventText					:= 'Process Door extend timeout';
 stStationEvents[4].aEvents[0].sSolution						:= 'Check cylinder, neumatic connections and sensors';
 
-stStationEvents[4].aEvents[1].bEventTimer( IN := bOpenDoor AND NOT bDoorOpened, PT := T#5S);
+stStationEvents[4].aEvents[1].bEventTimer( IN := bOpenDoor AND NOT bDoorOpened, PT := T#2S);
 stStationEvents[4].aEvents[1].bFault						:= TRUE;
 stStationEvents[4].aEvents[1].bEventFlag					:= stStationEvents[4].aEvents[1].bEventTimer.Q;
 stStationEvents[4].aEvents[1].bEventText					:= 'Process Door Retract timeout';

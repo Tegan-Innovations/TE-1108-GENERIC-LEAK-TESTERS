@@ -319,7 +319,7 @@
       {
         "objectType": "ControlApiFunction",
         "active": true,
-        "control": "TcHmiPopup_3",
+        "control": "TcHmiPopup_4",
         "fn": "open",
         "asyncWait": true
       },
@@ -331,7 +331,7 @@
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
           "value": {
-            "path": "Contents/Screens/9_Data_HistoryNest1.content"
+            "path": "Contents/Screens/9_Data_HistoryNest1_LT.content"
           }
         },
         "asyncWait": true
@@ -351,7 +351,7 @@
       {
         "objectType": "ControlApiFunction",
         "active": true,
-        "control": "TcHmiPopup_3",
+        "control": "TcHmiPopup_4",
         "fn": "open",
         "asyncWait": true
       },
@@ -363,7 +363,7 @@
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
           "value": {
-            "path": "Contents/Screens/9_Data_HistoryNest2.content"
+            "path": "Contents/Screens/9_Data_HistoryNest2_LT.content"
           }
         },
         "asyncWait": true

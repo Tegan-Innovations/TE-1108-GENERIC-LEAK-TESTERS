@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
   <POU Name="B_4_1_PRG_Master_ProcessCylinder" Id="{d0145914-e9cd-4253-a0f6-814edf8d9943}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM B_4_1_PRG_Master_ProcessCylinder
 
@@ -142,11 +142,11 @@ stProcessCylinder.Status.bStopped	:= 	NOT stProcessCylinder.Status.bBusy;]]></ST
     <Action Name="b_ACT_IO_A" Id="{29d1f0f3-bcef-4a52-aeb7-dd0a6b1253cf}">
       <Implementation>
         <ST><![CDATA[
-bExtended								:= dw_T08_EL1809.iProcessCylinder1Extended;
-bRetracted								:= stTwinSAFE.qProcessCylinder1Retracted;
+bExtended								:= dw_T08_EL1809.iProcessCylinderExtended;
+bRetracted								:= stTwinSAFE.qProcessCylinderRetracted;
 
-dw_T09_EL2809.qExtendProcessCylinder1	:= bExtend OR bProcessCylinder1_Down ;	
-dw_T09_EL2809.qRetractProcessCylinder1	:= bRetract OR bProcessCylinder1_Up OR bProcessCylinderSafetyPosition;
+dw_T09_EL2809.qExtendProcessCylinder	:= bExtend OR bProcessCylinder1_Down ;	
+dw_T09_EL2809.qRetractProcessCylinder	:= bRetract OR bProcessCylinder1_Up OR stTwinSAFE.iInitSafety;
 
 IF stStationEvents[3].aEvents[0].bEventTimer.Q THEN
 	
@@ -214,7 +214,7 @@ END_IF
       <Implementation>
         <ST><![CDATA[//FAULTS
 
-stStationEvents[3].aEvents[0].bEventTimer( IN := (bExtend AND NOT bExtended), PT := T#5S);
+stStationEvents[3].aEvents[0].bEventTimer( IN := (bExtend AND NOT bExtended), PT := T#10S);
 stStationEvents[3].aEvents[0].bFault						:= TRUE;
 stStationEvents[3].aEvents[0].bEventFlag					:= stStationEvents[3].aEvents[0].bEventTimer.Q;
 stStationEvents[3].aEvents[0].bEventText					:= 'Process Cylinder 1 extend timeout';

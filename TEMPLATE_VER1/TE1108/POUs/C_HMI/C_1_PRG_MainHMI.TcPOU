@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
   <POU Name="C_1_PRG_MainHMI" Id="{74beadf6-2d48-457c-a28f-741842f8514e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM C_1_PRG_MainHMI
 VAR
@@ -23,7 +23,9 @@ stStatisticsWH[2]			:= stStatisticsHMI[4];
 
 stStatisticsLT[0]			:= stStatisticsHMI[0];
 stStatisticsLT[1]			:= stStatisticsHMI[1];
-stStatisticsLT[2]			:= stStatisticsHMI[2];]]></ST>
+stStatisticsLT[2]			:= stStatisticsHMI[2];
+
+bOpenRejectDialog			:= bRejectPartDialog[0] OR bRejectPartDialog[1] OR bRejectPartDialog[2];]]></ST>
     </Implementation>
     <Action Name="a_ACT_MachineStatusBaner" Id="{0dc7bcd3-753a-4f06-be0f-fec0a8964021}">
       <Implementation>
@@ -146,10 +148,7 @@ stTimers.tAutoCycleIDLETimeOut			:= DINT_TO_TIME(stTimers.nAutoCycleIDLETimeOut 
     </Action>
     <Action Name="c_ACT_IO" Id="{5594a5d6-af1e-4a8b-85d6-f9bf1b336af1}">
       <Implementation>
-        <ST><![CDATA[
-
-bLeftHand							:= dw_T05_EL1918.iLeftTouchButtonNO;
-bRightHand							:= dw_T05_EL1918.iRightTouchButtonNO;]]></ST>
+        <ST><![CDATA[dw_T09_EL2809.qPanelLightLED				:= bLightsOnOff;]]></ST>
       </Implementation>
     </Action>
   </POU>

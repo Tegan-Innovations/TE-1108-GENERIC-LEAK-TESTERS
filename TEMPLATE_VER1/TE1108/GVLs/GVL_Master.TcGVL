@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
   <GVL Name="GVL_Master" Id="{ff1c03dd-d56c-490f-bced-572c30dff423}">
     <Declaration><![CDATA[VAR_GLOBAL
 ////////////////////////////////////////:	///////////////////////////////////////////////////
@@ -7,7 +7,7 @@
 
 	// PowerUP 
 	tonSystemPowerUP				:TON;
-	tSystemPowerUP_Time				:TIME								:=T#35S;
+	tSystemPowerUP_Time				:TIME								:=T#3S;
 	bSystemPoweringUP				:BOOL								:=TRUE; //Global System PowerUP Flag
 	
 	fbSystemShutDown     	        : NT_Shutdown;
@@ -24,6 +24,20 @@
 	bCSVDone						: BOOL;
 	bCSVReady						: BOOL;
 	bAutocycleIDLE					: BOOL;
+	bDoorOpenedFlag					: BOOL;
+	
+	bRejectPartFault				: BOOL;
+	bRejectPartOutTime				: BOOL;
+	bCSVError						: BOOL;
+	
+	NetAmsIdLocal        	       	: T_AmsNetId;// := '172.18.236.164.1.1'; // AMS-ID for com port setup 
+	bReadAMSNetID					: BOOL;
+	fbGetLocalAMSNetID				: FB_GetLocalAmsNetId;
+	
+	fbGetDeviceNetId				: IOF_GetDeviceNetId;
+	NetAmsIdDevice					: T_AmsNetId;
+	
+	
 	
 /////////////////////////////////////////////////////////////////////////////////////Event Log/////////////////////////////////////////////////////////////////////////////////////
 	
@@ -57,11 +71,9 @@
 	bDoorClosingFlag				: BOOL;
 	bDoorOpeningFlag				: BOOL;
 	bProcessDoorClosedConditionFlag	: BOOL;
-	bProcessCylinderUnlockConditionFlag: BOOL;
 	tonSafety						: TON;
-	bMainDoor_AirFlag				: ARRAY[0..1] OF  BOOL;
-	bProcessDoorUpInitialising		: BOOL;
 	bProcessCylinderSafetyPosition	: BOOL;
+	bProcessDoorUpInitialising		: BOOL;
 	
 END_VAR
 VAR_GLOBAL PERSISTENT

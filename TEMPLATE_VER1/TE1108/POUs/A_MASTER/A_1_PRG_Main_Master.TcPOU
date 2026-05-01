@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.17">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.18">
   <POU Name="A_1_PRG_Main_Master" Id="{f5cadd41-0b0d-4992-977e-5b237965be89}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM A_1_PRG_Main_Master
 VAR
@@ -33,26 +33,27 @@ VAR
 	fMessageReset							: F_TRIG;
 	j										: DINT;
 	i										: DINT;
+	b										: DINT; //index quit HMI
 	
-	rGoodStatistics						: ARRAY [0..1] OF R_TRIG;
-	rBadStatistics						: ARRAY [0..1] OF R_TRIG;
+	rGoodStatistics							: ARRAY [0..1] OF R_TRIG;
+	rBadStatistics							: ARRAY [0..1] OF R_TRIG;
 	
-	rsTest								: ARRAY [0..4] OF  RS;
-	rResetTest							:  ARRAY [0..4] OF BOOL;
-	
-	
-////////////////////////////////////////////////////////////////////////////////////CSV////////////////////////////////////////////////////////////////////////////	
-
-	
-	
+	cuRejectCounter							: CTU;
+	fbTest1									: FB_EcGetSlaveState;
+	fbTest									: FB_EcSetSlaveState;
+	bTest									: ARRAY [0..10] OF BOOL;
+	stest									: WORD;
+	stTest									: ST_EcSlaveState;
+	nTest									: UINT;
+	nErrorID								: ARRAY [0..10] OF UDINT;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[/////////////////////////////////////////////////////////////////////////////////////GENERAL/////////////////////////////////////////////////////////////////////////////////////
 A_3_PRG_FaultHandling();
+b_ACT_UserLogout();
 a_ACT_ButtonsLamps();
 d_ACT_ShutdownAndQuit();
-e_ACT_UserLog();
 f_ACT_TerminalInfo();
 g_ACT_Manual();
 h_ACT_Statistics();
@@ -147,9 +148,14 @@ D_1_PRG_CycleDataCSV( 	stCycleDataNest1 	:= stCycleDataNest1,
 						bWriteNest2			:= bWriteNest2,
 						bCSVDone			=> bCSVDone,
 						bReady				=> bCSVReady);
+	
+fbGetLocalAMSNetID(
+					bExecute	:= bReadAMSNetID,
+					AddrString => NetAmsIdLocal);	
 
-
-
+fbGetDeviceNetId(	START		:= 	bReadAMSNetID,
+					DEVICEID	:= 3,
+					DeviceNetId	=> 	NetAmsIdDevice);	
 
 ]]></ST>
     </Implementation>
@@ -178,18 +184,26 @@ dw_T09_EL2809.qStartButtonLED				:= (stMachineStatus.bReadyToStart AND stPuls.bF
 ]]></ST>
       </Implementation>
     </Action>
+    <Action Name="b_ACT_UserLogout" Id="{6c319716-c530-4af6-9e7d-f889bd5a56ed}">
+      <Implementation>
+        <ST><![CDATA[tonHMIAliveOn(IN := bHMIAlive, PT:= T#2S);
+
+tonHMIAliveOff(IN := NOT bHMIAlive, PT:= T#2S);
+
+bOutHMI := tonHMIAliveOn.Q OR tonHMIAliveOff.Q;]]></ST>
+      </Implementation>
+    </Action>
     <Action Name="d_ACT_ShutdownAndQuit" Id="{b7dac9a1-fefc-426e-a57f-b21e21205edc}">
       <Implementation>
         <ST><![CDATA[tonCloseChromeBusy( IN := bQuitHmi, PT := T#5S);
 IF  tonCloseChromeBusy.Q THEN
 	
 	bQuitHmi			:= FALSE;
-	bHMIInitialized		:= FALSE;
 
 END_IF
 
 closeChrome(
-    NetId := NetAmsId,
+    NetId := NetAmsIdLocal,
     PathStr := 'C:\Windows\System32\mshta vbscript:Execute("CreateObject(""WScript.Shell"").Run ""powershell -c',
     DirName := 'C:\Windows\System32\WindowsPowerShell\v1.0',
     ComndLine := 'taskkill /F /IM chrome.exe /T"", 0: window.close")',
@@ -199,51 +213,18 @@ closeChrome(
 );
 
 
-ntShutdown(NETID := NetAmsId, DELAY := 5, START := bShutDown);
+ntShutdown(NETID := NetAmsIdLocal, DELAY := 5, START := bShutDown);
 
-]]></ST>
-      </Implementation>
-    </Action>
-    <Action Name="e_ACT_UserLog" Id="{804f315c-0a35-4a48-b9b3-6593241a417c}">
-      <Implementation>
-        <ST><![CDATA[sUserGroupName																:= sUserGroupIn;
-
-nFindAdm	:= TC2_Utilities.FIND( 	STR1									:= sUserGroupName,
-									STR2									:= sAdmGroup);
-									
-nFindEng	:= TC2_Utilities.FIND( 	STR1									:= sUserGroupName,
-									STR2									:= sEngGroup);
-					
-nFindOpe	:= TC2_Utilities.FIND( 	STR1									:= sUserGroupName,
-									STR2									:= sOpeGroup);
-				
-IF nFindAdm <> 0 THEN
-	sUserGroupOut															:= 'Administrator';
-ELSIF nFindEng <> 0 THEN
-	sUserGroupOut															:= 'Engineer';
-ELSIF nFindOpe <> 0 THEN
-	sUserGroupOut															:= 'Operator';
-ELSE sUserGroupOut															:= '';
-END_IF
-
-(*
-fbUserLog(	nNumberOfData								:= 250,
-			bSaveSignal									:= rUserLoggedIn.Q, 
-			sUser										:= sUserName,
-			sGroup										:= sUserGroupOut,
-			sDate										:= sSystemDate,
-			sTime										:= sSystemTime,
-			aDataOutput									:= stUserLog);*)
-			
-
-
-
-
-
-
-
-
-]]></ST>
+IF dw_T08_EL1809.iStartButoon THEN
+	IF ftrigButton[2].Q THEN
+		b:= b+1;
+	END_IF
+	IF b>=3 THEN;
+		bQuitHmi:=TRUE;
+	END_IF
+ELSE
+	b:=0;
+END_IF]]></ST>
       </Implementation>
     </Action>
     <Action Name="f_ACT_TerminalInfo" Id="{8299d142-9ce5-4d1b-9f3f-121127d1dbfb}">
@@ -285,19 +266,23 @@ dw_T09_EL2809.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T09_EL280
 												bTerminalOperational				=> dw_T09_EL2809.stTerminalInfo.bTerminalOperational);
 												
 												
-dw_T11_EL3058.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T11_EL3058.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T11_EL3058.stTerminalInfo.sTerminalInfo,
-												bTerminalOperational				=> dw_T11_EL3058.stTerminalInfo.bTerminalOperational);
+dw_T10_EL3058.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T10_EL3058.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T10_EL3058.stTerminalInfo.sTerminalInfo,
+												bTerminalOperational				=> dw_T10_EL3058.stTerminalInfo.bTerminalOperational);
 												
-dw_T12_EL1918.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T12_EL1918.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T12_EL1918.stTerminalInfo.sTerminalInfo,
-												bTerminalOperational				=> dw_T12_EL1918.stTerminalInfo.bTerminalOperational);
+dw_T11_EL1918.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T11_EL1918.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T11_EL1918.stTerminalInfo.sTerminalInfo,
+												bTerminalOperational				=> dw_T11_EL1918.stTerminalInfo.bTerminalOperational);
 												
-dw_T13_EL6633.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T13_EL6633.stTerminalInfo.nTerminal_State,
-												sTerminalState						=> dw_T13_EL6633.stTerminalInfo.sTerminalInfo,
-												bTerminalOperational				=> dw_T13_EL6633.stTerminalInfo.bTerminalOperational);
+dw_T12_EL6633.stTerminalInfo.fbTerminalInfo(	nTerminalState						:= dw_T12_EL6633.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> dw_T12_EL6633.stTerminalInfo.sTerminalInfo,
+												bTerminalOperational				=> dw_T12_EL6633.stTerminalInfo.bTerminalOperational);
 												
-//add boxes]]></ST>
+//add boxes
+
+Probes.stTerminalInfo.fbTerminalInfo(			nTerminalState						:= Probes.stTerminalInfo.nTerminal_State,
+												sTerminalState						=> Probes.stTerminalInfo.sTerminalInfo,
+												bTerminalOperational				=> Probes.stTerminalInfo.bTerminalOperational);]]></ST>
       </Implementation>
     </Action>
     <Action Name="g_ACT_Manual" Id="{87b8b019-9eb6-46b9-b781-3301c89600c8}">
@@ -334,25 +319,7 @@ END_IF
     </Action>
     <Action Name="h_ACT_Statistics" Id="{00b1c5d7-138a-4e5a-aad9-c5f6ae987c75}">
       <Implementation>
-        <ST><![CDATA[rsTest[0]( SET := stCycleDataNest1.bFail, RESET1 := rResetTest[0]);
-rsTest[1]( SET := stCycleDataNest2.bFail, RESET1 := rResetTest[0]);
-
-IF rsTest[0].Q1 THEN
-	
-	rResetTest[1]				:= TRUE;
-	
-ELSE rResetTest[1]				:= FALSE;
-
-END_IF
-
-IF rsTest[1].Q1 THEN
-	
-	rResetTest[2]				:= TRUE;
-	
-ELSE rResetTest[2]				:= FALSE;
-
-END_IF
-
+        <ST><![CDATA[
 stStatisticsHMI[0].sName			:= 'Total';
 
 
@@ -403,9 +370,9 @@ END_IF
     <Action Name="i_ACT_TwinSAFE" Id="{0ecb0e06-5557-4943-b4e7-d2562aeb50f9}">
       <Implementation>
         <ST><![CDATA[	
-stTwinSAFE.iSafetyErrorAcknowledge		:= rtrigButton[3].Q;
+stTwinSAFE.iSafetyErrorAcknowledge		:= dw_T04_EL1918.iResetButton;
 
-fbScaleAirSupply( 			nRawValue						:= UINT_TO_REAL(GVL_IO.dw_T11_EL3058.iMainPressure),
+fbScaleAirSupply( 			nRawValue						:= UINT_TO_REAL(GVL_IO.dw_T10_EL3058.iMainPressure),
 							X1								:= 0,
 							X2								:= 32768,
 							Y1								:= 0,
@@ -416,18 +383,7 @@ fbScaleAirSupply( 			nRawValue						:= UINT_TO_REAL(GVL_IO.dw_T11_EL3058.iMainPr
 stTwinSAFE.iAirPressureMaxValue			:= nAirPressureMaxValue;
 stTwinSAFE.iAirPressureMinValue			:= nAirPressureMinValue;
 stTwinSAFE.iProcessDoorClosing			:= bDoorClosingFlag;
-
-bMainDoor_AirFlag[0]					:= (stMachineStatus.eMachineState = E_MachineState.SYSTEM_AUTO_CYCLE) OR ( stMachineStatus.eMachineState = E_MachineState.MANUAL_MODE) OR (stMachineStatus.eMachineState = E_MachineState.SYSTEM_INITIALISING) OR 
-											(stMachineStatus.eMachineState = E_MachineState.SAFETY ) OR (stMachineStatus.eMachineState = E_MachineState.SYSTEM_READY_TO_START)  OR (stMachineStatus.eMachineState = E_MachineState.MANUAL_MODE);
-
-bMainDoor_AirFlag[1]					:= (stMachineStatus.eMachineState = E_MachineState.STOPPING) OR (stMachineStatus.eMachineState = E_MachineState.STOPPED);
-
-stTwinSAFE.bMainDoor_AirFlag[0]			:= bMainDoor_AirFlag[0];
-stTwinSAFE.bMainDoor_AirFlag[1]			:= bMainDoor_AirFlag[1];
-
-stTwinSAFE.iProcessCylinder1UnlockCondition 	:=  bProcessCylinderUnlockConditionFlag;
-
-
+					
 
 ////////////////////////////////////////////////////////////TwinSAFE Outputs reading//////////////////////////////////////////////////////////
 
@@ -436,7 +392,7 @@ dw_T06_EL2904.qResetAirSupply_PSR2								:= SEL((dw_T06_EL2904_Reading.bResult[
 dw_T06_EL2904.qLockMainDoor										:= SEL((dw_T06_EL2904_Reading.bResult[3]=1),FALSE,TRUE);
 dw_T06_EL2904.qLockProcessCylinder								:= SEL((dw_T06_EL2904_Reading.bResult[4]=1),FALSE,TRUE);
 
-dw_T06_EL2904_Reading.fbReadOutSafety06[1]( 	sNetId 			:='192.168.7.20.4.1',
+dw_T06_EL2904_Reading.fbReadOutSafety06[1]( 	sNetId 			:=NetAmsIdDevice,
 	                					 		nSlaveAddr 		:=1006,
 					 							nSubIndex 		:=0001,
 					 							nIndex 			:=16#7001 ,
@@ -447,7 +403,7 @@ dw_T06_EL2904_Reading.fbReadOutSafety06[1]( 	sNetId 			:='192.168.7.20.4.1',
 					 							bBusy 			=> dw_T06_EL2904_Reading.bBusy[1],
 					 							bError 			=> dw_T06_EL2904_Reading.berror[1]);
 												
-dw_T06_EL2904_Reading.fbReadOutSafety06[2]( 	sNetId 			:='192.168.7.20.4.1',
+dw_T06_EL2904_Reading.fbReadOutSafety06[2]( 	sNetId 			:= NetAmsIdDevice,
 	                					 		nSlaveAddr 		:=1006,
 					 							nSubIndex 		:=0002,
 					 							nIndex 			:=16#7001 ,
@@ -458,7 +414,7 @@ dw_T06_EL2904_Reading.fbReadOutSafety06[2]( 	sNetId 			:='192.168.7.20.4.1',
 					 							bBusy 			=> dw_T06_EL2904_Reading.bBusy[2],
 					 							bError 			=> dw_T06_EL2904_Reading.berror[2]);
 												
-dw_T06_EL2904_Reading.fbReadOutSafety06[3]( 	sNetId 			:='192.168.7.20.4.1',
+dw_T06_EL2904_Reading.fbReadOutSafety06[3]( 	sNetId 			:=NetAmsIdDevice,
 	                					 		nSlaveAddr 		:=1006,
 					 							nSubIndex 		:=0003,
 					 							nIndex 			:=16#7001 ,
@@ -469,7 +425,7 @@ dw_T06_EL2904_Reading.fbReadOutSafety06[3]( 	sNetId 			:='192.168.7.20.4.1',
 					 							bBusy 			=> dw_T06_EL2904_Reading.bBusy[3],
 					 							bError 			=> dw_T06_EL2904_Reading.berror[3]);
 											
-dw_T06_EL2904_Reading.fbReadOutSafety06[4]( 	sNetId 			:='192.168.7.20.4.1',
+dw_T06_EL2904_Reading.fbReadOutSafety06[4]( 	sNetId 			:= NetAmsIdDevice,
 	                					 		nSlaveAddr 		:=1006,
 					 							nSubIndex 		:=0004,
 					 							nIndex 			:=16#7001 ,
@@ -484,8 +440,8 @@ dw_T06_EL2904_Reading.fbReadOutSafety06[4]( 	sNetId 			:='192.168.7.20.4.1',
     </Action>
     <Action Name="j_ACT_MachineDefinition" Id="{d060be37-8904-4e66-8914-eb7f14b7082a}">
       <Implementation>
-        <ST><![CDATA[rMachineDefinitionSet2(CLK := bMachineDefinitionSet2);
-fMachineDefinitionSet2(CLK := bMachineDefinitionSet2);
+        <ST><![CDATA[rMachineDefinitionSet2(CLK := bMachineDefinitionSet1);
+fMachineDefinitionSet2(CLK := bMachineDefinitionSet1);
 
 IF rMachineDefinitionSet2.Q THEN
 	
@@ -524,10 +480,13 @@ IF abMachineDefinition[1] THEN
 	stMACHINE.bHeightTest								:= TRUE;
 	stMACHINE.bLeakTest									:= TRUE;
 	stMACHINE.bVisionTest								:= TRUE;
-	stMACHINE.sName										:= 'LT-WH-VC LEAK TEST: FLUID PATH , HEIGHT TEST: FPB WELDING, VISION CHECK: EWIS FOAM';
+	stMACHINE.sName										:= 'LT-WH-VI LEAK TEST: FLUID PATH , HEIGHT TEST: FPB WELDING, VISION INSPECTION: EWIS FOAM';
 	stMACHINE.bMachine[1]								:= TRUE;
 	stMACHINE.bMachine[2]								:= FALSE;
 	stMACHINE.bMachine[3]								:= FALSE;
+	
+	sAplication                     					:= ' Leak Test - Weld Height - Vision Inspection ';
+	sSystemName											:= ' LT-WH-VI - FLUID PATH CAP ' ;
 
 END_IF
 
@@ -541,6 +500,9 @@ IF abMachineDefinition[2] THEN
 	stMACHINE.bMachine[2]								:= TRUE;
 	stMACHINE.bMachine[3]								:= FALSE;
 	
+	sAplication                     					:= ' Weld Height';
+	sSystemName											:= ' WH - FLUID PATH BODY ' ;
+	
 END_IF
 
 IF abMachineDefinition[3] THEN
@@ -552,6 +514,9 @@ IF abMachineDefinition[3] THEN
 	stMACHINE.bMachine[1]								:= FALSE;
 	stMACHINE.bMachine[2]								:= FALSE;
 	stMACHINE.bMachine[3]								:= TRUE;
+	
+	sAplication                     					:= ' Leak Test';
+	sSystemName											:= ' LT - RESERVOIR ' ;
 	
 END_IF
 
