@@ -3100,16 +3100,6 @@
             },
             "USEMAPPING": true
         },
-        "ADS.PLC1.GVL_HMI.bOpenRejectDialog": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI::bOpenRejectDialog",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            "USEMAPPING": true
-        },
         "ADS.PLC1.GVL_HMI.bPartPresent.0": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -10891,7 +10881,6 @@
                 "ADS.PLC1.GVL_HMI.bManualScreen": 3,
                 "ADS.PLC1.GVL_HMI.bNest1Flag": 3,
                 "ADS.PLC1.GVL_HMI.bNest2Flag": 3,
-                "ADS.PLC1.GVL_HMI.bOpenRejectDialog": 3,
                 "ADS.PLC1.GVL_HMI.bPartPresent.0": 3,
                 "ADS.PLC1.GVL_HMI.bPartPresent.1": 3,
                 "ADS.PLC1.GVL_HMI.bProcessCylinder1_Down": 3,
