@@ -29,7 +29,7 @@
 	
 /////////////////////////////////////////////////////////////////////////////////////SYSTEM INFO/////////////////////////////////////////////////////////////////////////////////////
 
-	sSoftwareVersion					: STRING := ' 1.0 ';
+	sSoftwareVersion					: STRING := 'v1.0.0-rc.1  ';
 	sSoftwareDate						: STRING := '23/04/2026';
 	sTC3Version							: STRING := ' v3.1.4026.22, Runtime v3.1.4026.22 ';
 	sHMIVersion							: STRING := ' 14.13';
