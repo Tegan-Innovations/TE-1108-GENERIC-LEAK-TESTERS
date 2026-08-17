@@ -29,7 +29,7 @@
     <HmiCommunicationRouterPort>10104</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13004</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.762.46</HmiInitial>
-    <HmiRecent>14.3.765.1</HmiRecent>
+    <HmiRecent>14.3.804.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -304,6 +304,9 @@
     <Content Include="Contents\popup\popup2_EmptyRejectChute.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\popup\popup3_LogoffPage.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\popup\popup6_ChangeSettings_ver2.content">
       <SubType>Content</SubType>
     </Content>
@@ -311,6 +314,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\popup\popup1_RejectedPart.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\popup\popup7_PuckRemoved.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Screens\10_Manage_Users.content">
@@ -394,6 +400,9 @@
     <Content Include="Contents\Settings\Calibration_Set1.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\Settings\NestOffset.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\Settings\Calibration_Set2.content">
       <SubType>Content</SubType>
     </Content>
@@ -407,6 +416,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\EnableNests.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Settings\PuckLockerMode.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Settings\Tolerances.content">
@@ -503,6 +515,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Contents\UserControl\PopUp\Acknowledge.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Contents\UserControl\PopUp\YesNoRed.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserControl\PopUp\YesNoRed.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Contents\UserControl\PopUp\YesNoRed.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Contents\UserControl\PopUp\YesNo_ver2.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -534,6 +553,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\animation_cylinder.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Base_animation_HW_3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Base_animation_LT_Reservoir_2.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Buttons\AlarmButton.png">
@@ -825,6 +850,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\Untitled (2).png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\Base_animation_HW.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\Base_animation_LT_Reservoir-0.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\Base_animation_LT_Reservoir.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
