@@ -32,14 +32,6 @@
             "SALT": "ZirSm1+lZTLCkbhMWDkWgL8FigYqCW/LUa3hnk1tOgrhEHtBVr+PhfxD9VWpTsV16G6DzM+JB3tdcnKTdHQeZQ==",
             "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         },
-        "TESTER": {
-            "ALGORITHM": 1,
-            "ENABLED": true,
-            "LAST_PASSWORD_CHANGE": "2026-07-16T07:03:50.4354955Z",
-            "PASSWORD": "72a75b53bd01444c329aad92711751c84ded2785083b9a7534ba9ab102d0d724138349ee43662559269ffb13735ae4225c284451ea34d6fb38405d25eac63abc",
-            "SALT": "+Uyd1YnGXUbVJc0pD6athMXl/hdDQfDlN9qUEs/SXSVg+/Ymjdwuh0krrxcgqFeI6oTKqoOs6i+h95LLaki7WA==",
-            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
-        },
         "__SystemAdministrator": {
             "ALGORITHM": 1,
             "ENABLED": true,
@@ -63,14 +55,6 @@
             "PASSWORD": "",
             "PASSWORD_HISTORY": [],
             "SALT": "",
-            "TWO_FACTOR_AUTHENTICATION_ENABLED": false
-        },
-        "sebastian.ulloa": {
-            "ALGORITHM": 1,
-            "ENABLED": true,
-            "LAST_PASSWORD_CHANGE": "2026-04-07T10:45:40.4048519Z",
-            "PASSWORD": "def7bc992c133b7fce454e62257bf21bb01ea11c5a44c1ff119753da59c0aff31eb5b36d3f181f8a8f8e99f8dc5e3dfe88136ba5e3d97d3f4a8920f5487e27e5",
-            "SALT": "vjbB/L/FgjNnSp/q558iZtFBBChcMqhuR0h02dQvVWwSD/w2OYLS8DMvmbopK5ANv2zgZxeo7mBB1c9VT6urCw==",
             "TWO_FACTOR_AUTHENTICATION_ENABLED": false
         }
     }
